@@ -1,0 +1,85 @@
+Open Data - ARCEP,,,
+Observatoire des déploiements des réseaux et services fixes,,,
+,,,
+,Sommaire,,
+,,Réseau HD,
+,,HD Gros,Cet onglet présente des séries temporelles d'accès à la boucle locale cuivre vendus par Orange sur le marché de gros.
+,,THD,"Cet onglet présente la progression de l’éligibilité aux différentes technologies d’accès au très haut débit. Ces données sont ventilées suivant les débits disponibles, les zones géographiques couvertes et, pour les réseaux en fibre optique jusqu’à l’abonné, suivant que l’initiative des déploiements est privée ou publique. On y présente par ailleurs une chronique des abonnements via des offres de  gros à la fibre optique jusqu’à l’abonné."
+,,,
+,,FttH,"Cet onglet présente la progression des déploiements, répartie selon l’opérateur d’infrastructure, et de la mutualisation des réseaux en fibre optique jusqu’à l’abonné. À partir du premier trimestre 2014, une ventilation suivant trois zones géographiques distinctes est proposée."
+,,OI FttH,Les différents opérateurs d'infrastructure de réseaux en fibre optique jusqu’à l’abonné sont listés sur cet onglet. Ils sont groupés par maison mère le cas échéant. On précise sur quelles zones géographiques ces différents opérateurs procèdent aux déploiements.
+,,,
+,,Linéaire GC,"Cet onglet présente le linéaire des câbles déployés par les opérateurs (en km) dans le cadre de l'offre d'accès aux infrastructures de génie civil d'Orange (GC-BLO). La distinction est opérée entre déploiements FttX et RCA, entre souterrain et aérien, par type d'opérateurs, et enfin par le détail entre amont et aval de point de mutualisation pour le FttX."
+,,,
+,,Volume GC,"Cet onglet présente le volume de génie civil occupé par les opérateurs (en m3) dans le cadre de l'offre d'accès aux infrastructures de génie civil d'Orange (GC-BLO). La distinction est opérée entre déploiements FttX et RCA, entre souterrain (volume des conduites) et aérien (volumes des tronçons), par type d'opérateurs, et enfin par le détail entre amont et aval de point de mutualisation pour le FttX."
+,,,
+,,FttH par Régions,Cet onglet présente des données ouvertes en lien avec le site https://cartefibre.arcep.fr à la maille de la région.
+,,FttH par Départements,Cet onglet présente des données ouvertes en lien avec le site https://cartefibre.arcep.fr à la maille du département.
+,,FttH par EPCI,Cet onglet présente des données ouvertes en lien avec le site https://cartefibre.arcep.fr à la maille de l'EPCI.
+,,FttH par Communes,Cet onglet présente des données ouvertes en lien avec le site https://cartefibre.arcep.fr à la maille de la commune.
+,,FttH par Arrondissement,Cet onglet présente des données ouvertes en lien avec le site https://cartefibre.arcep.fr à la maille de l'arrondissement municipal.
+,,,
+,Définitions,,
+,,Logements programmés,Logements ou locaux à usage professionnel situés dans la zone arrière d'un point de mutualisation qui a été installé et mis à disposition des opérateurs tiers
+,,Logements raccordables (FttH),Logements ou locaux à usage professionnel pour lesquels il existe une continuité optique entre le point de mutualisation et le point de branchement optique
+,,Logements éligibles,Logements ou locaux à usage professionnel raccordables pour lequel au moins un opérateur a relié le point de mutualisation (ou le point de raccordement distant mutualisé) à son réseau de collecte.
+,,,
+,,Opérateur commercial (OC),Opérateur de communications électroniques au sens de l’article L. 33-1 du CPCE ayant conclu ou ayant vocation à conclure une convention d’accès aux lignes à très haut débit en fibre optique dans le cadre prévu par l’article L. 34-8-3 du CPCE.
+,,"Opérateur d'infrastructure (OI)
+(ou Opérateur d'immeuble)","Personne chargée de l’établissement ou de la gestion d’une ou plusieurs lignes de communications électroniques à très haut débit en fibre optique, telle que définie dans les décisions n° 2009-1106 et n° 2010-1312 de l’Autorité."
+,,Opérateur verticalement intégré,Qualifie un opérateur de communications électroniques ayant à la fois les qualités d'opérateur d'infrastructure et d'opérateur commercial.
+,,,
+,,Point de mutualisation (PM),"Point d’extrémité d’une ou de plusieurs lignes au niveau duquel l’opérateur d’immeuble donne accès à des opérateurs à ces lignes en vue de fournir des services de communications électroniques aux utilisateurs finals correspondants, conformément à l’article L. 34-8-3 du code des postes et des communications électroniques. Il n’y a donc pas de coupleurs en aval du point de mutualisation, y compris dans une architecture de type point-à-multipoints."
+,,,
+,,Zones très denses (ZTD),"Classification établie par la décision 2009-1006 et révisée par la décision 2013-1475. La liste complète des 106 communes se trouvant en zones très denses est disponible à cette adresse : http://www.arcep.fr/fileadmin/reprise/dossiers/fibre/annexes-2013-1475-liste-communes-ztd.pdf.
+L'ensemble des autres communes sont classées en zones moins denses"
+,,Zones moins denses (ZMD),
+,,,
+,,Engagement L. 33-13,"Engagements souscrits par des opérateurs d'infrastructure auprès du Ministre chargé des communications électroniques conformément à l'article L. 33-13 du CPCE :
+https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006070987&idArticle=LEGIARTI000033207641"
+,,,
+,,Initiative privée,"Lignes déployées par les opérateurs privés, sans aucun financement public"
+,,Initiative publique,Lignes déployées dans le cadre de réseaux d'initiative publique (RIP)
+,,RIP,cf. Initiative publique
+,,PFTHD,RIP FttH subventionné par le Plan France Très Haut Débit
+,,,
+,,Commune rurale,Commune rurale au sens de l'Insee. La liste des communes est disponible à cette adresse : https://www.insee.fr/fr/information/2115018
+,,Commune de montagne,"Commune classée en zone de montagne d'après le Cget. 
+La liste des communes est disponible à cette adresse http://www.observatoire-des-territoires.gouv.fr/observatoire-des-territoires/fr/communes-classees-en-zone-de-montagne"
+,,,
+,,,
+,,Dégroupage,Offre de gros d'Orange régulée permettant aux opérateurs alternatifs d'avoir un accès direct à la paire de cuivre. Ils doivent pour cela avoir installé au préalable leurs propres équipements au niveau des répartiteurs d'Orange. Ils sont alors en mesure de contrôler l'accès haut débit de bout en bout et de fournir un service différencié de celui de l'opérateur historique.
+,,Dégroupage partiel,Nombre d'accès en dégroupage partiel (forme de dégroupage où l'abonné conserve un abonnement au service téléphonique classique) vendus sur le marché de gros.
+,,Dégroupage total,Nombre d'accès en dégroupage total (forme de dégroupage où l'abonné n'a plus d'abonnement au service téléphonique classique) vendus sur le marché de gros.
+,,Bitstream,Type d'offre de gros permettant aux opérateurs alternatifs de louer des accès haut débit qui ont été activés par Orange. Ils doivent pour cela avoir raccordé au préalable un ou plusieurs points de livraison du réseau d'Orange. Ils sont alors en mesure de proposer des services haut débit de détail dans les zones où ils ne sont pas présents au titre du dégroupage.
+,,,
+,,"Infrastructures de génie civil
+ (ou Génie Civil :GC)","Les installations physiques associées à la boucle locale déployées par un opérateur de communications électroniques pour abriter les câbles de la boucle locale qui peuvent être des câbles de cuivre, des câbles optiques et des câbles coaxiaux.
+"
+,,,
+,Méthodologie,,
+,Collecte des données,"L'ensemble des données présentées ici sont issues de la collecte trimestrielle ""Observatoire de gros HD/THD"" réalisée par l'ARCEP au titre de la décision n°2018-0170",
+,,"Répondent à ce questionnaire les personnes physiques ou morales qui exploitent un réseau de communications électroniques à haut débit fixe ou à très haut débit fixe ouvert au public, en particulier celles qui ont le statut d’opérateur d’immeuble au sens des décisions n° 2009-1106 et n° 2010-1312 (prises en application de l’article L. 34-8-3 du CPCE) et qui exploitent des points de mutualisation, ainsi que les personnes physiques ou morales fournissant au public un service de communications électroniques à haut débit fixe ou à très haut débit fixe (dans les conditions de l’article L. 33-1 du CPCE) ; parmi les personnes suscitées, seront seules concernées celles qui remplissent, directement ou via les groupes qui en détiennent le contrôle, l’une des conditions suivantes :",
+,,-          la personne physique ou morale dispose d’au moins 1 000 clients actifs sur le marché de détail du haut débit et du très haut débit fixe confondus ;,
+,,-          le chiffre d’affaires annuel de la personne physique ou morale sur le marché de détail et sur le marché de gros entreprises du haut débit et du très haut débit fixe confondus est supérieur ou égal à un million d’euros hors taxes ;,
+,,-          la personne physique ou morale exploite un réseau de communications électroniques à haut débit fixe ou à très haut débit fixe permettant de desservir au moins 1 000 clients finals potentiels.,
+,,,
+,Changement de périmètre,,
+,Définition du très haut débit,"Les informations récoltées sur les réseaux câblés (""câble coaxial"") distinguent les logements éligibles à un débit supérieur ou égal à 30 Mbits/s et inférieur à 100 Mbits/s et les logements éligibles à un débit supérieur à 100 Mbits/s à partir du 3ème trimestre 2012.",
+,,,
+,,"Précédemment, les informations récoltées ne portaient que sur les logements éligibles à un débit supérieur ou égal à 50 Mbits/s.",
+,,Les données fournies pour le premier et second trimestres 2012 ont été reconstituées a posteriori.,
+,,,
+,,,
+,,,
+,Mise à jour & Correction :,Les mises à jour  sont effectuées tous les trimestres. Des rectifications peuvent être faites sur l'historique. Elles seront alors mentionnées en italique.,
+,,Les chiffres présentés sont issus  des déclarations des opérateurs ; ils peuvent donc être sujets à modification.,
+,,,
+,,,
+,Catégories de taux de couverture des données cartefibre.arcep.fr :,,
+,,  0 : aucune ligne,
+,,  5 : moins de 10% de locaux raccordables,
+,,10 : de 10% à 25% de locaux raccordables,
+,,25 : de 25% à 50% de locaux raccordables,
+,,50 : de 50% à 80% de locaux raccordables,
+,,80 : plus de 80% de locaux raccordables,
