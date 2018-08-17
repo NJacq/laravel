@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Box\Spout\Reader\ReaderFactory;
 use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Departement;
 
 class Import extends Command
 {
@@ -59,18 +60,40 @@ class Import extends Command
 
             $reader->open($fileNameAbsolutePath); // ouvrir le fichier csv
 
-                // parcourir les feuilles une seule pour un csv
+                // parcourir les feuilles; une seule pour un csv
                 foreach($reader->getSheetIterator() as $sheet) {
+                   
  
                     $i = 0;
  
                     foreach($sheet->getRowIterator() as $row) {
+                       
                         $i++;
                         if($i<6) {
                             continue; // On ne prend pas en compte les lignes 1 à 5
+                            
                         }
-                        print_r($row); // On crée un tableau
-                        exit;
+                        print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau
+                        /*
+                         recréer un tableau $dataToInsert = [
+                            'code_departement' => $row[0],
+                        ]
+                        // create
+                        */
+                        // exit;
+                    
+                        $dataToInsert = [
+                            'code_departement' => $row[0],
+                            'nom_departement' => $row[1],
+                            'code_region' => $row[2],
+                            'logements' => (int)str_replace(' ','',$row[3]),
+                            'etablissements' => (int)str_replace(' ','',$row[4])
+                        ];
+                        print_r($dataToInsert);                    
+                       
+                            
+                            $newDepartement = Departement::create($dataToInsert);                
+                                      
                     }
  
                 }
