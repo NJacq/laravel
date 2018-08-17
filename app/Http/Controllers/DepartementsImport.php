@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class departementsImport extends Controller
+class DepartementsImport extends Controller
 {
      /**
      * Create a new instance.
@@ -12,7 +12,7 @@ class departementsImport extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function departementsImport(Request $request)
     {
         // Validate the request...
 
@@ -22,10 +22,5 @@ class departementsImport extends Controller
 
         $dpts->save();
 
-        // $dpts = App\Departements::find(1);
-
-        // $dpts->name = 'New';
-
-        // $dpts->save();
     }
 }
