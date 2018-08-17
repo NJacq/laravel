@@ -74,14 +74,7 @@ class Import extends Command
                             
                         }
                         print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau
-                        /*
-                         recréer un tableau $dataToInsert = [
-                            'code_departement' => $row[0],
-                        ]
-                        // create
-                        */
-                        // exit;
-                    
+                                       
                         $dataToInsert = [
                             'code_departement' => $row[0],
                             'nom_departement' => $row[1],
@@ -89,13 +82,11 @@ class Import extends Command
                             'logements' => (int)str_replace(' ','',$row[3]),
                             'etablissements' => (int)str_replace(' ','',$row[4])
                         ];
-                        print_r($dataToInsert);                    
-                       
-                            
-                            $newDepartement = Departement::create($dataToInsert);                
+                        print_r($dataToInsert);  
+                        
+                        $newDepartement = Departement::updateOrCreate(['code_departement' => $dataToInsert['code_departement']], $dataToInsert);                           
                                       
-                    }
- 
+                    } 
                 }
             
         } else {
