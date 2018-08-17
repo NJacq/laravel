@@ -75,16 +75,18 @@ class Import extends Command
                         }
                         print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau
                                        
-                        $dataToInsert = [
+                        $dataToInsert = [ // Creation d'un tableau avec la même structure que la base de données
                             'code_departement' => $row[0],
                             'nom_departement' => $row[1],
                             'code_region' => $row[2],
-                            'logements' => (int)str_replace(' ','',$row[3]),
-                            'etablissements' => (int)str_replace(' ','',$row[4])
+                            'logements' => (int)str_replace(' ','',$row[3]),
+                            'etablissements' => (int)str_replace(' ','',$row[4])
                         ];
                         print_r($dataToInsert);  
                         
-                        $newDepartement = Departement::updateOrCreate(['code_departement' => $dataToInsert['code_departement']], $dataToInsert);                           
+                        // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
+                        $newDepartement = Departement::updateOrCreate(['code_departement' => $dataToInsert['code_departement']], $dataToInsert); 
+                         
                                       
                     } 
                 }
