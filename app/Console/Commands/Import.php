@@ -64,7 +64,7 @@ class Import extends Command
                 $i = 0;
 
                 foreach($sheet->getRowIterator() as $row) {
-                                        
+
                     $i++;
                     if($i<6) {
                         continue; // On ne prend pas en compte les lignes 1 à 5                            
@@ -90,6 +90,5 @@ class Import extends Command
         }
  
         $this->info('Fin du script');
-
     }
 }
