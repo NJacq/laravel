@@ -42,10 +42,10 @@ class Import extends Command
     public function handle()
     {
         $this->info('Début du script');
- 
-        $i = 0;
- 
+
+        $i = 0; 
         $fileName = $this->argument('file');
+
         $this->info('Importation du fichier : '.$fileName);
 
         $exists = Storage::disk('public')->exists($fileName);
@@ -53,43 +53,38 @@ class Import extends Command
         if ($exists) { // on vérifie que le fichier que l'on veut importer existe
             
             $fileNameAbsolutePath = Storage::disk('public')->path($fileName);
+
             $this->info('Le fichier est dans : '.$fileNameAbsolutePath);
                     
             $reader = ReaderFactory::create(Type::CSV); //on utilise box/spout pour lire le fichier
             $reader->setFieldDelimiter(',');
+            $reader->open($fileNameAbsolutePath); // ouvrir le fichier csv            
+            foreach($reader->getSheetIterator() as $sheet) { // parcourir les feuilles; une seule pour un csv 
 
-            $reader->open($fileNameAbsolutePath); // ouvrir le fichier csv
+                $i = 0;
 
-                // parcourir les feuilles; une seule pour un csv
-                foreach($reader->getSheetIterator() as $sheet) {
-                   
- 
-                    $i = 0;
- 
-                    foreach($sheet->getRowIterator() as $row) {
-                       
-                        $i++;
-                        if($i<6) {
-                            continue; // On ne prend pas en compte les lignes 1 à 5
-                            
-                        }
-                        print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau
-                                       
-                        $dataToInsert = [ // Creation d'un tableau avec la même structure que la base de données
-                            'code_departement' => $row[0],
-                            'nom_departement' => $row[1],
-                            'code_region' => $row[2],
-                            'logements' => (int)str_replace(' ','',$row[3]),
-                            'etablissements' => (int)str_replace(' ','',$row[4])
-                        ];
-                        print_r($dataToInsert);  
-                        
-                        // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
-                        $newDepartement = Departement::updateOrCreate(['code_departement' => $dataToInsert['code_departement']], $dataToInsert);                         
-                                      
-                    } 
-                }
-            
+                foreach($sheet->getRowIterator() as $row) {
+                                        
+                    $i++;
+                    if($i<6) {
+                        continue; // On ne prend pas en compte les lignes 1 à 5                            
+                    }
+                    // print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau  
+
+                    $dataToInsert = [ // Creation d'un tableau avec la même structure que la base de données
+                        'code_departement' => $row[0],
+                        'nom_departement' => $row[1],
+                        'code_region' => $row[2],
+                        'logements' => (int)str_replace(' ','',$row[3]),
+                        'etablissements' => (int)str_replace(' ','',$row[4])
+                    ];
+                    // print_r($dataToInsert); 
+                    
+                    $newDepartement = Departement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
+                        'code_departement' => $dataToInsert['code_departement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
+                    ], $dataToInsert);                                       
+                } 
+            }            
         } else {
             $this->error('le fichier n\'existe pas');
         }
