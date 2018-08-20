@@ -80,7 +80,8 @@ class Import extends Command
                     
                     $newDepartement = Departement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'code_departement' => $dataToInsert['code_departement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
-                    ], $dataToInsert);                                       
+                    ], $dataToInsert);    
+                    
                 } 
             }            
         } else {

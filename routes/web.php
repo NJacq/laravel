@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/new', function () {
-    return view('new');
-});
+
+
+// Route::get('/departements', function () {
+//     return view('departements',['title' => 'Liste des départements']);
+// });
+Route::get('/departement/{id}', 'DepartementController@show');
+
+Route::get('/list', 'DepartementController@list');
