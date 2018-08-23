@@ -9,14 +9,42 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// importer les pages
+import Home from './components/HomeComponent'
+import Departements from './components/DepartementsComponent'
+import Departement from './components/DepartementComponent'
+import Regions from './components/RegionsComponent'
+import Region from './components/RegionComponent'
+import Vue2Filters from 'vue2-filters'
 
-const app = new Vue({
-    el: '#app'
-});
+Vue.use(Vue2Filters)
+Vue.use(VueRouter)
+
+Vue.component('regions', require('./components/RegionsComponent.vue'));
+Vue.component('region', require('./components/RegionComponent.vue'));
+Vue.component('departements', require('./components/DepartementsComponent.vue'));
+Vue.component('departement', require('./components/DepartementComponent.vue'));
+Vue.component('home', require('./components/HomeComponent.vue'));
+
+const routes = [
+    { path: '/', component: Home },
+    { path: '/regions', component: Regions },
+    { path: '/region/:id', component: Region },
+    { path: '/departements', component: Departements },
+    { path: '/departement/:id', component: Departement }
+  ]
+
+  const router = new VueRouter({
+    // mode: 'history',
+    // base: '',
+    routes, // short for `routes: routes`
+
+})
+
+new Vue({
+    el: '#app',
+    router: router,
+})

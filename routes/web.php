@@ -15,10 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// pour l'API
+Route::get('/api/departements', 'Api\DepartementController@list'); // API pour récupèrer un seul département
+Route::get('/api/departements/geojson', 'Api\DepartementController@geojson'); // API pour récupèrer le geojson des contours de départements
+Route::get('/api/departements/{id}', 'Api\DepartementController@show'); // API pour récupèrer la liste des départements
+Route::get('/api/regions', 'Api\RegionController@list'); // API pour récupèrer la liste des regions
+Route::get('/api/regions/{id}', 'Api\RegionController@show'); // API pour récupèrer le detail d'une region
 
-// Route::get('/departements', function () {
-//     return view('departements',['title' => 'Liste des départements']);
-// });
-Route::get('/departement/{id}', 'DepartementController@show');
+Auth::routes(); // routes ajoutées par Laravel pour l'authentification
 
-Route::get('/list', 'DepartementController@list');
+Route::get('/', 'Front\IndexController@index')->name('index');
