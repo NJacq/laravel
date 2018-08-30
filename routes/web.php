@@ -21,6 +21,11 @@ Route::get('/api/departements/geojson', 'Api\DepartementController@geojson'); //
 Route::get('/api/departements/{id}', 'Api\DepartementController@show'); // API pour récupèrer la liste des départements
 Route::get('/api/regions', 'Api\RegionController@list'); // API pour récupèrer la liste des regions
 Route::get('/api/regions/{id}', 'Api\RegionController@show'); // API pour récupèrer le detail d'une region
+Route::get('/api/ftthdepartements', 'Api\FtthDepartementController@list'); // API pour récupèrer un seul département
+Route::get('/api/ftthdepartements/{id}', 'Api\FtthDepartementController@show'); // API pour récupèrer la liste des départements
+Route::get('/api/ftthregions', 'Api\FtthRegionController@list'); // API pour récupèrer une seule région
+Route::get('/api/ftthregions/{id}', 'Api\FtthRegionController@show'); // API pour récupèrer la liste des régions
+
 
 Auth::routes(); // routes ajoutées par Laravel pour l'authentification
 
