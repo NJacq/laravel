@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Models\Departement;
+use App\Models\Region;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -27,7 +28,7 @@ class DepartementController extends Controller
         ]);
         */ 
         return response()->json(
-            Departement::findOrFail($id)
+            Departement::with('ftthdepartements')->with('region')->findOrFail($id)
         );
     }
 

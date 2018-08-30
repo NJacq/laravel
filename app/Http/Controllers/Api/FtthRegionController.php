@@ -5,30 +5,34 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use App\Models\Region;
+use App\Models\FtthRegion;
 
 use Illuminate\Support\Facades\Storage;
 
-class RegionController extends Controller
+class FtthRegionController extends Controller
 {     
       /**
-     * 
+     * Show the profile for the given departement.
      *
-     * @param  int  $id Identifiant de la ligne dans la table regions
+     * @param  int  $id Identifiant de la ligne dans la table ftthregions
      * @return Response
      */
     
     public function show($id) // Affiche le detail d'une région
     {
+
         return response()->json(
-            Region::with('ftthregions')->with('departements')->findOrFail($id)
+            FtthRegion::findOrFail($id)
         );
     }
 
     public function list() // Liste toutes les régions
     {
-            return response()->json(
-            Region::all()
+
+        return response()->json(
+            FtthRegion::all()
         );
     }
 }
+
+   

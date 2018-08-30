@@ -8,4 +8,5 @@ class FtthDepartement extends Model
 {
     protected $table = 'ftthdepartements';
     protected $guarded = ['id'];
+    
 }

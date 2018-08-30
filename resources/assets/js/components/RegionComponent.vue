@@ -3,32 +3,122 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card card-default">
-                    <div class="card-header">Stats arcep de la région {{region.nom_region}}</div>
+                   <div class="card-header">      
+                        <p class="title">Stats arcep de la région {{region.nom_region}}</p>
+                    </div>
 
                     <div class="card-body">
-                        <table class="table table-sm table-hover">                 
-                            <thead class="thead-dark">           
-                                <tr>
-                                    <th>Nom de la région</th>              
-                                    <th>Numéro de la région</th>
+                          <div id="loadingIndicatorCtn">
+	                        <div class="fa-3x loadingIndicator">
+                                <i class="fas fa-sync fa-spin"></i>
+                            </div>
+	                    </div>
+                        <table class="table table-striped table-sm table-bordered">                 
+                                <thead class="table-info">             
+                                <tr>                                  
                                     <th>Logements</th>
                                     <th>Établissements</th>
                                 </tr>
                             </thead>
                             <tbody>   
-                                <tr>                             
-                                    <td>{{region.nom_region}}</td>
-                                    <td>{{region.code_region}}</td>
-                                    <td>{{region.logements}}</td>
-                                    <td>{{region.etablissements}}</td>
+                                <tr> 
+                                    <td class="cellule">{{region.logements}}</td>
+                                    <td class="cellule">{{region.etablissements}}</td>
                                 </tr>          
                             </tbody>
                         </table>
-                         <ul>
-                            <li v-bind:key="departement.nom_departement" v-for="departement in filterBy (departements, region.code_region, 'code_region') ">
-                                <router-link class="" v-bind:to="`/departement/${departement.id}`">{{departement.nom_departement}}</router-link> 
+
+            
+<!--                                   
+                        <ul>
+                            <li v-bind:key="ftthregion.nom_region" v-for="ftthregion in ftthregions">
+                                <p>Au moins un opérateur au PM via la mutualisation passive : {{ftthregion.unoperateur}} au {{ftthregion.trimestre}} de {{ftthregion.annee}}</p>
+                                <p>Au moins deux opérateurs au PM via la mutualisation passive : {{ftthregion.deuxoperateurs}} au {{ftthregion.trimestre}} de {{ftthregion.annee}}</p>
                             </li>
-                        </ul>
+                        </ul> -->                
+
+                        <p>Tableau des opérateurs au PM via la mutualisation passive</p>    
+
+                       
+                        <table class="table table-striped table-sm table-bordered">
+                            <thead class="table-info">       
+                                <tr>
+                                    <th></th>                                                                                       
+                                    <th>Au moins un opérateur</th>
+                                    <th>Au moins deux opérateurs</th>
+                                    <th>Au moins trois opérateurs</th>
+                                    <th>Au moins quatre opérateurs</th>
+                                </tr>                  
+                            </thead>
+
+                            <tbody> 
+                                <tr>                       
+                                    <td class="cellule premier">
+                                        <ul>
+                                            <li v-bind:key="ftthregion.code_region" v-for="ftthregion in ftthregions">                                                                                  
+                                                {{ftthregion.trimestre}} {{ftthregion.annee}}
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li v-bind:key="ftthregion.code_region" v-for="ftthregion in ftthregions">                                                                                  
+                                                {{ftthregion.unoperateur}} 
+                                            </li>
+                                        </ul>
+                                    </td>  
+                                    <td>
+                                        <ul>
+                                            <li v-bind:key="ftthregion.code_region" v-for="ftthregion in ftthregions">                                                                                  
+                                                {{ftthregion.deuxoperateurs}} 
+                                            </li>
+                                        </ul>
+                                    </td>  
+                                    <td>
+                                        <ul>
+                                            <li v-bind:key="ftthregion.code_region" v-for="ftthregion in ftthregions">                                                                                  
+                                                {{ftthregion.troisoperateurs}} 
+                                            </li>
+                                        </ul>
+                                    </td>  
+                                    <td>
+                                        <ul>
+                                            <li v-bind:key="ftthregion.code_region" v-for="ftthregion in ftthregions">                                                                                  
+                                                {{ftthregion.quatreoperateurs}} 
+                                            </li>
+                                        </ul>
+                                    </td>                 
+                                                                
+                                        </tr>                               
+                                    
+                            </tbody>
+                        
+                        </table>
+                        <p>Liste des départements de la région {{region.nom_region}}</p>
+                        <table class="table table-striped table-sm table-bordered">                 
+                                <thead class="table-info">             
+                                <tr>                                  
+                                    <th></th>
+                                    <th>Départements</th>
+                                </tr>
+                            </thead>                            
+                            <tbody>   
+                                <tr>                             
+                                    <td></td>
+                                    <td>                                     
+                                        <ul>     
+                                            <li v-bind:key="departement.nom_departement" v-for="departement in orderBy(departements, 'nom_departement')">
+                                                <router-link class="" v-bind:to="`/departement/${departement.id}`">{{departement.nom_departement}}</router-link>
+                                             </li> 
+                                        </ul> 
+                                    </td>                                                                                                                                       
+                                </tr>          
+                            </tbody>                    
+                        </table>              
+                                                   
+                    </div>
+                    <div class="card-footer">
+                        <router-link class="" v-bind:to="`/regions`"><button type="button" class="btn btn-primary">Retour à la liste des régions</button></router-link> 
                     </div>
                 </div>
             </div>
@@ -37,36 +127,55 @@
 </template>
 
 <script>
+   
     import axios from 'axios'
     export default {
         name: 'Region',
         data () {
             return {
-                region: {},
-                departements : {}
-            }
+                region: {},                       
+                departements : {},
+                ftthregions: {},               
+            }       
         },
         created () {
-            this.id = this.$route.params.id
+            this.id = this.$route.params.id          
             axios.get('http://localhost:8000/api/regions/'+ this.id)
             .then(response => {
-                console.log(response)
-                this.region = response.data
+                // console.log(response)
+                this.region = response.data           
+                this.departements = response.data.departements
+                this.ftthregions = response.data.ftthregions
+                console.log(this.ftthregions)
                 // this.comp = JSON.parse(response.data)
+                document.getElementById("loadingIndicatorCtn").style.display = 'none';
             })
             .catch(Err => {
                 // console.log(err)
-            }),            
-            axios.get('http://localhost:8000/api/departements')
-            .then(response => {
-                console.log(response)
-                this.departements = response.data
-                // this.comp = JSON.parse(response.data)
-            })
-            .catch(Err => {
-                // console.log(err)
-            })
+            })            
         }
     }
 </script>
-
+<style scoped>
+    p{
+        font-size: 18px;
+    }
+    ul{
+        list-style: none;
+    }
+    #loadingIndicatorCtn {
+	   text-align: center;   
+	   padding-top:2em;
+	}
+    .cellule{       
+        width: 30%;
+        text-align: center;
+    }
+    .premier{
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+    th{
+        text-align: center;
+    }
+</style>

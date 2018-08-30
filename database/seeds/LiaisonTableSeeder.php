@@ -2,10 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class LiaisonTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'liaison_id' => 973
         ]);
         DB::table('liaison')->insert([
-            'region_id' => 974,
+            'region_id' => 4,
             'liaison_id' => 974
         ]);
     }

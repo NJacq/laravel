@@ -6,6 +6,11 @@
                     <div class="card-header">Stats arcep</div>
 
                     <div class="card-body">
+                          <div id="loadingIndicatorCtn">
+	                        <div class="fa-3x loadingIndicator">
+                                <i class="fas fa-sync fa-spin"></i>
+                            </div>
+	                    </div>
                         <ul>
                             <li v-bind:key="departement.nom_departement" v-for="departement in departements">
                                 <router-link class="" v-bind:to="`/departement/${departement.id}`">{{departement.nom_departement}}</router-link> 
@@ -33,6 +38,7 @@
                 console.log(response)
                 this.departements = response.data
                 // this.comp = JSON.parse(response.data)
+                document.getElementById("loadingIndicatorCtn").style.display = 'none';
             })
             .catch(Err => {
                 // console.log(err)

@@ -3,18 +3,43 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card card-default">
-                    <div class="card-header">Stats arcep par régions</div>
+                    <div class="card-header">    
+                        <p class="title">Liste des régions</p>            
+                    </div>
 
                     <div class="card-body">
-                        <ul>
-                            <li v-bind:key="region.nom_region" v-for="region in orderBy (regions, 'nom_region')">
-                                <router-link class="" v-bind:to="`/region/${region.id}`">{{region.nom_region}}</router-link> 
-                            </li>
-                        </ul>
+                        <div id="loadingIndicatorCtn">
+	                        <div class="fa-3x loadingIndicator">
+                                <i class="fas fa-sync fa-spin"></i>
+                            </div>
+	                    </div>
+                        <table class="table table-striped table-sm table-bordered">                 
+                                <thead class="table-info">             
+                                <tr>                                  
+                                    <th></th>
+                                    <th>Régions</th>
+                                </tr>
+                            </thead>                            
+                            <tbody>   
+                                <tr>                             
+                                    <td></td>
+                                    <td>                                     
+                                        <ul>     
+                                            <li v-bind:key="region.nom_region" v-for="region in orderBy(regions, 'nom_region')">
+                                                <router-link class="" v-bind:to="`/region/${region.id}`">{{region.nom_region}}</router-link>
+                                             </li> 
+                                        </ul> 
+                                    </td>                                                                                                                                       
+                                </tr>          
+                            </tbody>                    
+                        </table>              
+                    </div>
+                    <div class="card-footer">
+                        <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link> 
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
 </template>
 
@@ -22,21 +47,35 @@
     import axios from 'axios'
     export default {
         name: 'Regions',
-        data () {
+        data () {            	
             return {
-                regions: {}              
+                regions: {}                             
             }
-        },
+        },        
         created () {
             axios.get('http://localhost:8000/api/regions')
             .then(response => {
                 console.log(response)
                 this.regions = response.data
                 // this.comp = JSON.parse(response.data)
-            })
+                console.log(this.regions.nom_region)
+                document.getElementById("loadingIndicatorCtn").style.display = 'none';
+            })            
             .catch(Err => {
                 // console.log(err)
-            })            
+            })        
         }
     }
 </script>
+<style scoped>
+    p{
+        font-size: 18px;
+    }    
+    ul{
+        list-style: none;
+    }    
+	#loadingIndicatorCtn {
+	   text-align: center;   
+	   padding-top:2em;
+	}
+</style>

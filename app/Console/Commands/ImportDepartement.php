@@ -6,23 +6,25 @@ use Illuminate\Console\Command;
 use Box\Spout\Reader\ReaderFactory;
 use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
-use App\Models\Departement;
 
-class Import extends Command
+use App\Models\Departement;
+use App\Models\Region;
+
+class ImportDepartement extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:csv {file}';
+    protected $signature = 'import:departement {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
      *
      * @var string
      */
-    protected $description = 'Importer fichier csv arcep';
+    protected $description = 'Importer les départements depuis le fichier csv arcep';
 
     /**
      * Créer une nouvelle instance de commande.
@@ -76,6 +78,15 @@ class Import extends Command
                         'logements' => (int)str_replace(' ','',$row[3]),
                         'etablissements' => (int)str_replace(' ','',$row[4])
                     ];
+
+                    $region = Region::where('code_region', $dataToInsert['code_region'])->first();
+
+                    if(empty($region->id)) {
+                        $this->error('Impossible de trouver la région '.$dataToInsert['code_region'].' pour le département '.$dataToInsert['code_departement']);
+                        exit;
+                    }
+
+                    $dataToInsert['region_id'] = $region->id;
                     // print_r($dataToInsert); 
                     
                     $newDepartement = Departement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
