@@ -152,24 +152,5 @@
     }
 </script>
 <style scoped>
-    p{
-        font-size: 18px;
-    }
-    ul{
-        list-style: none;
-    }
-    #loadingIndicatorCtn {
-	   text-align: center;   
-	   padding-top:2em;
-	}
-    .cellule{       
-        height: 30%;
-    }
-    .premier{
-        text-transform: capitalize;
-        font-weight: bold;
-    }
-    th{
-        text-align: center;
-    }
+    
 </style>

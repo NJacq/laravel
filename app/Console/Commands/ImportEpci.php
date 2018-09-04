@@ -81,11 +81,8 @@ class ImportEpci extends Command
                         'etablissements' => (int)str_replace(' ','',$row[3])                           
                     ];
 
-                    $commune = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();
-                    $dataToInsert['commune_id'] = $commune->id;
-
-                    $departement = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();
-                    $dataToInsert['departement_id'] = $departement->departement_id;
+                    $commune = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();            
+                    $dataToInsert['departement_id'] = $commune->departement_id;
                  
                     $newEpci = Epci::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'siren_epci' => $dataToInsert['siren_epci'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 

@@ -20,12 +20,6 @@
 <script>
     
 </script>
-<style scoped>
-    p{
-        font-size: 18px;
-    }
-    #loadingIndicatorCtn {
-	   text-align: center;   
-	   padding-top:2em;
-	}
+<style>
+   
 </style>

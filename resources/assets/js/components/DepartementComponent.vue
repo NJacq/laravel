@@ -137,30 +137,5 @@
 </script>
 
 <style scoped>
-    p{
-        font-size: 18px;
-    }
-    ul{
-        list-style: none;
-    }
-    #loadingIndicatorCtn {
-	   text-align: center;   
-	   padding-top:2em;
-    }
-    .cellule{       
-        height: 30%;
-        text-align: center;
-       }
-    .premier{
-        text-transform: capitalize;
-        font-weight: bold;
-    }
-    .liste ul{
-        height:400px;
-        width:100%;}
 
-    .liste ul{
-        overflow:hidden; 
-        overflow-y:scroll;
-    }
 </style>
