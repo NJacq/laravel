@@ -7,25 +7,24 @@ use Box\Spout\Reader\ReaderFactory;
 use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
 
-use App\Models\Departement;
-use App\Models\Region;
+use App\Models\Arrondissement;
 use App\Models\Commune;
 
-class ImportDepartement extends Command
+class ImportArrondissement extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:departement {file}';
+    protected $signature = 'import:arrondissement {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
      *
      * @var string
      */
-    protected $description = 'Importer les départements depuis le fichier csv arcep';
+    protected $description = 'Importer les arrondissements depuis le fichier csv arcep';
 
     /**
      * Créer une nouvelle instance de commande.
@@ -73,28 +72,29 @@ class ImportDepartement extends Command
                     // print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau  
 
                     $dataToInsert = [ // Creation d'un tableau avec la même structure que la base de données
-                        'code_departement' => $row[0],
-                        'nom_departement' => $row[1],
+                        'code_arrondissement' => $row[0],
+                        'nom_arrondissement' => $row[1],
                         'code_region' => $row[2],
-                        'logements' => (int)str_replace(' ','',$row[3]),
-                        'etablissements' => (int)str_replace(' ','',$row[4])
+                        'code_departement' => $row[3],
+                        'siren_epci' => (int)str_replace('ZZZZZZZZZ','',$row[4]),
+                        'code_commune' => $row[5],
+                        'logements' => (int)str_replace(' ','',$row[6]),
+                        'etablissements' => (int)str_replace(' ','',$row[7]),
+                        'zones_td' => $row[8],                       
+                        'oi_2018_t1' => $row[9]
                     ];
 
-                    $region = Region::where('code_region', $dataToInsert['code_region'])->first();
                     
+                    $commune = Commune::where('code_commune', $dataToInsert['code_commune'])->first();
 
+                    if(empty($commune->id)) {
+                        $this->error('Impossible de trouver l\'arrondissement '.$dataToInsert['code_commune'].' pour la commune '.$dataToInsert['code_arrondissement']);
+                        exit;
+                    }
 
-                    // if(empty($region->id)) {
-                    //     $this->error('Impossible de trouver la région '.$dataToInsert['code_region'].' pour le département '.$dataToInsert['code_departement']);
-                    //     exit;
-                    // }
-
-                    $dataToInsert['region_id'] = $region->id;
-                    
-                    // print_r($dataToInsert); 
-                    
-                    $newDepartement = Departement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
-                        'code_departement' => $dataToInsert['code_departement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
+                    $dataToInsert['commune_id'] = $commune->id;
+                    $newArrondissement = Arrondissement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
+                        'code_arrondissement' => $dataToInsert['code_arrondissement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
                     ], $dataToInsert);    
                     
                 } 

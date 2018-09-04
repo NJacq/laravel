@@ -6,17 +6,17 @@ use Illuminate\Console\Command;
 use Box\Spout\Reader\ReaderFactory;
 use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
-use App\Models\FtthDepartement;
-use App\Models\Departement;
+use App\Models\FtthEpci;
+use App\Models\Epci;
 
-class ImportFtthDepartement extends Command
+class ImportFtthEpci extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:ftthdepartements {file}';
+    protected $signature = 'import:ftthepci {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
@@ -93,14 +93,14 @@ class ImportFtthDepartement extends Command
                     if($row[1]=='Locaux Raccordables') {
 
                         for($j=2;$j<5;$j++) { // on parcours les 3 dernières colonnes de cette ligne = elles correspondent aux trimestres
-                            $datasForOneDepartement[$j] = [
-                                'code_departement' => $row[0],
-                                'nombre_locaux' => $row[$j],
+                            $datasForOneEpci[$j] = [
+                                'siren_epci' => $row[0],
+                                'locaux_raccordables' => $row[$j],
                                 'trimestre' => $trimestres[$j]['trimestre'],
                                 'annee' => $trimestres[$j]['annee'],
                             ];
                         }
-                        //print_r($datasForOneDepartement); // ici, le tableau data à bien 3 entrées pour 3 trimestres
+                        //print_r($datasForOneEpci); // ici, le tableau data à bien 3 entrées pour 3 trimestres
                         continue; // on passe à la ligne suivante qui correspond aux catégories des trimestres de cette ligne
 
                     }
@@ -109,28 +109,28 @@ class ImportFtthDepartement extends Command
                     if($row[1]=='Catégorie') {
                         // ici on a $data
                         for($j=2;$j<5;$j++) { // on parcours les 3 colonnes de catégorie
-                            $datasForOneDepartement[$j]['categorie'] = $row[$j];
+                            $datasForOneEpci[$j]['categorie'] = $row[$j];
                         }
-                        print_r($datasForOneDepartement);
+                        print_r($datasForOneEpci);
                         
 
                         // on parcours ce tableau data pour insérer 3 lignes = 3 trimestres
-                        foreach($datasForOneDepartement as $lineForThisDepartement) {
-                            //print_r($lineForThisDepartement);
+                        foreach($datasForOneEpci as $lineForThisEpci) {
+                            //print_r($lineForThisEpci);
                             //exit;
-                            $departement = Departement::where('code_departement', $lineForThisDepartement['code_departement'])->first();
-
-                            // if(empty($departement->id)) {
-                            //     $this->error('Impossible de trouver la région '.$lineForThisDepartement['code_departement'].' pour le département '.$lineForThisDepartement['code_departement']);
-                            //     // exit;
-                            // }
+       
+                            $epci = Epci::where('siren_epci', $lineForThisEpci['siren_epci'])->first();
+                            if(empty($epci->id)) {
+                                $this->error('Impossible de trouver l epci '.$lineForThisEpci['siren_epci'].' pour l epci '.$lineForThisEpci['siren_epci']);
+                                // exit;
+                            }
             
-                            $lineForThisDepartement['departement_id'] = $departement->id;
-                            FtthDepartement::updateOrCreate([
-                                'code_departement' => $lineForThisDepartement['code_departement'],
-                                'trimestre' => $lineForThisDepartement['trimestre'],
-                                'annee' => $lineForThisDepartement['annee'],
-                            ],$lineForThisDepartement);
+                            $lineForThisEpci['epci_id'] = $epci->id;
+                            FtthEpci::updateOrCreate([
+                                'siren_epci' => $lineForThisEpci['siren_epci'],
+                                'trimestre' => $lineForThisEpci['trimestre'],
+                                'annee' => $lineForThisEpci['annee'],
+                            ],$lineForThisEpci);
                         }
                     }
   

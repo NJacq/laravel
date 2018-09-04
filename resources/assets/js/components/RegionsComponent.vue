@@ -13,26 +13,18 @@
                                 <i class="fas fa-sync fa-spin"></i>
                             </div>
 	                    </div>
-                        <table class="table table-striped table-sm table-bordered">                 
-                                <thead class="table-info">             
-                                <tr>                                  
-                                    <th></th>
-                                    <th>Régions</th>
-                                </tr>
-                            </thead>                            
-                            <tbody>   
-                                <tr>                             
-                                    <td></td>
-                                    <td>                                     
-                                        <ul>     
-                                            <li v-bind:key="region.nom_region" v-for="region in orderBy(regions, 'nom_region')">
-                                                <router-link class="" v-bind:to="`/region/${region.id}`">{{region.nom_region}}</router-link>
-                                             </li> 
-                                        </ul> 
-                                    </td>                                                                                                                                       
-                                </tr>          
-                            </tbody>                    
-                        </table>              
+                        <div class="row">
+                            <div class="col-xl-6 col-md-6 carte">
+                                Carte
+                            </div>
+                            <div class="col-xl-6 col-md-6 liste">                                                                 
+                                <ul>     
+                                    <li v-bind:key="region.nom_region" v-for="region in orderBy(regions, 'nom_region')">
+                                        <router-link class="" v-bind:to="`/region/${region.id}`">{{region.nom_region}}</router-link>
+                                    </li> 
+                                </ul>                       
+                            </div> 
+                        </div>            
                     </div>
                     <div class="card-footer">
                         <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link> 

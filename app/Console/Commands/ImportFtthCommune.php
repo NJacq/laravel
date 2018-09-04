@@ -6,17 +6,17 @@ use Illuminate\Console\Command;
 use Box\Spout\Reader\ReaderFactory;
 use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
-use App\Models\FtthDepartement;
-use App\Models\Departement;
+use App\Models\FtthCommune;
+use App\Models\Commune;
 
-class ImportFtthDepartement extends Command
+class ImportFtthCommune extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:ftthdepartements {file}';
+    protected $signature = 'import:ftthcommunes {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
@@ -64,7 +64,6 @@ class ImportFtthDepartement extends Command
             $trimestres = [
                 2 => [
                     'trimestre' => 'trimestre 3',
-                    'trimestre' => 'trimestre 3',
                     'annee' => 2017,
                 ],
                 3 => [
@@ -93,14 +92,14 @@ class ImportFtthDepartement extends Command
                     if($row[1]=='Locaux Raccordables') {
 
                         for($j=2;$j<5;$j++) { // on parcours les 3 dernières colonnes de cette ligne = elles correspondent aux trimestres
-                            $datasForOneDepartement[$j] = [
-                                'code_departement' => $row[0],
-                                'nombre_locaux' => $row[$j],
+                            $datasForOneCommune[$j] = [
+                                'code_commune' => $row[0],
+                                'locaux_raccordables' => $row[$j],
                                 'trimestre' => $trimestres[$j]['trimestre'],
                                 'annee' => $trimestres[$j]['annee'],
                             ];
                         }
-                        //print_r($datasForOneDepartement); // ici, le tableau data à bien 3 entrées pour 3 trimestres
+                        //print_r($datasForOneCommune); // ici, le tableau data à bien 3 entrées pour 3 trimestres
                         continue; // on passe à la ligne suivante qui correspond aux catégories des trimestres de cette ligne
 
                     }
@@ -109,32 +108,31 @@ class ImportFtthDepartement extends Command
                     if($row[1]=='Catégorie') {
                         // ici on a $data
                         for($j=2;$j<5;$j++) { // on parcours les 3 colonnes de catégorie
-                            $datasForOneDepartement[$j]['categorie'] = $row[$j];
+                            $datasForOneCommune[$j]['categorie'] = $row[$j];
                         }
-                        print_r($datasForOneDepartement);
+                        print_r($datasForOneCommune);
                         
 
                         // on parcours ce tableau data pour insérer 3 lignes = 3 trimestres
-                        foreach($datasForOneDepartement as $lineForThisDepartement) {
-                            //print_r($lineForThisDepartement);
+                        foreach($datasForOneCommune as $lineForThisCommune) {
+                            //print_r($lineForThisCommune);
                             //exit;
-                            $departement = Departement::where('code_departement', $lineForThisDepartement['code_departement'])->first();
+                            $commune = Commune::where('code_commune', $lineForThisCommune['code_commune'])->first();
 
-                            // if(empty($departement->id)) {
-                            //     $this->error('Impossible de trouver la région '.$lineForThisDepartement['code_departement'].' pour le département '.$lineForThisDepartement['code_departement']);
+                            // if(empty($Commune->id)) {
+                            //     $this->error('Impossible de trouver la région '.$lineForThisCommune['code_Commune'].' pour le département '.$lineForThisCommune['code_Commune']);
                             //     // exit;
                             // }
             
-                            $lineForThisDepartement['departement_id'] = $departement->id;
-                            FtthDepartement::updateOrCreate([
-                                'code_departement' => $lineForThisDepartement['code_departement'],
-                                'trimestre' => $lineForThisDepartement['trimestre'],
-                                'annee' => $lineForThisDepartement['annee'],
-                            ],$lineForThisDepartement);
+                            $lineForThisCommune['commune_id'] = $commune->id;
+                           
+                            FtthCommune::updateOrCreate([
+                                'code_commune' => $lineForThisCommune['code_commune'],
+                                'trimestre' => $lineForThisCommune['trimestre'],
+                                'annee' => $lineForThisCommune['annee'],
+                            ],$lineForThisCommune);
                         }
-                    }
-  
-                    
+                    }                   
                 } 
             }            
         } else {

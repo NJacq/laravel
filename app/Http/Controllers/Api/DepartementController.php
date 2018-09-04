@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Departement;
 use App\Models\Region;
+use App\Models\Commune;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -28,7 +29,7 @@ class DepartementController extends Controller
         ]);
         */ 
         return response()->json(
-            Departement::with('ftthdepartements')->with('region')->findOrFail($id)
+            Departement::with('ftthdepartements')->with('region')->with('communes')->with('epci')->findOrFail($id)
         );
     }
 

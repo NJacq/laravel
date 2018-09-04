@@ -8,24 +8,24 @@ use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
 
 use App\Models\Departement;
-use App\Models\Region;
 use App\Models\Commune;
+use App\Models\Epci;
 
-class ImportDepartement extends Command
+class ImportCommune extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:departement {file}';
+    protected $signature = 'import:commune {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
      *
      * @var string
      */
-    protected $description = 'Importer les départements depuis le fichier csv arcep';
+    protected $description = 'Importer les communes depuis le fichier csv arcep';
 
     /**
      * Créer une nouvelle instance de commande.
@@ -73,28 +73,38 @@ class ImportDepartement extends Command
                     // print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau  
 
                     $dataToInsert = [ // Creation d'un tableau avec la même structure que la base de données
-                        'code_departement' => $row[0],
-                        'nom_departement' => $row[1],
+                        'code_commune' => $row[0],
+                        'nom_commune' => $row[1],
                         'code_region' => $row[2],
-                        'logements' => (int)str_replace(' ','',$row[3]),
-                        'etablissements' => (int)str_replace(' ','',$row[4])
+                        'code_departement' => $row[3],
+                        'siren_epci' => (int)str_replace('ZZZZZZZZZ','',$row[4]),
+                        'logements' => (int)str_replace(' ','',$row[5]),
+                        'etablissements' => (int)str_replace(' ','',$row[6]),
+                        'zones_td' => $row[7],
+                        'engagements' => $row[8],
+                        'hors_engagements' => $row[9],
+                        'commune_rurale' => $row[10],
+                        'commune_montagne' => $row[11],
+                        'oi_2018_t1' => $row[12]
                     ];
 
-                    $region = Region::where('code_region', $dataToInsert['code_region'])->first();
                     
+                    $departement = Departement::where('code_departement', $dataToInsert['code_departement'])->first();
+                    $epci = Epci::where('siren_epci', $dataToInsert['siren_epci'])->first();
 
+                    if(empty($departement->id)) {
+                        $this->error('Impossible de trouver le département '.$dataToInsert['code_departement'].' pour la commune '.$dataToInsert['code_commune']);
+                   
+                    }
+                    if(empty($epci->id)) {
+                        $this->error('Impossible de trouver l\'epci '.$dataToInsert['siren_epci'].' pour la commune '.$dataToInsert['code_commune']);
+                 
+                    }
 
-                    // if(empty($region->id)) {
-                    //     $this->error('Impossible de trouver la région '.$dataToInsert['code_region'].' pour le département '.$dataToInsert['code_departement']);
-                    //     exit;
-                    // }
-
-                    $dataToInsert['region_id'] = $region->id;
-                    
-                    // print_r($dataToInsert); 
-                    
-                    $newDepartement = Departement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
-                        'code_departement' => $dataToInsert['code_departement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
+                    $dataToInsert['departement_id'] = $departement->id;
+                    $dataToInsert['epci_id'] = $epci->id;
+                    $newCommune = Commune::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
+                        'code_commune' => $dataToInsert['code_commune'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
                     ], $dataToInsert);    
                     
                 } 

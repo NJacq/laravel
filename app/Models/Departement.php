@@ -16,6 +16,13 @@ class Departement extends Model
     public function ftthdepartements()
     {
         return $this->hasMany('App\Models\FtthDepartement');
-    }    
-
+    }
+    public function communes()
+    {
+        return $this->hasMany('App\Models\Commune');
+    }
+    public function epci()
+    {
+        return $this->hasMany('App\Models\Epci');
+    }
 }

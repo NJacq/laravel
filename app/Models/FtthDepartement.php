@@ -8,5 +8,10 @@ class FtthDepartement extends Model
 {
     protected $table = 'ftthdepartements';
     protected $guarded = ['id'];
-    
+
+    public function departement()
+{
+    return $this->belongsTo('App\Models\Departement');
 }
+}
+

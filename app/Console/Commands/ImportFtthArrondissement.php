@@ -6,17 +6,17 @@ use Illuminate\Console\Command;
 use Box\Spout\Reader\ReaderFactory;
 use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
-use App\Models\FtthDepartement;
-use App\Models\Departement;
+use App\Models\FtthArrondissement;
+use App\Models\Arrondissement;
 
-class ImportFtthDepartement extends Command
+class ImportFtthArrondissement extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:ftthdepartements {file}';
+    protected $signature = 'import:fttharrondissements {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
@@ -93,14 +93,14 @@ class ImportFtthDepartement extends Command
                     if($row[1]=='Locaux Raccordables') {
 
                         for($j=2;$j<5;$j++) { // on parcours les 3 dernières colonnes de cette ligne = elles correspondent aux trimestres
-                            $datasForOneDepartement[$j] = [
-                                'code_departement' => $row[0],
-                                'nombre_locaux' => $row[$j],
+                            $datasForOneArrondissement[$j] = [
+                                'code_arrondissement' => $row[0],
+                                'locaux_raccordables' => $row[$j],
                                 'trimestre' => $trimestres[$j]['trimestre'],
                                 'annee' => $trimestres[$j]['annee'],
                             ];
                         }
-                        //print_r($datasForOneDepartement); // ici, le tableau data à bien 3 entrées pour 3 trimestres
+                        //print_r($datasForOneArrondissement); // ici, le tableau data à bien 3 entrées pour 3 trimestres
                         continue; // on passe à la ligne suivante qui correspond aux catégories des trimestres de cette ligne
 
                     }
@@ -109,28 +109,28 @@ class ImportFtthDepartement extends Command
                     if($row[1]=='Catégorie') {
                         // ici on a $data
                         for($j=2;$j<5;$j++) { // on parcours les 3 colonnes de catégorie
-                            $datasForOneDepartement[$j]['categorie'] = $row[$j];
+                            $datasForOneArrondissement[$j]['categorie'] = $row[$j];
                         }
-                        print_r($datasForOneDepartement);
+                        print_r($datasForOneArrondissement);
                         
 
                         // on parcours ce tableau data pour insérer 3 lignes = 3 trimestres
-                        foreach($datasForOneDepartement as $lineForThisDepartement) {
-                            //print_r($lineForThisDepartement);
+                        foreach($datasForOneArrondissement as $lineForThisArrondissement) {
+                            //print_r($lineForThisArrondissement);
                             //exit;
-                            $departement = Departement::where('code_departement', $lineForThisDepartement['code_departement'])->first();
+                            $arrondissement = Arrondissement::where('code_arrondissement', $lineForThisArrondissement['code_arrondissement'])->first();
 
-                            // if(empty($departement->id)) {
-                            //     $this->error('Impossible de trouver la région '.$lineForThisDepartement['code_departement'].' pour le département '.$lineForThisDepartement['code_departement']);
-                            //     // exit;
-                            // }
+                            if(empty($arrondissement->id)) {
+                                $this->error('Impossible de trouver l\'arrondissement '.$lineForThisArrondissement['code_arrondissement'].' pour la commune '.$lineForThisArrondissement['code_arrondissement']);
+                                // exit;
+                            }
             
-                            $lineForThisDepartement['departement_id'] = $departement->id;
-                            FtthDepartement::updateOrCreate([
-                                'code_departement' => $lineForThisDepartement['code_departement'],
-                                'trimestre' => $lineForThisDepartement['trimestre'],
-                                'annee' => $lineForThisDepartement['annee'],
-                            ],$lineForThisDepartement);
+                            $lineForThisArrondissement['arrondissement_id'] = $arrondissement->id;
+                            FtthArrondissement::updateOrCreate([
+                                'code_arrondissement' => $lineForThisArrondissement['code_arrondissement'],
+                                'trimestre' => $lineForThisArrondissement['trimestre'],
+                                'annee' => $lineForThisArrondissement['annee'],
+                            ],$lineForThisArrondissement);
                         }
                     }
   

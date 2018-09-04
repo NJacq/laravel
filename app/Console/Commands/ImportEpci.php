@@ -8,24 +8,24 @@ use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
 
 use App\Models\Departement;
-use App\Models\Region;
 use App\Models\Commune;
+use App\Models\Epci;
 
-class ImportDepartement extends Command
+class ImportEpci extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:departement {file}';
+    protected $signature = 'import:epci {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
      *
      * @var string
      */
-    protected $description = 'Importer les départements depuis le fichier csv arcep';
+    protected $description = 'Importer les communes depuis le fichier csv arcep';
 
     /**
      * Créer une nouvelle instance de commande.
@@ -72,29 +72,23 @@ class ImportDepartement extends Command
                     }
                     // print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau  
 
+                   
+
                     $dataToInsert = [ // Creation d'un tableau avec la même structure que la base de données
-                        'code_departement' => $row[0],
-                        'nom_departement' => $row[1],
-                        'code_region' => $row[2],
-                        'logements' => (int)str_replace(' ','',$row[3]),
-                        'etablissements' => (int)str_replace(' ','',$row[4])
+                        'siren_epci' => $row[0],
+                        'nom_epci' => $row[1],                        
+                        'logements' => (int)str_replace(' ','',$row[2]),
+                        'etablissements' => (int)str_replace(' ','',$row[3])                           
                     ];
 
-                    $region = Region::where('code_region', $dataToInsert['code_region'])->first();
-                    
+                    $commune = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();
+                    $dataToInsert['commune_id'] = $commune->id;
 
-
-                    // if(empty($region->id)) {
-                    //     $this->error('Impossible de trouver la région '.$dataToInsert['code_region'].' pour le département '.$dataToInsert['code_departement']);
-                    //     exit;
-                    // }
-
-                    $dataToInsert['region_id'] = $region->id;
-                    
-                    // print_r($dataToInsert); 
-                    
-                    $newDepartement = Departement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
-                        'code_departement' => $dataToInsert['code_departement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
+                    $departement = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();
+                    $dataToInsert['departement_id'] = $departement->departement_id;
+                 
+                    $newEpci = Epci::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
+                        'siren_epci' => $dataToInsert['siren_epci'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
                     ], $dataToInsert);    
                     
                 } 

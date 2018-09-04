@@ -24,13 +24,6 @@
     p{
         font-size: 18px;
     }
-    .btn{
-        display: flex;
-        justify-content: center;      
-    }
-    .btn:not(:disabled):not(.disabled){
-        cursor: default;
-    }
     #loadingIndicatorCtn {
 	   text-align: center;   
 	   padding-top:2em;
