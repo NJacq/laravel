@@ -12,7 +12,7 @@
                             </div>
 	                    </div>
                         <ul>
-                            <li v-bind:key="departement.nom_departement" v-for="departement in departements">
+                            <li v-bind:key="departement.id" v-for="departement in departements">
                                 <router-link class="" v-bind:to="`/departement/${departement.id}`">{{departement.nom_departement}}</router-link> 
                             </li>
                         </ul>

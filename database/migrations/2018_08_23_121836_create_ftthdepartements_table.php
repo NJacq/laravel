@@ -15,11 +15,11 @@ class CreateFtthdepartementsTable extends Migration
     {
         Schema::create('ftthdepartements', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code_departement', 255)->nullable(); // Création d'un champs texte de 255 caractères
+            $table->string('code_departement', 11)->nullable(); 
             $table->integer('nombre_locaux')->nullable();
-            $table->string('categorie', 255)->nullable();  
-            $table->string('trimestre', 255)->nullable();  
-            $table->string('annee', 255)->nullable();  
+            $table->integer('categorie')->nullable();  
+            $table->integer('trimestre')->nullable();  
+            $table->integer('annee')->nullable();  
             $table->timestamps();
         });
     }

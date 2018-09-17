@@ -15,15 +15,16 @@ class CreateFtthregionsTable extends Migration
     {
         Schema::create('ftthregions', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('region_id')->nullable();
             $table->string('code_region', 255)->nullable(); // Création d'un champs texte de 255 caractères
             $table->integer('nombre_locaux')->nullable();
-            $table->string('categorie', 255)->nullable();  
+            $table->integer('categorie')->nullable();  
             $table->string('unoperateur', 255)->nullable();  
             $table->string('deuxoperateurs', 255)->nullable();  
             $table->string('troisoperateurs', 255)->nullable();  
             $table->string('quatreoperateurs', 255)->nullable();  
-            $table->string('trimestre', 255)->nullable();  
-            $table->string('annee', 255)->nullable();  
+            $table->integer('trimestre')->nullable();  
+            $table->integer('annee')->nullable();  
             $table->timestamps();
         });
     }

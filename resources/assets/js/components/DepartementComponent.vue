@@ -2,92 +2,79 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card card-default">
-                    <div class="card-header">                        
-                        <p class="title">Stats arcep du département : {{departement.nom_departement}}</p>
+                <div class="card text-center" v-show="isLoading">
+                    <div class="card-body p-5">
+                        <i class="fas fa-3x fa-sync fa-spin"></i>
                     </div>
-
-                    <div class="card-body">
-                        <div id="loadingIndicatorCtn">
-	                        <div class="fa-3x loadingIndicator">
-                                <i class="fas fa-sync fa-spin"></i>
-                            </div>
-	                    </div>                    
-
-                        <table class="table table-striped table-sm table-bordered">                 
-                            <thead class="table-primary">          
-                                <tr>                                              
-                                    <th class="cellule">Logements</th>
-                                    <th class="cellule">Établissements</th>                                          
-                                   
-                                </tr>
-                            </thead>
-                            <tbody>   
-                                <tr> 
-                                    <td class="cellule">{{departement.logements}}</td>
-                                    <td class="cellule">{{departement.etablissements}}</td>                                                                                       
-                                </tr>          
-                            </tbody>
-                        </table>                   
-                        <table class="table table-striped table-sm table-bordered">                                             
+                </div>
+                <div class="card card-default" v-show="!isLoading">
+                    <div class="card-header">
+                        <h5>
+                            <small class="text-muted">Département</small><br>
+                            <i class="fas fa-map-marker"></i> {{departement.nom_departement}}
+                        </h5>           
+                    </div>
+                    <div class="card-bodyb">
+                        <p>Dans le département {{departement.nom_departement}}, il y a <strong>{{departement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                        soit un total de <strong>{{departement.logements + departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></p>
+                        
+                        Pourcentage de locaux raccordables (sur {{departement.logements + departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux au total)
+                        <table class="table table-striped table-sm table-bordered" v-if="departement.ftthdepartements>[]">                                             
                             <thead class="table-primary">                                      
                                 <tr>
-                                    <th></th>                                                                              
-                                    <th class="cellule">Locaux raccordables</th>
-                                    <th class="cellule">Catégorie</th>                 
+                                    <th>Période</th>                                                                              
+                                    <th>Locaux raccordables</th>
+                                    <th>Pourcentage</th>                 
                                 </tr>
                             </thead>
                             <tbody>   
-                                <tr>   
-                                    <td class="cellule premier">     
-                                        <ul>
-                                            <li v-bind:key="ftthdepartement.trimestre" v-for="ftthdepartement in ftthdepartements">
-                                                {{ftthdepartement.trimestre}} {{ftthdepartement.annee}} 
-                                            </li>
-                                        </ul> 
+                                <tr v-bind:key="ftthdepartement.id" v-for="ftthdepartement in orderBy(departement.ftthdepartements, 'annee', 'trimestre', -1)">   
+                                    <td>     
+                                        {{ftthdepartement.trimestre}}<sup>{{ftthdepartement.trimestre | pluralize('er','ème','ème','ème')}}</sup> trimestre {{ftthdepartement.annee}} 
                                     </td> 
-                                     <td class="cellule">   
-                                        <ul>
-                                            <li v-bind:key="ftthdepartement.trimestre" v-for="ftthdepartement in ftthdepartements">
-                                                {{ftthdepartement.nombre_locaux}}
-                                            </li>
-                                        </ul> 
+                                    <td>   
+                                        {{ftthdepartement.nombre_locaux | currency('', 0, { thousandsSeparator: ' ' })}}
                                     </td> 
-                                     <td class="cellule">     
-                                        <ul>
-                                            <li v-bind:key="ftthdepartement.trimestre" v-for="ftthdepartement in ftthdepartements">
-                                                {{ftthdepartement.categorie}}
-                                            </li>
-                                        </ul> 
+                                    <td>     
+                                        {{ftthdepartement.pourcentage}}
                                     </td>
                                 </tr>          
                             </tbody>
-                        </table> 
-
-                        <div class="row">
-                            <div class="col-xl-4 col-md-4 carte">
+                        </table>
+                        <p v-else>Données indisponibles</p>
+                        <div class="row" v-if="departement.epci>[]">
+                            <div class="col-xl-4 col-md-4 carte">                                
                             </div>                            
-                            <div class="col-xl-4 col-md-4 liste">Liste des epci
-                                <ul>
-                                    <li v-bind:key="epci" v-for="epci in orderBy(epcis, 'nom_epci')">
-                                        <router-link class="" v-bind:to="`/epci/${epci.id}`">{{epci.nom_epci}}</router-link>
-                                    </li>
-                                </ul> 
+                            <div class="col-xl-4 col-md-4 liste">                                
+                                <v-select label="nom_epci" @input='onSelectEpci' :options="departement.epci" placeholder="EPCI">
+                                    <span slot="no-options">Aucun résultat</span>
+                                </v-select>
                             </div>
-                            <div class="col-xl-4 col-md-4 liste">Liste des communes
-                                <ul>
-                                    <li v-bind:key="commune" v-for="commune in communes">
-                                        <router-link class="" v-bind:to="`/commune/${commune.id}`">{{commune.nom_commune}}</router-link>
-                                    </li>
-                                </ul> 
-                            </div>
+             
+                            <div class="col-xl-4 col-md-4 liste">
+                                <v-select label="nom_commune" @input='onSelectCommune' :options="departement.communes" placeholder="Communes">
+                                    <span slot="no-options">Aucun résultat</span>
+                                </v-select>
+                            </div> 
+                        </div>                     
+                        <div class="row" v-else>
+                            <div class="col-xl-6 col-md-6 carte">                                
+                            </div>                  
+                            <div class="col-xl-6 col-md-6 liste">
+                                <v-select label="nom_commune" @input='onSelectCommune' :options="departement.communes" placeholder="Communes">
+                                    <span slot="no-options">Aucun résultat</span>
+                                </v-select>
+                            </div>            
                         </div>
-
                     </div>
-                    <router-link class="" v-bind:to="`/departement/${departement.id}/chart`">Voir le graphique</router-link>
+                    <!-- <router-link class="" v-bind:to="`/departement/${departement.id}/chart`">Voir le graphique</router-link> -->
                     <div class="card-footer">
+                        <router-link v-bind:to="`/region/${departement.region_id}`">
+                            <button type="button" class="btn btn-primary" v-if="departement.region">
+                                Retour à la région {{ departement.region.nom_region }}
+                            </button>
+                        </router-link> 
                         <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link> 
-                        <router-link class=""  v-bind:to="`/region/${region.id}`"><button type="button" class="btn btn-primary">Retour à la région {{region.nom_region}}</button></router-link> 
                     </div>
                 </div>
             </div>
@@ -96,44 +83,38 @@
 </template>
   
 <script>
-    import axios from 'axios'
-
-
-    export default {
-      
+    import axios from 'axios'           
+        
+    export default {        
+        methods:{
+            onSelectEpci(epci) {
+                //console.log(epci.id);
+                this.$router.push({ path: '/epci/' + epci.id })
+            },
+            onSelectCommune(commune) {
+                //console.log(epci.id);
+                this.$router.push({ path: '/commune/' + commune.id })
+            },
+        },
         name: 'Departement',
         data () {
             return {
-                departement: {},
-                ftthdepartements: {},
-                region: {},
-                communes: {},
-                epci: {}
+                departement: {},            
             }
-        },
+        },        
         created () {
+            this.isLoading = true;
             this.id = this.$route.params.id
-            axios.get('http://localhost:8000/api/departements/'+ this.id)
+            axios.get('api/departements/'+ this.id)
             .then(response => {
-                // console.log(response)
                 this.departement = response.data
-                console.log(response.data)
-                this.ftthdepartements = response.data.ftthdepartements
-                // console.log(this.ftthdepartements)
-                this.region = response.data.region
-                this.communes = response.data.communes
-                this.epcis = response.data.epci
-                console.log(this.epcis)
-                document.getElementById("loadingIndicatorCtn").style.display = 'none';
-                
+                this.isLoading = false;                
             })
             .catch(Err => {
                 // console.log(err)
-            })         
-        },
-    }
-    
-   
+            })             
+        }
+    }       
 </script>
 
 <style scoped>

@@ -2,19 +2,22 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card card-default">
-                    <div class="card-header">                        
-                        <p class="title">Stats arcep de l'arrondissement : {{arrondissement.nom_arrondissement}}</p>
+                <div class="card text-center" v-show="isLoading">
+                    <div class="card-body p-5">
+                        <i class="fas fa-3x fa-sync fa-spin"></i>
                     </div>
-
+                </div>
+                <div class="card card-default" v-show="!isLoading">
+                    <div class="card-header">                   
+                        <h5>
+                            <i class="fas fa-map-marker"></i> {{arrondissement.nom_arrondissement}} <small class="text-muted">arrondissement</small>
+                        </h5>
+                    </div>
                     <div class="card-body">
-                        <div id="loadingIndicatorCtn">
-	                        <div class="fa-3x loadingIndicator">
-                                <i class="fas fa-sync fa-spin"></i>
-                            </div>
-	                    </div>                    
-                
-                        <table class="table table-striped table-sm table-bordered">                 
+                        <p>A {{arrondissement.nom_arrondissement}}, on dénombre <strong>{{arrondissement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                        soit un total de <strong>{{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></p>
+                                                        
+                        <!-- <table class="table table-striped table-sm table-bordered" v-if="arrondissement.logements>0">                 
                             <thead class="table-primary">          
                                 <tr>                                              
                                     <th>Logements</th>
@@ -28,44 +31,31 @@
                                     <td>{{arrondissement.etablissements}}</td>                                                                                       
                                 </tr>          
                             </tbody>
-                        </table>                   
-                        <table class="table table-striped table-sm table-bordered">                                             
+                        </table>                    -->
+                        Pourcentage de locaux raccordables (sur {{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux au total)
+                        <table class="table table-striped table-sm table-bordered" v-if="arrondissement.fttharrondissements>[]">                                             
                             <thead class="table-primary">                                      
                                 <tr>
                                     <th></th>                                                                              
-                                    <th class="cellule">Locaux raccordables</th>
-                                    <th class="cellule">Catégorie</th>                 
+                                    <th>Locaux raccordables</th>
+                                    <th>Pourcentage</th>                 
                                 </tr>
                             </thead>
                             <tbody>   
-                                <tr>   
-                                    <td class="cellule premier">     
-                                        <ul>
-                                            <li v-bind:key="fttharrondissement.trimestre" v-for="fttharrondissement in fttharrondissements">
-                                                {{fttharrondissement.trimestre}} {{fttharrondissement.annee}} 
-                                            </li>
-                                        </ul> 
+                                <tr v-bind:key="fttharrondissement.id" v-for="fttharrondissement in orderBy(arrondissement.fttharrondissements, 'annee', 'trimestre', -1)">   
+                                    <td>     
+                                        {{fttharrondissement.trimestre}} {{fttharrondissement.annee}}                                      
                                     </td> 
-                                     <td class="cellule">     
-                                        <ul>
-                                            <li v-bind:key="fttharrondissement.trimestre" v-for="fttharrondissement in fttharrondissements">
-                                                {{fttharrondissement.locaux_raccordables}}
-                                            </li>
-                                        </ul> 
+                                    <td>     
+                                        {{fttharrondissement.locaux_raccordables | currency('', 0, { thousandsSeparator: ' ' })}}
                                     </td> 
-                                     <td class="cellule">     
-                                        <ul>
-                                            <li v-bind:key="fttharrondissement.trimestre" v-for="fttharrondissement in fttharrondissements">
-                                                {{fttharrondissement.categorie}}
-                                            </li>
-                                        </ul> 
+                                     <td>            
+                                        {{fttharrondissement.pourcentage}}
                                     </td>
                                 </tr>          
                             </tbody>
-                        </table>
-
-                       
-                                                
+                        </table>                      
+                        <table v-else>Données indisponibles</table>
                     </div>
                     <router-link class="" v-bind:to="`/arrondissement/${arrondissement.id}/chart`">Voir le graphique</router-link>
                      <div class="card-footer">                        
@@ -94,15 +84,12 @@
             }
         },
         created () {
+            this.isLoading = true;
             this.id = this.$route.params.id
             axios.get('http://localhost:8000/api/arrondissements/'+ this.id)
             .then(response => {                
                 this.arrondissement = response.data
-                console.log(this.arrondissement)
-                this.commune =response.data.commune
-                console.log(this.commune)
-                this.fttharrondissements = response.data.fttharrondissements
-                document.getElementById("loadingIndicatorCtn").style.display = 'none';
+                this.isLoading = false;
                 
             })
             .catch(Err => {

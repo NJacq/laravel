@@ -22,26 +22,22 @@ class DepartementController extends Controller
     
     public function show($id) // Affiche le detail d'un département
     {
-        /*
-        return view('departement.show', [
-            'departement' => Departement::findOrFail($id),
-            'title' => 'Détail du département :'
-        ]);
-        */ 
+        $departement = Departement::with('ftthdepartements')->with('region')->with('communes')->with('epci')->findOrFail($id);
+        // print_r($departement->toArray());
+        foreach($departement->ftthdepartements as $pourcent) {
+            echo $pourcent->mavariable;
+        }
+        //exit;
         return response()->json(
-            Departement::with('ftthdepartements')->with('region')->with('communes')->with('epci')->findOrFail($id)
+            $departement    
         );
     }
 
     public function list() // Liste tous les départements
     {
-        /*
-        return view('departement.list',[
-            'departements' => Departement::all()         
-        ]);
-        */
-        return response()->json(
-            Departement::all()
+            return response()->json(
+            // Departement::all()
+            $departement = Departement::all()->sortBy('nom_departement') 
         );
     }
 

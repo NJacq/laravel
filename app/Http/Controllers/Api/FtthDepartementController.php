@@ -24,7 +24,7 @@ class FtthDepartementController extends Controller
         return response()->json(
             FtthDepartement::findOrFail($id)
         );
-    }
+    }   
 
     public function list() // Liste tous les départements
     {

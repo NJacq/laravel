@@ -63,16 +63,15 @@ class ImportFtthArrondissement extends Command
             
             $trimestres = [
                 2 => [
-                    'trimestre' => 'trimestre 3',
-                    'trimestre' => 'trimestre 3',
+                    'trimestre' => '3è trimestre',
                     'annee' => 2017,
                 ],
                 3 => [
-                    'trimestre' => 'trimestre 4',
+                    'trimestre' => '4è trimestre',
                     'annee' => 2017,
                 ],
                 4 => [
-                    'trimestre' => 'trimestre 1',
+                    'trimestre' => '1er trimestre',
                     'annee' => 2018,
                 ],
             ];

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 class RegionController extends Controller
 {     
-      /**
+    /**
      * 
      *
      * @param  int  $id Identifiant de la ligne dans la table regions
@@ -20,15 +20,28 @@ class RegionController extends Controller
     
     public function show($id) // Affiche le detail d'une région
     {
+        $region = Region::with('ftthregions')->with('departements')->sortBy('nom_departement')->findOrFail($id);
+        // print_r($region->toArray());
+        foreach($region->ftthregions as $pourcent) {
+            echo $pourcent->mavariable;
+        }
+        // exit;
         return response()->json(
-            Region::with('ftthregions')->with('departements')->findOrFail($id)
+            $region
         );
     }
 
     public function list() // Liste toutes les régions
     {
-            return response()->json(
-            Region::all()
+        $region = Region::all();        
+        return response()->json(
+            $region
         );
+        
+    }
+    public function geojson() // Récupère le geojson du contour des régions
+    {
+        return response(Storage::disk('public')->get('regions.geojson'))
+                ->header('Content-Type', 'text/plain');
     }
 }

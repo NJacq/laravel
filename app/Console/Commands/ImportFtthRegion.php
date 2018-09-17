@@ -63,15 +63,15 @@ class ImportFtthRegion extends Command
             
             $trimestres = [
                 2 => [
-                    'trimestre' => 'trimestre 3',
+                    'trimestre' => '3',
                     'annee' => 2017,
                 ],
                 3 => [
-                    'trimestre' => 'trimestre 4',
+                    'trimestre' => '4',
                     'annee' => 2017,
                 ],
                 4 => [
-                    'trimestre' => 'trimestre 1',
+                    'trimestre' => '1',
                     'annee' => 2018,
                 ],
             ];
@@ -152,8 +152,7 @@ class ImportFtthRegion extends Command
                                 // exit;
                             }
             
-                            $lineForThisRegion['region_id'] = $region->id;
-                                
+                            $lineForThisRegion['region_id'] = $region->id;                                
                             FtthRegion::updateOrCreate([
                                 'code_region' => $lineForThisRegion['code_region'],
                                 'trimestre' => $lineForThisRegion['trimestre'],
