@@ -21,6 +21,10 @@ class Commune extends Model
     {
         return $this->hasMany('App\Models\Arrondissement');
     }
+    public function statcommune()
+    {
+        return $this->hasMany('App\Models\StatCommune');
+    }
     public function epci()
     {
         return $this->belongsTo('App\Models\Epci');

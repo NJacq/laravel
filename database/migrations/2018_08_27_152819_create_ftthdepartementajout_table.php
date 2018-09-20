@@ -15,6 +15,7 @@ class CreateFtthdepartementajoutTable extends Migration
     {
         Schema::table('ftthdepartements', function (Blueprint $table) {
             $table->integer('departement_id')->nullable()->after('id');
+            $table->integer('region_id')->nullable()->after('departement_id');
         });
     }
 

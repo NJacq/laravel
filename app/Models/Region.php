@@ -22,8 +22,13 @@ class Region extends Model
     {
         return $this->hasMany('App\Models\FtthRegion');
     }    
-    public function statregion()
+    public function statregions()
     {
         return $this->hasMany('App\Models\StatRegion');
     }    
+    public function statdepartements()
+    {
+        return $this->hasMany('App\Models\StatDepartement');
+    }    
+
 }

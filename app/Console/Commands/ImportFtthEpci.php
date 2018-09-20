@@ -63,15 +63,15 @@ class ImportFtthEpci extends Command
             
             $trimestres = [
                 2 => [
-                    'trimestre' => '3è trimestre',
+                    'trimestre' => '3',
                     'annee' => 2017,
                 ],
                 3 => [
-                    'trimestre' => '4è trimestre',
+                    'trimestre' => '4',
                     'annee' => 2017,
                 ],
                 4 => [
-                    'trimestre' => '1er trimestre',
+                    'trimestre' => '1',
                     'annee' => 2018,
                 ],
             ];
@@ -120,11 +120,13 @@ class ImportFtthEpci extends Command
        
                             $epci = Epci::where('siren_epci', $lineForThisEpci['siren_epci'])->first();
                             if(empty($epci->id)) {
-                                $this->error('Impossible de trouver l epci '.$lineForThisEpci['siren_epci'].' pour l epci '.$lineForThisEpci['siren_epci']);
+                                $this->error('Impossible de trouver l epci '.$lineForThisEpci['siren_epci'].' pour l epci '.$lineForThisEpci['nom_epci']);
                                 // exit;
                             }
             
-                            $lineForThisEpci['epci_id'] = $epci->id;
+                            $lineForThisEpci['epci_id'] = $epci->id; // ajout de la colonne epci_id en plus des colonnes deja présentes dans le csv
+                            $lineForThisEpci['departement_id'] = $epci->departement_id;
+                        
                             FtthEpci::updateOrCreate([
                                 'siren_epci' => $lineForThisEpci['siren_epci'],
                                 'trimestre' => $lineForThisEpci['trimestre'],

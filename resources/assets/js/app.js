@@ -11,6 +11,8 @@ window.Vue = require('vue');
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Vue2Filters from 'vue2-filters'
+import vSelect from 'vue-select'
 
 // importer les pages
 import Home from './components/HomeComponent'
@@ -22,10 +24,13 @@ import Commune from './components/CommuneComponent'
 import Epci from './components/EpciComponent'
 import Arrondissement from './components/ArrondissementComponent'
 import ChartDep from './components/ChartDepComponent'
-import Vue2Filters from 'vue2-filters'
+
 
 Vue.use(Vue2Filters)
 Vue.use(VueRouter)
+
+Vue.component('v-select', vSelect)
+
 
 Vue.component('regions', require('./components/RegionsComponent.vue'));
 Vue.component('region', require('./components/RegionComponent.vue'));
@@ -60,5 +65,7 @@ const routes = [
 
 new Vue({
     el: '#app',
-    router: router,
-})
+    router: router,    
+});
+    
+    

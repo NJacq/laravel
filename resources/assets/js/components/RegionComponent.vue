@@ -18,9 +18,13 @@
                         </div>
                     </div>      
                     <div class="card-body">              
-                        <p class="text-justify">En région {{region.nom_region}}, il y a <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                        <p class="text-justify" v-if="region.etablissements > 1">En région {{region.nom_region}}, il y a <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
                         soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></p>
-                       
+                        <p class="text-justify" v-else-if="region.etablissements > 0">En région {{region.nom_region}}, il y a <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
+                        soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></p>
+                        <p class="text-justify" v-else>En région {{region.nom_region}}, il y a <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong> aucun établissement</strong>
+                        soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></p>
+
                         <table class="table table-striped table-sm table-bordered" v-if="region.ftthregions>[]">                                                                         
                             <thead class="table-secondary">                                      
                                 <tr>
@@ -88,25 +92,32 @@
                                 </l-map>
                             </div>
                             <div class="col-xl-6 col-md-6">                      
-                                <v-select label="nom_departement" orderBy="nom_departement" items="" @input='onSelectDepartements' :options="region.departements" placeholder="Départements">
+                                <v-select label="nom_departement" items="" @input='onSelectDepartements' :options="region.departements" placeholder="Départements">
                                     <span slot="no-options">Aucun résultat</span>
                                 </v-select>                                
                             </div>
                         </div>
 
-                         <div>
-                            <p>Départements ayant la plus forte progression sur les 3 derniers trimestres</p>
-
-
-                            <p>Départements ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
-                            <ul>     
-                                <!-- <li v-bind:key="ftthtopregio.id" v-for="ftthtopregio in ftthtopregion">
-                               
-                                    <strong>{{ftthtopregio.region.nom_region}}</strong> avec {{ftthtopregio.pourcentage}} de locaux raccordables
-                                </li>  -->
+                        <div v-show="statdepartements.length>0">
+                            <p v-if="statdepartements.length>1">Départements ayant la plus forte progression sur les 3 derniers trimestres</p>
+                            <p v-else>Département ayant la plus forte progression sur les 3 derniers trimestres</p>
+                            
+                            <ul>      
+                                <li v-bind:key="statdepartement.id" v-for="statdepartement in statdepartements" v-if="statdepartement.pourcentage_progression>0">
+                                <strong>{{statdepartement.departement.nom_departement}}</strong> avec une progression de <strong>{{statdepartement.pourcentage_progression}}%</strong> des locaux raccordables.
+                               </li> 
                             </ul> 
+                        </div>
+                        <div v-show="ftthtopdepartements.length>0">
+                            <p v-if="ftthtopdepartements.length>1">Départements ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                            <p v-else>Département ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                            <ul>     
+                                <li v-bind:key="ftthtopdepartement.id" v-for="ftthtopdepartement in ftthtopdepartements">                               
+                                    <strong>{{ftthtopdepartement.departement.nom_departement}}</strong> avec {{ftthtopdepartement.pourcentage}} de locaux raccordables
+                                </li> 
+                            </ul> 
+                        </div>  
 
-                        </div>                                                                
                     </div>
                     <div class="card-footer">               
                         <router-link class="col-xl-6" v-bind:to="`/regions`"><button type="button" class="btn btn-primary">Retour à la liste des régions</button></router-link>  
@@ -155,7 +166,10 @@
         },
         data () {            
             return {                                 
-                region: [],                               
+                region: [], 
+                statdepartements: [],
+                ftthtopdepartements: [],
+                li:{},                              
                 show: true,
                 zoom:5,
                 center:[46.413220, 1.419482],
@@ -188,10 +202,24 @@
             axios.get('api/regions/'+ this.id)   
             .then(response => {
                 this.region = response.data
-                console.log(this.region)                      
+                // console.log(this.region)                      
           
             }),
-      
+
+            axios.get('api/stattopdepartements/region/' + this.id)   
+            .then(response => {
+                this.statdepartements = response.data
+                // console.log(this.statdepartements)                      
+          
+            }),
+
+            axios.get('api/ftthtopdepartements/region/' + this.id)
+               .then(response => {
+                this.ftthtopdepartements = response.data
+                console.log(this.ftthtopdepartements)                      
+          
+            }),
+
             axios.get('api/departements/geojson')
             .then(response => {                
                 this.geojson = response.data;

@@ -14,12 +14,16 @@ class FtthCommune extends Model
     {
         return $this->belongsTo('App\Models\Commune');
     }
+    public function epci()
+    {
+        return $this->belongsTo('App\Models\Epci');
+    }
 
     //getNOMPERSOAttribute
     public function getPourcentageAttribute()
     {
         $valeurs = [
-            0 => 'aucune ligne',
+            0 => '',
             5 => '0% à 10%',
             10 => '10% à 25%',
             25 => '25% à 50%',
@@ -29,7 +33,7 @@ class FtthCommune extends Model
         if(!empty($valeurs[$this->categorie])) {
             return $valeurs[$this->categorie];
         } else {
-            return 'N/A (catégorie : '.$this->categorie.')';
+            return 'N/A';
         }
     }
 

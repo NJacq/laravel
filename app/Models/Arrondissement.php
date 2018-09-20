@@ -17,4 +17,8 @@ class Arrondissement extends Model
     {
         return $this->hasMany('App\Models\FtthArrondissement');
     }
+    public function statarrondissements()
+    {
+        return $this->hasMany('App\Models\StatArrondissement');
+    }
 }

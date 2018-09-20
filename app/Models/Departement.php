@@ -25,4 +25,20 @@ class Departement extends Model
     {
         return $this->hasMany('App\Models\Epci');
     }
+    public function statdepartements()
+    {
+        return $this->hasMany('App\Models\StatDepartement');
+    }
+    public function statepci()
+    {
+        return $this->hasMany('App\Models\StatEpci');
+    }
+    public function ftthepci()
+    {
+        return $this->hasMany('App\Models\FtthEpci');
+    }
+    public function statcommunes()
+    {
+        return $this->hasMany('App\Models\StatCommune');
+    }
 }

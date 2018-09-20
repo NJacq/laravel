@@ -63,15 +63,15 @@ class ImportFtthArrondissement extends Command
             
             $trimestres = [
                 2 => [
-                    'trimestre' => '3è trimestre',
+                    'trimestre' => '3',
                     'annee' => 2017,
                 ],
                 3 => [
-                    'trimestre' => '4è trimestre',
+                    'trimestre' => '4',
                     'annee' => 2017,
                 ],
                 4 => [
-                    'trimestre' => '1er trimestre',
+                    'trimestre' => '1',
                     'annee' => 2018,
                 ],
             ];
@@ -125,6 +125,7 @@ class ImportFtthArrondissement extends Command
                             }
             
                             $lineForThisArrondissement['arrondissement_id'] = $arrondissement->id;
+                            $lineForThisArrondissement['commune_id'] = $arrondissement->commune_id;
                             FtthArrondissement::updateOrCreate([
                                 'code_arrondissement' => $lineForThisArrondissement['code_arrondissement'],
                                 'trimestre' => $lineForThisArrondissement['trimestre'],

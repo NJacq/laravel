@@ -15,12 +15,13 @@ class CreateFttharrondissementsTable extends Migration
     {
         Schema::create('fttharrondissements', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('arrondissement_id', 255)->nullable();
+            $table->integer('arrondissement_id')->nullable();
+            $table->integer('commune_id')->nullable();
             $table->string('code_arrondissement', 255)->nullable(); // Création d'un champs texte de 255 caractères
             $table->integer('locaux_raccordables')->nullable();
-            $table->string('categorie', 255)->nullable();  
-            $table->string('trimestre', 255)->nullable();  
-            $table->string('annee', 255)->nullable();  
+            $table->integer('categorie')->nullable();  
+            $table->integer('trimestre')->nullable();  
+            $table->integer('annee')->nullable();  
             $table->timestamps();
         });
     }

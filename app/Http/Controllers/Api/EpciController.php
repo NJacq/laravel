@@ -25,7 +25,7 @@ class EpciController extends Controller
     {
     
         return response()->json(
-            Epci::with('departement')->with('communes')->with('ftthepci')->findOrFail($id)
+            Epci::with('departement')->with('communes')->with('ftthepci')->with('ftthcommune')->with('statcommune')->findOrFail($id)
         );
     }
 

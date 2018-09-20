@@ -14,14 +14,18 @@ class FtthDepartement extends Model
     {
         return $this->belongsTo('App\Models\Departement');
     }
-    public function region()
+    public function regions()
     {
-        return $this->belongsTo('App\Models\region');
+        return $this->belongsTo('App\Models\Region');
+    }
+    public function communes()
+    {
+        return $this->belongsTo('App\Models\Commune');
     }
     public function getPourcentageAttribute()
     {
         $valeurs = [
-            0 => 'aucune ligne',
+            0 => '',
             5 => '0% à 10%',
             10 => '10% à 25%',
             25 => '25% à 50%',
@@ -31,7 +35,7 @@ class FtthDepartement extends Model
         if(!empty($valeurs[$this->categorie])) {
             return $valeurs[$this->categorie];
         } else {
-            return 'N/A (catégorie : '.$this->categorie.')';
+            return 'N/A';
         }
     }
 }

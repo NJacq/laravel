@@ -9,12 +9,16 @@
                 </div>
                 <div class="card card-default" v-show="!isLoading">
                     <div class="card-header">                   
-                        <h5>
-                            <i class="fas fa-map-marker"></i> {{arrondissement.nom_arrondissement}} <small class="text-muted">arrondissement</small>
-                        </h5>
+                            <div class="row">
+                            <router-link v-bind:to="`/commune/${arrondissement.commune_id}`"><i class="fas fa-3x fa-chevron-left col-xl-1"></i></router-link>                       
+                            <h5 class="col-xl-11">                              
+                                <small class="text-muted">Arrondissement</small><br>
+                                {{arrondissement.nom_arrondissement}}
+                            </h5>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <p>A {{arrondissement.nom_arrondissement}}, on dénombre <strong>{{arrondissement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                        <p>A {{arrondissement.nom_arrondissement}}, il y a <strong>{{arrondissement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
                         soit un total de <strong>{{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></p>
                                                         
                         <!-- <table class="table table-striped table-sm table-bordered" v-if="arrondissement.logements>0">                 
@@ -36,15 +40,15 @@
                         <table class="table table-striped table-sm table-bordered" v-if="arrondissement.fttharrondissements>[]">                                             
                             <thead class="table-primary">                                      
                                 <tr>
-                                    <th></th>                                                                              
+                                    <th>Période</th>                                                                              
                                     <th>Locaux raccordables</th>
                                     <th>Pourcentage</th>                 
                                 </tr>
                             </thead>
                             <tbody>   
                                 <tr v-bind:key="fttharrondissement.id" v-for="fttharrondissement in orderBy(arrondissement.fttharrondissements, 'annee', 'trimestre', -1)">   
-                                    <td>     
-                                        {{fttharrondissement.trimestre}} {{fttharrondissement.annee}}                                      
+                                    <td>  
+                                        {{fttharrondissement.trimestre}}<sup>{{fttharrondissement.trimestre | pluralize('er','ème','ème','ème')}}</sup> trimestre {{fttharrondissement.annee}}    
                                     </td> 
                                     <td>     
                                         {{fttharrondissement.locaux_raccordables | currency('', 0, { thousandsSeparator: ' ' })}}
@@ -57,7 +61,7 @@
                         </table>                      
                         <table v-else>Données indisponibles</table>
                     </div>
-                    <router-link class="" v-bind:to="`/arrondissement/${arrondissement.id}/chart`">Voir le graphique</router-link>
+                    <!-- <router-link class="" v-bind:to="`/arrondissement/${arrondissement.id}/chart`">Voir le graphique</router-link> -->
                      <div class="card-footer">                        
                         <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link> 
                         <router-link class=""  v-bind:to="`/commune/${arrondissement.commune_id}`"><button type="button" class="btn btn-primary">Retour à la commune {{commune.nom_commune}}</button></router-link> 

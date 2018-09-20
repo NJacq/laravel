@@ -35,9 +35,8 @@ class DepartementController extends Controller
 
     public function list() // Liste tous les départements
     {
-            return response()->json(
-            // Departement::all()
-            $departement = Departement::all()->sortBy('nom_departement') 
+            return response()->json(           
+            $departement = Departement::all()->with('statdepartements')->sortBy('nom_departement') 
         );
     }
 

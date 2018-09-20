@@ -9,10 +9,13 @@
                 </div>
                 <div class="card card-default" v-show="!isLoading">
                     <div class="card-header">
-                        <h5>
-                            <small class="text-muted">Département</small><br>
-                            <i class="fas fa-map-marker"></i> {{departement.nom_departement}}
-                        </h5>           
+                        <div class="row">
+                            <router-link v-bind:to="`/region/${departement.region_id}`"><i class="fas fa-3x fa-chevron-left col-xl-1"></i></router-link>                       
+                            <h5 class="col-xl-11">                              
+                                <small class="text-muted">Département</small><br>
+                                {{departement.nom_departement}}
+                            </h5>
+                        </div>
                     </div>
                     <div class="card-bodyb">
                         <p>Dans le département {{departement.nom_departement}}, il y a <strong>{{departement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
@@ -20,7 +23,7 @@
                         
                         Pourcentage de locaux raccordables (sur {{departement.logements + departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux au total)
                         <table class="table table-striped table-sm table-bordered" v-if="departement.ftthdepartements>[]">                                             
-                            <thead class="table-primary">                                      
+                            <thead class="table-secondary">                                      
                                 <tr>
                                     <th>Période</th>                                                                              
                                     <th>Locaux raccordables</th>
@@ -66,6 +69,44 @@
                                 </v-select>
                             </div>            
                         </div>
+
+                        <div v-show="statepcis.length>0">
+                            <p>EPCI ayant la plus forte progression sur les 3 derniers trimestres</p>                       
+                            <ul>      
+                                <li v-bind:key="statepci.id" v-for="statepci in statepcis">                               
+                                    <strong>{{statepci.epci.nom_epci}}</strong> avec une progression de <strong>{{statepci.pourcentage_progression}}%</strong> des locaux raccordables.
+                               </li> 
+                            </ul> 
+                        </div>
+                        <div v-show="ftthtopepcis.length>0">
+                            <p>EPCI ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>                           
+                            <ul>     
+                                <li v-bind:key="ftthtopepci.id" v-for="ftthtopepci in ftthtopepcis">                               
+                                    <strong>{{ftthtopepci.epci.nom_epci}}</strong> avec {{ftthtopepci.pourcentage}} de locaux raccordables
+                                </li> 
+                            </ul> 
+                        </div>  
+
+                        <div v-show="statcommunes.length>0">
+                            <p v-if="statcommunes.length>1">Communes ayant la plus forte progression sur les 3 derniers trimestres</p>
+                            <p v-else>Commune ayant la plus forte progression sur les 3 derniers trimestres</p>
+                            <ul>      
+                                <li v-bind:key="statcommune.id" v-for="statcommune in statcommunes" v-if="statcommune.pourcentage_progression>0">                               
+                                    <strong>{{statcommune.commune.nom_commune}}</strong> avec une progression de <strong>{{statcommune.pourcentage_progression}}%</strong> des locaux raccordables.
+                                </li> 
+                            </ul>
+                        </div>
+                        <div v-show="ftthtopcommunes.length>0">       
+                            <p v-if="ftthtopcommunes.length>1">Communes ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                            <p v-else>Commune ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                            <ul>     
+                                <li v-bind:key="ftthtopcommune.id" v-for="ftthtopcommune in ftthtopcommunes">
+                               
+                                    <strong>{{ftthtopcommune.commune.nom_commune}}</strong> avec {{ftthtopcommune.pourcentage}} de locaux raccordables
+                                </li> 
+                            </ul> 
+                        </div>  
+
                     </div>
                     <!-- <router-link class="" v-bind:to="`/departement/${departement.id}/chart`">Voir le graphique</router-link> -->
                     <div class="card-footer">
@@ -99,7 +140,11 @@
         name: 'Departement',
         data () {
             return {
-                departement: {},            
+                departement: {},
+                statepcis: [],  
+                statcommunes: [],
+                ftthtopepcis:[],
+                ftthtopcommunes: []               
             }
         },        
         created () {
@@ -108,11 +153,33 @@
             axios.get('api/departements/'+ this.id)
             .then(response => {
                 this.departement = response.data
-                this.isLoading = false;                
+                       
             })
             .catch(Err => {
                 // console.log(err)
-            })             
+            }),
+            axios.get('api/stattopcommunes/departement/'+ this.id) 
+            .then(response =>{
+                this.statcommunes = response.data      
+                // console.log(this.departement)           
+            }),            
+            axios.get('api/stattopepci/departement/'+ this.id) 
+            .then(response =>{
+                this.statepcis = response.data
+                this.isLoading = false;  
+            }),
+             axios.get('api/ftthtopepci/departement/'+ this.id) 
+            .then(response =>{
+                this.ftthtopepcis = response.data
+                // console.log(this.ftthtopepcis)      
+                this.isLoading = false;  
+            }),
+             axios.get('api/ftthtopcommunes/departement/'+ this.id) 
+            .then(response =>{
+                this.ftthtopcommunes = response.data
+                console.log(this.ftthtopcommunes)      
+                this.isLoading = false;  
+            })                                                
         }
     }       
 </script>

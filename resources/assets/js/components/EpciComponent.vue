@@ -9,19 +9,30 @@
                 </div>
                 <div class="card card-default" v-show="!isLoading">
                     <div class="card-header">                                  
-                        <h5>
-                            <i class="fas fa-map-marker"></i> {{epci.nom_epci}} <small class="text-muted">EPCI</small>
-                        </h5>
+                         <div class="row">
+                            <router-link v-bind:to="`/departement/${epci.departement_id}`"><i class="fas fa-3x fa-chevron-left col-xl-1"></i></router-link>                       
+                            <h5 class="col-xl-11">                              
+                                <small class="text-muted">EPCI</small><br>
+                                {{epci.nom_epci}}
+                            </h5>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <p>Dans l'EPCI {{epci.nom_epci}}, on dénombre <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
-                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></p>
+                        <p v-if="epci.etablissements > 1">Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                        </p>
+                        <p v-else-if="epci.etablissements > 0">Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
+                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                        </p>
+                        <p v-else>Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>aucun établissement</strong>
+                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                        </p>
                                      
                         Pourcentage de locaux raccordables (sur {{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux au total)
                         <table class="table table-striped table-sm table-bordered" v-if="epci.ftthepci>[]">                                             
-                            <thead class="table-primary">                                      
+                            <thead class="table-secondary">                                      
                                 <tr>
-                                    <th></th>                                                                              
+                                    <th>Période</th>                                                                              
                                     <th>Locaux raccordables</th>
                                     <th>Pourcentage</th>                 
                                 </tr>
@@ -29,7 +40,7 @@
                             <tbody>   
                                 <tr v-bind:key="ftthepci.id" v-for="ftthepci in orderBy(epci.ftthepci, 'annee', 'trimestre', -1)"> 
                                     <td>     
-                                        {{ftthepci.trimestre}} {{ftthepci.annee}} 
+                                        {{ftthepci.trimestre}}<sup>{{ftthepci.trimestre | pluralize('er','ème','ème','ème')}}</sup> trimestre {{ftthepci.annee}} 
                                     </td> 
                                     <td>     
                                         {{ftthepci.locaux_raccordables | currency('', 0, { thousandsSeparator: ' ' })}}
@@ -50,6 +61,27 @@
                                 </v-select>
                             </div>
                         </div>
+
+                        <div v-show="statcommunes.length>0">            
+                            <p v-if="statcommunes.length>1">Communes ayant la plus forte progression sur les 3 derniers trimestres</p>
+                            <p v-else>Commune ayant la plus forte progression sur les 3 derniers trimestres</p>
+                                                                           
+                            <ul>      
+                                <li v-bind:key="statcommune.id" v-for="statcommune in statcommunes">                               
+                                    <strong>{{statcommune.commune.nom_commune}}</strong> avec une progression de <strong>{{statcommune.pourcentage_progression}}%</strong> des locaux raccordables.
+                            </li> 
+                            </ul>
+                        </div>
+                        <div v-show="ftthtopcommunes.length>0">                                  
+                            <p v-if="ftthtopcommunes.length>1">Communes ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                            <p v-else>Commune ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                            <ul>     
+                                <li v-bind:key="ftthtopcommune.id" v-for="ftthtopcommune in ftthtopcommunes" v-if="ftthtopcommune.categorie>0">                               
+                                    <strong>{{ftthtopcommune.commune.nom_commune}}</strong> avec {{ftthtopcommune.pourcentage}} de locaux raccordables
+                                </li> 
+                            </ul> 
+                        </div>  
+
                     </div>
                     <div class="card-footer">
                         <router-link class=""  v-bind:to="`/departement/${epci.departement_id}`" v-if="epci.departement">
@@ -83,8 +115,9 @@
         name: 'Epci',
         data () {
             return {
-                epci: {},
-                // communes:[], 
+                epci: [],
+                statcommunes: [],
+                ftthtopcommunes: [],
                 // ftthepcis: {},
                 // departement:{}                             
             }
@@ -94,14 +127,26 @@
             this.id = this.$route.params.id
             axios.get('http://localhost:8000/api/epci/'+ this.id)
             .then(response => {
-                // console.log(response)
                 this.epci = response.data
-                this.isLoading = false;     
+                // console.log(this.epci.ftthepci[0].locaux_raccordables)    
+        
                 
             })
             .catch(Err => {
                 // console.log(err)
-            })         
+            }),
+            axios.get('api/stattopcommunes/epci/'+ this.id) 
+            .then(response =>{
+                this.statcommunes = response.data 
+                console.log(this.statcommunes)
+                          
+            }),
+            axios.get('api/ftthtopcommunes/epci/'+ this.id) 
+            .then(response =>{
+                this.ftthtopcommunes = response.data 
+                console.log(this.ftthtopcommunes)
+                this.isLoading = false;                 
+            })                                          
         },
     }
     

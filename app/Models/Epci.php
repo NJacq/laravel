@@ -21,5 +21,17 @@ class Epci extends Model
     {
         return $this->hasMany('App\Models\FtthEpci');
     }
+    public function ftthcommune()
+    {
+        return $this->hasMany('App\Models\FtthCommune');
+    }
+    public function statepci()
+    {
+        return $this->hasMany('App\Models\StatEpci');
+    }
+    public function statcommune()
+    {
+        return $this->hasMany('App\Models\StatCommune');
+    }
     
 }

@@ -3,9 +3,14 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card card-default">
-                    <div class="card-header">    
-                        <h5><strong>Liste des régions</strong></h5>            
-                    </div>
+                    <div class="card-header">
+                        <div class="row">
+                            <router-link v-bind:to="`/`"><i class="fas fa-3x fa-chevron-left col-xl-1"></i></router-link>                       
+                            <h5 class="col-xl-11">                              
+                                <small class="text-muted">Régions</small>                                
+                            </h5>
+                        </div>
+                    </div>      
 
                     <div class="card-body">
                         <div id="loadingIndicatorCtn">
@@ -14,35 +19,15 @@
                             </div>
 	                    </div>
                         <div class="row">
-                            <div class="col-xl-6 col-md-6 carte">
-                                <l-map style="height: 400px" :zoom="zoom" :center="center">
-                                    <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-                                    <l-geo-json v-if="show" :geojson="geojson" :options="options"></l-geo-json>
-                                    <!-- <l-marker :lat-lng="marker"></l-marker> -->
-                                </l-map>
-                            </div>
-                            <div class="col-xl-6 col-md-6 liste">                                                                 
-                                <ul>     
-                                    <li v-bind:key="region.id" v-for="region in orderBy(regions, 'nom_region')">
-                                        <router-link class="" v-bind:to="`/region/${region.id}`">{{region.nom_region}}</router-link>
-                                    </li> 
-                                </ul>                   
-                            </div> 
-                        </div>
-
-
-                        <div>
-                            <p>Régions ayant la plus forte progression sur les 3 derniers trimestres</p>
+                            <div class="col-xl-6 col-md-6">
+                                <div>
+                            <p>Plus forte progression sur les 3 derniers trimestres</p>
                             <ul>     
-                                <li v-bind:key="statregion.id" v-for="statregion in statregions">
-                               
-                                    <strong>{{statregion.region.nom_region}}</strong> avec une progression de {{statregion.pourcentage_progression}}% des locaux raccordables. 
+                                <li v-bind:key="statregion.id" v-for="statregion in statregions">                               
+                                    <strong>{{statregion.region.nom_region}}</strong> -> <strong>{{statregion.pourcentage_progression}}%</strong> 
                                 </li> 
                             </ul> 
-
-
-
-                            <p>Régions ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                            <p>Plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
                             <ul>     
                                 <li v-bind:key="ftthtopregion.id" v-for="ftthtopregion in ftthtopregions">
                                
@@ -51,6 +36,15 @@
                             </ul> 
 
                         </div>            
+                            </div>
+                            <div class="col-xl-6 col-md-6 liste">                                                                 
+                                <ul>Choisir une région<br>     
+                                    <li v-bind:key="region.id" v-for="region in orderBy(regions, 'nom_region')">
+                                        <router-link class="" v-bind:to="`/region/${region.id}`">{{region.nom_region}}</router-link>
+                                    </li> 
+                                </ul>                   
+                            </div> 
+                        </div>                       
                     </div>
                     <div class="card-footer text-center">
                         <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link> 
@@ -121,7 +115,7 @@
             axios.get('/api/ftthregions?trimestre=1&annee=2018')
             .then(response => {      
                 this.ftthtopregions = response.data 
-                console.log(this.ftthtopregions)
+                console.log(this.regions)
             });  
 
             axios.get("/api/stattopregion/{id}")

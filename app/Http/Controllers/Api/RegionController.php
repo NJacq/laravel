@@ -20,7 +20,7 @@ class RegionController extends Controller
     
     public function show($id) // Affiche le detail d'une région
     {
-        $region = Region::with('ftthregions')->with('departements')->sortBy('nom_departement')->findOrFail($id);
+        $region = Region::with('ftthregions')->with('departements')->with('statdepartements')->findOrFail($id);
         // print_r($region->toArray());
         foreach($region->ftthregions as $pourcent) {
             echo $pourcent->mavariable;

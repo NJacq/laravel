@@ -6,25 +6,26 @@ use Illuminate\Console\Command;
 use Box\Spout\Reader\ReaderFactory;
 use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
-use App\Models\StatRegion;
-use App\Models\Region;
-use App\Models\FtthRegion;
+use App\Models\StatArrondissement;
+use App\Models\Commune;
+use App\Models\FtthArrondissement;
+use App\Models\Arrondissement;
 
-class ImportStatRegion extends Command
+class ImportStatArrondissement extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:statregions';
+    protected $signature = 'import:statarrondissements';
 
     /**
-     * Description de la commande : imporer donnees depuis ftthregions.
+     * Description de la commande : imporer donnees depuis fttharrondissements.
      *
      * @var string
      */
-    protected $description = 'Importer stats regions depuis ftthregions';
+    protected $description = 'Importer stats arrondissements depuis fttharrondissements';
 
     /**
      * Créer une nouvelle instance de commande.
@@ -43,7 +44,7 @@ class ImportStatRegion extends Command
      */
     public function handle()
     {
-        $regions = Region::all(); //Liste toutes les régions
+        $arrondissements = Arrondissement::all(); //Liste tous les arrondissements
 
         $periode = [ // tableau associatif
             3 => 2017,  // 3 = trimestre 3 = clé. 
@@ -51,24 +52,26 @@ class ImportStatRegion extends Command
         ];
      
       
-        foreach($regions as $region) {  // On fait une boucle
+        foreach($arrondissements as $arrondissement) {  // On fait une boucle
             foreach($periode as $trimestre=>$annee) {
-                $ftthregion = FtthRegion::where('region_id', $region->id)->where('trimestre', $trimestre)->where('annee', $annee)->first();
-                if(empty($ftthregion->id)) { // si ftthregions n'a pas id regions
-                    $this->error('Impossible de trouver le trimestre '.$trimestre.' de année '.$annee.' pour la région '.$region->nom_region);
+                $fttharrondissement = FtthArrondissement::where('arrondissement_id', $arrondissement->id)->where('trimestre', $trimestre)->where('annee', $annee)->first();
+                if(empty($fttharrondissement->id)) { 
+                    $this->error('Impossible de trouver le trimestre '.$trimestre.' de année '.$annee.' pour la région '.$arrondissement->nom_arrondissement);
                 } else {
-                    $this->info('Pour la région '.$region->nom_region.' le trimestre '.$trimestre.' '.$annee.' a '.$ftthregion->nombre_locaux.' locaux raccordables.');
-                    $locauxTrimestre[$trimestre.'-'.$annee] = $ftthregion;
+                    $this->info('Pour l\' arrondissement '.$arrondissement->nom_arrondissement.' le trimestre '.$trimestre.' '.$annee.' a '.$fttharrondissement->locaux_raccordables.' locaux raccordables.');
+                    $locauxTrimestre[$trimestre.'-'.$annee] = $fttharrondissement;
              
                 }           
             }   
+
+            // exit;
      
             $trimestre_debut = key($periode);       
             $annee_debut = $periode[key($periode)];
             $trimestre_fin = $trimestre;
             $annee_fin = $annee;
-            $nb_locaux_debut = $locauxTrimestre[$trimestre_debut.'-'.$annee_debut]->nombre_locaux;  
-            $nb_locaux_fin = $locauxTrimestre[$trimestre_fin.'-'.$annee_fin]->nombre_locaux;
+            $nb_locaux_debut = $locauxTrimestre[$trimestre_debut.'-'.$annee_debut]->locaux_raccordables;  
+            $nb_locaux_fin = $locauxTrimestre[$trimestre_fin.'-'.$annee_fin]->locaux_raccordables;
 
             $pourcentage = null;
 
@@ -84,12 +87,13 @@ class ImportStatRegion extends Command
             //     $pourcentage = ($nb_locaux_fin - $nb_locaux_debut)/$nb_locaux_debut*100; //Calcul du pourcentage d'augmentation du nombre de locaux entre le 3è trimestre 2017 et le 1er trimestre 2018
             //     $this->info('Le nombre de locaux a augmenté de '.$pourcentage.'%');    
             // }
-            // $this->line('===> Région '.$region->nom_region.' : T3-2017 = '.$nb_locaux_debut.' / T1-2018 = '.$nb_locaux_fin);
+            // $this->line('===> Arrondissement '.$arrondissement->nom_arrondissement.' : T3-2017 = '.$nb_locaux_debut.' / T1-2018 = '.$nb_locaux_fin);
         
                   
             
             $dataToInsert = [
-                'region_id' => $region->id,
+                'arrondissement_id' => $arrondissement->id,
+                'commune_id' => $arrondissement->commune_id,
                 'trimestre_debut' => $trimestre_debut,
                 'annee_debut' => $annee_debut,
                 'trimestre_fin' => $trimestre_fin,
@@ -99,10 +103,9 @@ class ImportStatRegion extends Command
                 'pourcentage_progression' => $pourcentage,
             ];
             print_r($dataToInsert);
-            // exit;
-
-            $newStatRegion = StatRegion::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
-                'region_id' => $dataToInsert['region_id'] // On se base sur la clé 'region_id" pour véfifier les modifications des autres clés. 
+    //    exit;
+            StatArrondissement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
+                'arrondissement_id' => $dataToInsert['arrondissement_id'] // On se base sur la clé 'departement_id" pour véfifier les modifications des autres clés. 
             ], $dataToInsert);    
 
         }

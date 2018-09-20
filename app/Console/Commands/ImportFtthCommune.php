@@ -63,15 +63,15 @@ class ImportFtthCommune extends Command
             
             $trimestres = [
                 2 => [
-                    'trimestre' => 'trimestre 3',
+                    'trimestre' => 3,
                     'annee' => 2017,
                 ],
                 3 => [
-                    'trimestre' => 'trimestre 4',
+                    'trimestre' => 4,
                     'annee' => 2017,
                 ],
                 4 => [
-                    'trimestre' => 'trimestre 1',
+                    'trimestre' => 1,
                     'annee' => 2018,
                 ],
             ];
@@ -125,6 +125,9 @@ class ImportFtthCommune extends Command
                             // }
             
                             $lineForThisCommune['commune_id'] = $commune->id;
+                            $lineForThisCommune['departement_id'] = $commune->departement_id;                           
+                            $lineForThisCommune['epci_id'] = $commune->epci_id; 
+                                       
                            
                             FtthCommune::updateOrCreate([
                                 'code_commune' => $lineForThisCommune['code_commune'],
