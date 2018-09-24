@@ -35,7 +35,7 @@ class FtthRegionController extends Controller
         $annee = $request->annee;
         $region = Region::findOrFail($id);
         return response()->json(
-            $ftthtopdepartements = FtthDepartement::where('region_id', $region->id)->where('trimestre', 1)->where('annee', 2018)->with('departement')->orderBy('categorie', 'desc')->limit(5)->get()
+            $ftthtopdepartements = FtthDepartement::where('region_id', $region->id)->where('trimestre', 1)->where('annee', 2018)->with('departement')->where('categorie', '>', 0)->orderBy('categorie', 'desc')->limit(5)->get()
         );    
     }
 
@@ -45,7 +45,7 @@ class FtthRegionController extends Controller
         $annee = $request->annee;
         
         return response()->json(
-            $ftth = FtthRegion::with('region')->where('trimestre', '=', $trimestre)->where('annee','=', $annee)->where('categorie', '>', 0)->orderBy('categorie', 'desc')->limit(5)->get()
+            $ftthtopregions = FtthRegion::with('region')->where('trimestre', '=', $trimestre)->where('annee','=', $annee)->where('categorie', '>', 0)->orderBy('categorie', 'desc')->limit(5)->get()
         );
     }
 }

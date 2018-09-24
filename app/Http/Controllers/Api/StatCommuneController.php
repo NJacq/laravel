@@ -25,7 +25,7 @@ class StatCommuneController extends Controller
     {
         $departement = Departement::findOrFail($id);
         return response()->json(
-            $statcommunes = StatCommune::with('departement')->with('commune')->where('departement_id', $departement->id)->orderBy('pourcentage_progression', 'desc')->limit(5)->get()
+            $statcommunes = StatCommune::with('departement')->with('commune')->where('departement_id', $departement->id)->where('pourcentage_progression', '>', 0)->orderBy('pourcentage_progression', 'desc')->limit(5)->get()
         );
     }
 

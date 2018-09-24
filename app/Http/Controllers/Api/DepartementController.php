@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Departement;
 use App\Models\Region;
 use App\Models\Commune;
+use App\Models\Epci;
+
 
 use Illuminate\Support\Facades\Storage;
 
@@ -22,7 +24,7 @@ class DepartementController extends Controller
     
     public function show($id) // Affiche le detail d'un département
     {
-        $departement = Departement::with('ftthdepartements')->with('region')->with('communes')->with('epci')->findOrFail($id);
+        $departement = Departement::with('ftthdepartements')->with('region')->with('communes')->with('epci')->orderBy('nom_departement')->findOrFail($id);
         // print_r($departement->toArray());
         foreach($departement->ftthdepartements as $pourcent) {
             echo $pourcent->mavariable;
@@ -33,18 +35,19 @@ class DepartementController extends Controller
         );
     }
 
-    public function list() // Liste tous les départements
+    public function showepci($id) // Affiche les epci d'une région
     {
-            return response()->json(           
-            $departement = Departement::all()->with('statdepartements')->sortBy('nom_departement') 
+        $epci = Epci::where('departement_id', $id)->orderBy('nom_epci')->get();        
+        return response()->json(
+            $epci
         );
     }
 
-    public function geojson() // Récupère le geojson du contour des départements
+    public function list() // Liste tous les départements
     {
-        return response(Storage::disk('public')->get('departements.geojson'))
-                        ->header('Content-Type', 'text/plain');
-
-    }
+            return response()->json(           
+            $departement = Departement::with('statdepartements')->orderBy('nom_departement')->get() 
+        );
+    }  
 
 }

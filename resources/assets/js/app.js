@@ -18,12 +18,11 @@ import vSelect from 'vue-select'
 import Home from './components/HomeComponent'
 import Regions from './components/RegionsComponent'
 import Region from './components/RegionComponent'
-import Departements from './components/DepartementsComponent'
 import Departement from './components/DepartementComponent'
 import Commune from './components/CommuneComponent'
 import Epci from './components/EpciComponent'
 import Arrondissement from './components/ArrondissementComponent'
-import ChartDep from './components/ChartDepComponent'
+
 
 
 Vue.use(Vue2Filters)
@@ -34,25 +33,23 @@ Vue.component('v-select', vSelect)
 
 Vue.component('regions', require('./components/RegionsComponent.vue'));
 Vue.component('region', require('./components/RegionComponent.vue'));
-Vue.component('departements', require('./components/DepartementsComponent.vue'));
 Vue.component('departement', require('./components/DepartementComponent.vue'));
 Vue.component('epci', require('./components/EpciComponent.vue'));
 Vue.component('commune', require('./components/CommuneComponent.vue'));
 Vue.component('arrondissement', require('./components/ArrondissementComponent.vue'));
 Vue.component('home', require('./components/HomeComponent.vue'));
-Vue.component('chartdep', require('./components/ChartDepComponent.vue'));
+
 
 
 const routes = [
     { path: '/', component: Home },
     { path: '/regions', component: Regions },
-    { path: '/region/:id', component: Region },
-    { path: '/departements', component: Departements },
+    { path: '/region/:id', component: Region }, 
     { path: '/departement/:id', component: Departement },
     { path: '/commune/:id', component: Commune },
     { path: '/epci/:id', component: Epci },
     { path: '/arrondissement/:id', component: Arrondissement },
-    { path: '/departement/:id/chart', component: ChartDep }
+
     
   ]
 

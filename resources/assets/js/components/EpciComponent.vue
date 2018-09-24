@@ -18,16 +18,6 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <p v-if="epci.etablissements > 1">Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
-                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
-                        </p>
-                        <p v-else-if="epci.etablissements > 0">Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
-                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
-                        </p>
-                        <p v-else>Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>aucun établissement</strong>
-                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
-                        </p>
-                                     
                         Pourcentage de locaux raccordables (sur {{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux au total)
                         <table class="table table-striped table-sm table-bordered" v-if="epci.ftthepci>[]">                                             
                             <thead class="table-secondary">                                      
@@ -52,43 +42,42 @@
                             </tbody>
                         </table> 
                         <p v-else>Données indisponibles</p>
+                        <p v-if="epci.etablissements > 1"><small>Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        </p>
+                        <p v-else-if="epci.etablissements > 0"><small>Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
+                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        </p>
+                        <p v-else><small>Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>aucun établissement</strong>
+                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        </p>
                         <div class="row">
-                            <div class="col-xl-6 col-md-6 carte">
+                            <div class="col-xl-6 col-md-6">
+                                <div v-show="statcommunes.length>0">   
+                                    <p>Plus forte progression sur les 3 derniers trimestres</p>
+                                    <ul>      
+                                        <li v-bind:key="statcommune.id" v-for="statcommune in statcommunes">                               
+                                            <strong><router-link class="" v-bind:to="`/commune/${statcommune.commune.id}`">{{statcommune.commune.nom_commune}}</router-link></strong> -> <strong>{{statcommune.pourcentage_progression}}%</strong>
+                                    </li> 
+                                    </ul>
+                                </div>
+                                <div v-show="ftthtopcommunes.length>0">                                  
+                                    <p>Plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                                    <ul>     
+                                        <li v-bind:key="ftthtopcommune.id" v-for="ftthtopcommune in ftthtopcommunes" v-if="ftthtopcommune.categorie>0">                               
+                                            <strong><router-link class="" v-bind:to="`/commune/${ftthtopcommune.commune.id}`">{{ftthtopcommune.commune.nom_commune}}</router-link></strong> -> <strong>{{ftthtopcommune.pourcentage}}</strong>
+                                        </li> 
+                                    </ul> 
+                                </div> 
                             </div>
                             <div class="col-xl-6 col-md-6 liste">
-                                <v-select label="nom_commune" @input='onSelectCommune' :options="epci.communes" placeholder="Communes">
-                                     <span slot="no-options">Aucun résultat</span>
+                                <v-select label="nom_commune" @input='onSelectCommune' :options="epci.communes" placeholder="Choisir une commune">
+                                     <span slot="no-options">Aucune commune trouvée!</span>
                                 </v-select>
                             </div>
                         </div>
-
-                        <div v-show="statcommunes.length>0">            
-                            <p v-if="statcommunes.length>1">Communes ayant la plus forte progression sur les 3 derniers trimestres</p>
-                            <p v-else>Commune ayant la plus forte progression sur les 3 derniers trimestres</p>
-                                                                           
-                            <ul>      
-                                <li v-bind:key="statcommune.id" v-for="statcommune in statcommunes">                               
-                                    <strong>{{statcommune.commune.nom_commune}}</strong> avec une progression de <strong>{{statcommune.pourcentage_progression}}%</strong> des locaux raccordables.
-                            </li> 
-                            </ul>
-                        </div>
-                        <div v-show="ftthtopcommunes.length>0">                                  
-                            <p v-if="ftthtopcommunes.length>1">Communes ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
-                            <p v-else>Commune ayant le plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
-                            <ul>     
-                                <li v-bind:key="ftthtopcommune.id" v-for="ftthtopcommune in ftthtopcommunes" v-if="ftthtopcommune.categorie>0">                               
-                                    <strong>{{ftthtopcommune.commune.nom_commune}}</strong> avec {{ftthtopcommune.pourcentage}} de locaux raccordables
-                                </li> 
-                            </ul> 
-                        </div>  
-
-                    </div>
-                    <div class="card-footer">
-                        <router-link class=""  v-bind:to="`/departement/${epci.departement_id}`" v-if="epci.departement">
-                            <button type="button" class="btn btn-primary">
-                                Retour au département {{epci.departement.nom_departement}}
-                            </button>
-                        </router-link>
+                   </div>
+                    <div class="card-footer">                        
                         <router-link class="" v-bind:to="`/`">
                             <button type="button" class="btn btn-primary">
                                 Retour à l'accueil
@@ -117,9 +106,7 @@
             return {
                 epci: [],
                 statcommunes: [],
-                ftthtopcommunes: [],
-                // ftthepcis: {},
-                // departement:{}                             
+                ftthtopcommunes: [],                                    
             }
         },
         created () {
@@ -127,24 +114,18 @@
             this.id = this.$route.params.id
             axios.get('http://localhost:8000/api/epci/'+ this.id)
             .then(response => {
-                this.epci = response.data
-                // console.log(this.epci.ftthepci[0].locaux_raccordables)    
-        
-                
+                this.epci = response.data    
             })
             .catch(Err => {
                 // console.log(err)
             }),
             axios.get('api/stattopcommunes/epci/'+ this.id) 
             .then(response =>{
-                this.statcommunes = response.data 
-                console.log(this.statcommunes)
-                          
+                this.statcommunes = response.data                          
             }),
             axios.get('api/ftthtopcommunes/epci/'+ this.id) 
             .then(response =>{
-                this.ftthtopcommunes = response.data 
-                console.log(this.ftthtopcommunes)
+                this.ftthtopcommunes = response.data               
                 this.isLoading = false;                 
             })                                          
         },

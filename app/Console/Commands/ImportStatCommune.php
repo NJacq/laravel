@@ -105,11 +105,10 @@ class ImportStatCommune extends Command
             ];
             print_r($dataToInsert);
     //    exit;
-            /*
             $newStatDepartement = StatCommune::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
-                'commune_id' => $dataToInsert['commune_id'] // On se base sur la clé 'departement_id" pour véfifier les modifications des autres clés. 
+            'commune_id' => $dataToInsert['commune_id'] // On se base sur la clé 'departement_id" pour véfifier les modifications des autres clés. 
             ], $dataToInsert);    
-            */
+            
         }
 
         $this->info('Fin du script');

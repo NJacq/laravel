@@ -14,6 +14,10 @@ class StatRegion extends Model
     {
         return $this->belongsTo('App\Models\Region');
     }
+    public function regions()
+    {
+        return $this->hasMany('App\Models\Region');
+    }
     public function statdepartements()
     {
         return $this->hasMany('App\Models\StatDepartement');

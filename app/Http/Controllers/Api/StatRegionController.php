@@ -28,14 +28,6 @@ class StatRegionController extends Controller
            StatRegion::findOrFail($id)
         );
     }
-
-    public function topshow(Request $request, $id) // Affiche le detail d'une région
-    {
-     
-        return response()->json(
-            $statregion = StatRegion::with('region')->where('pourcentage_progression', '>', 0)->orderBy('pourcentage_progression', 'desc')->limit(5)->get()
-        );    
-    }
     public function list(Request $request) // Liste toutes les statregions 
     {
         return response()->json(

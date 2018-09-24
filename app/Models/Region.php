@@ -29,6 +29,7 @@ class Region extends Model
     public function statdepartements()
     {
         return $this->hasMany('App\Models\StatDepartement');
-    }    
+    }
+        
 
 }

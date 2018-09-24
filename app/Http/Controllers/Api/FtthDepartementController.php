@@ -37,7 +37,7 @@ class FtthDepartementController extends Controller
         $annee = $request->annee;
         $departement = Departement::findOrFail($id);
         return response()->json(
-            $ftthtopepcis = FtthEpci::where('departement_id', $departement->id)->where('trimestre', 1)->where('annee', 2018)->with('epci')->orderBy('categorie', 'desc')->limit(5)->get()
+            $ftthtopepcis = FtthEpci::where('departement_id', $departement->id)->where('trimestre', 1)->where('annee', 2018)->with('epci')->where('categorie', '>', 0)->orderBy('categorie', 'desc')->limit(5)->get()
         );    
     }
     public function topshowcommunes(Request $request, $id) // Affiche le top ftth du dernier trimestre d'un departement

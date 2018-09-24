@@ -1,4 +1,4 @@
-<template> 
+<template>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -8,41 +8,23 @@
                     </div>
                 </div>
                 <div class="card card-default" v-show="!isLoading">
-                    <div class="card-header">                   
+                    <div class="card-header">
                             <div class="row">
-                            <router-link v-bind:to="`/commune/${arrondissement.commune_id}`"><i class="fas fa-3x fa-chevron-left col-xl-1"></i></router-link>                       
-                            <h5 class="col-xl-11">                              
+                            <router-link v-bind:to="`/commune/${arrondissement.commune_id}`"><i class="fas fa-3x fa-chevron-left col-xl-1"></i></router-link>
+                            <h5 class="col-xl-11">
                                 <small class="text-muted">Arrondissement</small><br>
                                 {{arrondissement.nom_arrondissement}}
                             </h5>
                         </div>
                     </div>
                     <div class="card-body">
-                        <p>A {{arrondissement.nom_arrondissement}}, il y a <strong>{{arrondissement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
-                        soit un total de <strong>{{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></p>
-                                                        
-                        <!-- <table class="table table-striped table-sm table-bordered" v-if="arrondissement.logements>0">                 
-                            <thead class="table-primary">          
-                                <tr>                                              
-                                    <th>Logements</th>
-                                    <th>Établissements</th>                                          
-                                   
-                                </tr>
-                            </thead>
-                            <tbody>   
-                                <tr> 
-                                    <td>{{arrondissement.logements}}</td>
-                                    <td>{{arrondissement.etablissements}}</td>                                                                                       
-                                </tr>          
-                            </tbody>
-                        </table>                    -->
-                        Pourcentage de locaux raccordables (sur {{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux au total)
-                        <table class="table table-striped table-sm table-bordered" v-if="arrondissement.fttharrondissements>[]">                                             
-                            <thead class="table-primary">                                      
+                    Pourcentage de locaux raccordables (sur {{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux au total)
+                        <table class="table table-striped table-sm table-bordered" v-if="arrondissement.fttharrondissements>[]">
+                            <thead class="table-primary">
                                 <tr>
-                                    <th>Période</th>                                                                              
+                                    <th>Période</th> 
                                     <th>Locaux raccordables</th>
-                                    <th>Pourcentage</th>                 
+                                    <th>Pourcentage</th>
                                 </tr>
                             </thead>
                             <tbody>   
@@ -52,20 +34,21 @@
                                     </td> 
                                     <td>     
                                         {{fttharrondissement.locaux_raccordables | currency('', 0, { thousandsSeparator: ' ' })}}
-                                    </td> 
-                                     <td>            
+                                    </td>
+                                     <td>
                                         {{fttharrondissement.pourcentage}}
                                     </td>
-                                </tr>          
+                                </tr>
                             </tbody>
-                        </table>                      
+                        </table>
                         <table v-else>Données indisponibles</table>
+                        <p><small>A {{arrondissement.nom_arrondissement}}, il y a <strong>{{arrondissement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                        soit un total de <strong>{{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        </p>
                     </div>
-                    <!-- <router-link class="" v-bind:to="`/arrondissement/${arrondissement.id}/chart`">Voir le graphique</router-link> -->
-                     <div class="card-footer">                        
+                    <div class="card-footer">                        
                         <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link> 
-                        <router-link class=""  v-bind:to="`/commune/${arrondissement.commune_id}`"><button type="button" class="btn btn-primary">Retour à la commune {{commune.nom_commune}}</button></router-link> 
-                    </div>
+                     </div>
                 </div>
             </div>
         </div>
@@ -80,7 +63,7 @@
       
         name: 'Arrondissement',
         data () {
-            return {                
+            return {
                 arrondissement:{},
                 fttharrondissements:{},
                 commune:{}
@@ -90,19 +73,16 @@
         created () {
             this.isLoading = true;
             this.id = this.$route.params.id
-            axios.get('http://localhost:8000/api/arrondissements/'+ this.id)
-            .then(response => {                
+            axios.get('http://localhost:8000/api/arrondissement/'+ this.id)
+            .then(response => {
                 this.arrondissement = response.data
-                this.isLoading = false;
-                
+                this.isLoading = false;                
             })
             .catch(Err => {
                 // console.log(err)
-            })         
+            })
         },
     }
-    
-   
 </script>
 
 <style scoped>

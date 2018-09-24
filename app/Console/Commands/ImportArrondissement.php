@@ -17,7 +17,7 @@ class ImportArrondissement extends Command
      *
      * @var string
      */
-    protected $signature = 'import:arrondissement {file}';
+    protected $signature = 'import:arrondissements {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
@@ -89,7 +89,7 @@ class ImportArrondissement extends Command
 
                     if(empty($commune->id)) {
                         $this->error('Impossible de trouver l\'arrondissement '.$dataToInsert['code_commune'].' pour la commune '.$dataToInsert['code_arrondissement']);
-                        exit;
+               
                     }
 
                     $dataToInsert['commune_id'] = $commune->id;
