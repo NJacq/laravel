@@ -34,17 +34,15 @@ class RegionController extends Controller
     }
     public function showdepartements($id) // Affiche les départements d'une région
     {
-        $departements = Departement::where('region_id', $id)->orderBy('nom_departement')->get();        
         return response()->json(
-            $departements
+            Departement::where('region_id', $id)->orderBy('nom_departement')->get()
         );
     }
 
     public function list() // Liste toutes les régions
     {
-        $region = Region::orderBy('nom_region')->with('statregions')->get();        
         return response()->json(
-            $region
-        );        
+            Region::orderBy('nom_region')->with('statregions')->get()
+        );
     }    
 }

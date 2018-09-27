@@ -43,6 +43,7 @@ class ImportStatRegion extends Command
      */
     public function handle()
     {
+        $this->info('Début du script');
         $regions = Region::all(); //Liste toutes les régions
 
         $periode = [ // tableau associatif

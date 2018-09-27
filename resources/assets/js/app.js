@@ -62,7 +62,9 @@ const routes = [
 
 new Vue({
     el: '#app',
-    router: router,    
+    router: router,
+    
 });
+    
     
     

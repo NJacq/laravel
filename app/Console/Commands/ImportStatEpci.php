@@ -44,6 +44,7 @@ class ImportStatEpci extends Command
      */
     public function handle()
     {
+        $this->info('Début du script');
         $epcis = Epci::all(); //Liste toutes les régions
 
         $periode = [ // tableau associatif

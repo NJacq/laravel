@@ -36,4 +36,13 @@ class CommuneController extends Controller
             Commune::all()
         );
     }
+
+    public function search(Request $request) // Liste toutes les communes pour la recherche
+        {
+                
+        return response()->json(            
+            //Commune::where('nom_commune', 'like', '%'.$request->q.'%')->get()->pluck('nom_commune', 'id')
+            Commune::where('nom_commune', 'like', '%'.$request->q.'%')->get()
+        );
+    }
 }

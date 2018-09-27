@@ -42,8 +42,12 @@
                             </tbody>
                         </table>
                         <table v-else>Données indisponibles</table>
-                        <p><small>A {{arrondissement.nom_arrondissement}}, il y a <strong>{{arrondissement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
-                        soit un total de <strong>{{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        <p>
+                            <small>
+                                A {{arrondissement.nom_arrondissement}}, il y a <strong>{{arrondissement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
+                                <strong>{{arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                                soit un total de <strong>{{arrondissement.logements + arrondissement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
                     </div>
                     <div class="card-footer">                        
@@ -57,7 +61,6 @@
   
 <script>
     import axios from 'axios'
-
 
     export default {
       

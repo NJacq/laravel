@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Departement;
 use App\Models\Region;
 use App\Models\Commune;
+use App\Models\UrlCarteDepartement;
+
 
 class ImportDepartement extends Command
 {
@@ -18,7 +20,7 @@ class ImportDepartement extends Command
      *
      * @var string
      */
-    protected $signature = 'import:departement {file}';
+    protected $signature = 'import:departements {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
@@ -58,13 +60,14 @@ class ImportDepartement extends Command
             $fileNameAbsolutePath = Storage::disk('public')->path($fileName);
 
             $this->info('Le fichier est dans : '.$fileNameAbsolutePath);
-                    
+                                
             $reader = ReaderFactory::create(Type::CSV); //on utilise box/spout pour lire le fichier
             $reader->setFieldDelimiter(',');
             $reader->open($fileNameAbsolutePath); // ouvrir le fichier csv            
             foreach($reader->getSheetIterator() as $sheet) { // parcourir les feuilles; une seule pour un csv 
-                $i = 0;
-
+                $i = 0; 
+                
+                  
                 foreach($sheet->getRowIterator() as $row) {
                     $i++;
                     if($i<6) {
@@ -77,26 +80,29 @@ class ImportDepartement extends Command
                         'nom_departement' => $row[1],
                         'code_region' => $row[2],
                         'logements' => (int)str_replace(' ','',$row[3]),
-                        'etablissements' => (int)str_replace(' ','',$row[4])
+                        'etablissements' => (int)str_replace(' ','',$row[4]),
                     ];
+                    
 
                     $region = Region::where('code_region', $dataToInsert['code_region'])->first();
-                    
+                    $urlCarte = UrlCarteDepartement::where('code_departement', $dataToInsert['code_departement']);
+                    print_r($urlCarte);
+                    exit;
+                   
+                    if(empty($region->id)) {
+                        $this->error('Impossible de trouver la région '.$dataToInsert['code_region'].' pour le département '.$dataToInsert['code_departement']);
+                        // exit;
+                    }
 
+                    $dataToInsert['region_id'] = $region->id; 
+                    $dataToInsert['url'] = $urlCarte->$url;                                  
+            
+                    // exit;
 
-                    // if(empty($region->id)) {
-                    //     $this->error('Impossible de trouver la région '.$dataToInsert['code_region'].' pour le département '.$dataToInsert['code_departement']);
-                    //     exit;
-                    // }
-
-                    $dataToInsert['region_id'] = $region->id;
-                    
-                    // print_r($dataToInsert); 
-                    
                     $newDepartement = Departement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'code_departement' => $dataToInsert['code_departement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
                     ], $dataToInsert);    
-                    
+                
                 } 
             }            
         } else {

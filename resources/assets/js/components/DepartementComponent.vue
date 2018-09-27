@@ -44,11 +44,11 @@
                         <p v-else>Données indisponibles</p>
                         
                         <p>
-                        <small>Dans le département {{departement.nom_departement}}, il y a 
-                        <strong>{{departement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
-                        <strong>{{departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
-                        soit un total de <strong>{{departement.logements + departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
-                        </small>
+                            <small>Dans le département {{departement.nom_departement}}, il y a 
+                                <strong>{{departement.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
+                                <strong>{{departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                                soit un total de <strong>{{departement.logements + departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
                         
                         <div class="row" v-if="departement.epci>[]">
@@ -58,71 +58,73 @@
                                 </v-select><br> 
                                 <div v-show="statepcis.length>0">
                                     <p>Plus forte progression sur les 3 derniers trimestres</p>                       
-                                    <ul>      
+                                    <ul>
                                         <li v-bind:key="statepci.id" v-for="statepci in statepcis">                               
                                             <strong><router-link class="" v-bind:to="`/epci/${statepci.epci.id}`">{{statepci.epci.nom_epci}}</router-link></strong> -> <strong>{{statepci.pourcentage_progression}}%</strong>
-                                    </li> 
+                                        </li> 
                                     </ul> 
                                 </div>
                                 <div v-show="ftthtopepcis.length>0">
                                     <p>Plus fort pourcentage de locaux raccordables au dernier trimestre.</p>                           
-                                    <ul>     
+                                    <ul>
                                         <li v-bind:key="ftthtopepci.id" v-for="ftthtopepci in ftthtopepcis">                               
                                             <strong><router-link class="" v-bind:to="`/epci/${ftthtopepci.epci.id}`">{{ftthtopepci.epci.nom_epci}}</router-link></strong> -> <strong>{{ftthtopepci.pourcentage}}</strong>
                                         </li> 
                                     </ul> 
-                                </div>                                                        
-                            </div>                            
-                            <div class="col-xl-6 col-md-6 liste">                              
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6 liste">
                                 <v-select label="nom_commune" @input='onSelectCommune' :options="departement.communes" placeholder="Choisir une commune">
                                     <span slot="no-options">Aucune commune trouvée!</span>
                                 </v-select><br>
                                 <div v-show="statcommunes.length>0">
-                                    <p>Plus forte progression sur les 3 derniers trimestres</p>                                    
-                                    <ul>      
+                                    <p>Plus forte progression sur les 3 derniers trimestres</p>
+                                    <ul>
                                         <li v-bind:key="statcommune.id" v-for="statcommune in statcommunes" v-if="statcommune.pourcentage_progression>0">                               
+                                            <strong><router-link class="" v-bind:to="`/commune/${statcommune.commune.id}`">{{statcommune.commune.nom_commune}}</router-link></strong> -> <strong>{{statcommune.pourcentage_progression}}%</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div v-show="ftthtopcommunes.length>0">
+                                    <p>Plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
+                                    <ul>
+                                        <li v-bind:key="ftthtopcommune.id" v-for="ftthtopcommune in ftthtopcommunes">                                            
+                                            <strong><router-link class="" v-bind:to="`/commune/${ftthtopcommune.commune.id}`">{{ftthtopcommune.commune.nom_commune}}</router-link></strong> -> <strong>{{ftthtopcommune.pourcentage}}</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="row" v-else>
+                            <div class="col-xl-6 col-md-6">
+                                <div v-show="statcommunes.length>0">
+                                    <p>Plus forte progression sur les 3 derniers trimestres</p>
+                                    <ul>      
+                                        <li v-bind:key="statcommune.id" v-for="statcommune in statcommunes" v-if="statcommune.pourcentage_progression>0">
                                             <strong><router-link class="" v-bind:to="`/commune/${statcommune.commune.id}`">{{statcommune.commune.nom_commune}}</router-link></strong> -> <strong>{{statcommune.pourcentage_progression}}%</strong>
                                         </li> 
                                     </ul>
                                 </div>
-                                <div v-show="ftthtopcommunes.length>0">       
+                                <div v-show="ftthtopcommunes.length>0">
                                     <p>Plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
                                     <ul>     
-                                        <li v-bind:key="ftthtopcommune.id" v-for="ftthtopcommune in ftthtopcommunes">                                            
+                                        <li v-bind:key="ftthtopcommune.id" v-for="ftthtopcommune in ftthtopcommunes">
                                             <strong><router-link class="" v-bind:to="`/commune/${ftthtopcommune.commune.id}`">{{ftthtopcommune.commune.nom_commune}}</router-link></strong> -> <strong>{{ftthtopcommune.pourcentage}}</strong>
                                         </li> 
                                     </ul> 
-                                </div>                                                 
-                            </div> 
-                        </div>
-                        <div class="row" v-else>                           
-                            <div class="col-xl-6 col-md-6">
-                                <div v-show="statcommunes.length>0">
-                                    <p>Plus forte progression sur les 3 derniers trimestres</p>                                    
-                                    <ul>      
-                                        <li v-bind:key="statcommune.id" v-for="statcommune in statcommunes" v-if="statcommune.pourcentage_progression>0">                               
-                                            <strong>{{statcommune.commune.nom_commune}}</strong> -> <strong>{{statcommune.pourcentage_progression}}%</strong>
-                                        </li> 
-                                    </ul>
                                 </div>
-                                <div v-show="ftthtopcommunes.length>0">       
-                                    <p>Plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
-                                    <ul>     
-                                        <li v-bind:key="ftthtopcommune.id" v-for="ftthtopcommune in ftthtopcommunes">                                            
-                                            <strong>{{ftthtopcommune.commune.nom_commune}}</strong> -> <strong>{{ftthtopcommune.pourcentage}}</strong>
-                                        </li> 
-                                    </ul> 
-                                </div>                                                 
                             </div> 
-                             <div class="col-xl-6 col-md-6">                              
+                             <div class="col-xl-6 col-md-6">
                                 <v-select label="nom_commune" @input='onSelectCommune' :options="departement.communes" placeholder="Choisir une commune">
                                     <span slot="no-options">Aucune commune trouvée!</span>
                                 </v-select>
                             </div>
-                        </div>                  
-                    </div>                    
-                    <div class="card-footer">
-                        <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link> 
+                        </div>
+                    </div>
+                    <div class="card-footer" v-if='departement.urlcartedepartement'>
+                        <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link>
+                        <a target="blank" v-bind:href= "departement.urlcartedepartement[0].url"><button type="button" class="btn btn-primary">Carte du département</button></a>              
+                    
                     </div>
                 </div>
             </div>
@@ -145,13 +147,18 @@
         name: 'Departement',
         data () {
             return {
-                departement: {},
+                departement: [],
                 statepcis: [],  
                 statcommunes: [],
                 ftthtopepcis:[],
                 ftthtopcommunes: [],
-                epci:[]
+                epci:[],                        
             }
+        },
+        computed: {
+            url () {
+                return this.departement.urlcartedepartemnt[0].url;
+            },            
         },        
         created () {
             this.isLoading = true;
@@ -159,7 +166,6 @@
             axios.get('api/departement/'+ this.id)
             .then(response => {
                 this.departement = response.data
-                       
             })
             .catch(Err => {
                 // console.log(err)
@@ -185,7 +191,7 @@
                 this.ftthtopcommunes = response.data
                 this.isLoading = false;
             })
-        }
+        }        
     }
 </script>
 

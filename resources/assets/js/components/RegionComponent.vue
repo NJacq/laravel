@@ -40,28 +40,23 @@
                             </tbody>
                         </table>  
                         <p class="text-justify" v-if="region.etablissements > 1">
-                        <small>En région {{region.nom_region}}, il y a 
-                        <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong>
-                        et
-                        <strong>{{region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
-                        soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
-                        </small>
+                            <small>
+                                En région {{region.nom_region}}, il y a <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong> 
+                                soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
                         <p class="text-justify" v-else-if="region.etablissements > 0">
-                        <small>En région {{region.nom_region}}, il y a 
-                        <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
-                        <strong>{{region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
-                        soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
-                        </small>
+                            <small>
+                                En région {{region.nom_region}}, il y a <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
+                                 soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
                         <p class="text-justify" v-else>
-                        <small>En région {{region.nom_region}}, il y a 
-                        <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
-                        <strong> aucun établissement</strong>
-                        soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
-                        </small>
-                        </p>
-       
+                            <small>
+                                En région {{region.nom_region}}, il y a <strong>{{region.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong> aucun établissement</strong>
+                                soit un total de <strong>{{region.logements + region.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
+                        </p>       
                         <div col-md-12 col-xl-12 v-if="region.ftthregions>[]">
                             Pourcentage de locaux raccordables par nombre d'opérateurs
                             <table class="table table-striped table-sm table-bordered">
@@ -75,28 +70,28 @@
                                     </tr>
                                 </thead>
                                 <tbody> 
-                                    <tr v-bind:key="ftthregion.id" v-for="ftthregion in orderBy(region.ftthregions, 'annee', 'trimestre', -1)">                       
-                                        <td>                                                                                                                                 
+                                    <tr v-bind:key="ftthregion.id" v-for="ftthregion in orderBy(region.ftthregions, 'annee', 'trimestre', -1)">
+                                        <td>
                                             {{ftthregion.trimestre}}<sup>{{ftthregion.trimestre | pluralize('er','ème','ème','ème')}}</sup> trimestre {{ftthregion.annee}}
                                         </td>
-                                        <td>                                                                                                          
+                                        <td>
                                             {{ftthregion.unoperateur}} 
                                         </td>  
-                                        <td>                                                                                                                                 
+                                        <td>
                                           {{ftthregion.deuxoperateurs}} 
                                         </td>  
-                                        <td>                                                                                                                                  
-                                            {{ftthregion.troisoperateurs}}                             
+                                        <td>
+                                            {{ftthregion.troisoperateurs}}
                                         </td>  
-                                        <td>                                                                                                                              
+                                        <td>
                                             {{ftthregion.quatreoperateurs}} 
-                                        </td>             
+                                        </td>
                                     </tr>
-                                </tbody>                               
-                            </table>                                
+                                </tbody>
+                            </table>
                         </div>
                         <div class="col-md-12 col-xl-12" v-else>
-                            <p>Données indisponibles</p>                                
+                            <p>Données indisponibles</p>
                         </div>
                         <div class="row">
                             <div class="col-xl-6 col-md-6">
@@ -126,7 +121,7 @@
 
                         
                     </div>
-                    <div class="card-footer">               
+                    <div class="card-footer">
                        <router-link class="col-xl-6" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link>
                     </div>
                 </div>
@@ -147,42 +142,39 @@
             },
         },
         name: 'Region',
-        data () {            
-            return {                                 
+        data () {
+            return {
                 region: [], 
                 statdepartements: [],
                 ftthtopdepartements: [],
-                departements:[]                
-            }               
-        },      
+                departements:[]
+            }
+        },
         created () {  
-            this.isLoading = true       
+            this.isLoading = true
             this.id = this.$route.params.id  
                   
-            axios.get('api/region/'+ this.id)   
+            axios.get('api/region/'+ this.id)
             .then(response => {
                 this.region = response.data
-                console.log(this.region.departements)
             }),
-            axios.get('api/departements/region/'+ this.id)   
+            axios.get('api/departements/region/'+ this.id)
             .then(response => {
                 this.departements = response.data
-                console.log(this.departements)
             }),
-            axios.get('api/stattopdepartements/region/' + this.id)   
+            axios.get('api/stattopdepartements/region/' + this.id)
             .then(response => {
-                this.statdepartements = response.data         
+                this.statdepartements = response.data
             }),
-
             axios.get('api/ftthtopdepartements/region/' + this.id)
-               .then(response => {
-                this.ftthtopdepartements = response.data           
-                this.isLoading = false            
-            })            
+            .then(response => {
+                this.ftthtopdepartements = response.data
+                this.isLoading = false
+            })
         }
     }
-    
 </script>
+
 <style scoped>
-    
+
 </style>

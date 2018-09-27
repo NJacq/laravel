@@ -45,14 +45,26 @@
                         </table>
                         <p v-else>Pas de données disponibles</p>
 
-                        <p v-if="commune.etablissements > 1"><small>Dans la commune {{commune.nom_commune}}, il y a <strong>{{commune.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
-                        soit un total de <strong>{{commune.logements + commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        <p v-if="commune.etablissements > 1">
+                            <small>
+                                Dans la commune {{commune.nom_commune}}, il y a <strong>{{commune.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
+                                <strong>{{commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                                soit un total de <strong>{{commune.logements + commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
-                        <p v-else-if="commune.etablissements > 0"><small>Dans la commune {{commune.nom_commune}}, il y a <strong>{{commune.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
-                        soit un total de <strong>{{commune.logements + commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        <p v-else-if="commune.etablissements > 0">
+                            <small>
+                                Dans la commune {{commune.nom_commune}}, il y a <strong>{{commune.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
+                                <strong>{{commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
+                                soit un total de <strong>{{commune.logements + commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
-                        <p v-else><small>Dans la commune {{commune.nom_commune}}, il y a <strong>{{commune.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong> aucun établissement</strong>
-                        soit un total de <strong>{{commune.logements + commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        <p v-else>
+                            <small>
+                                Dans la commune {{commune.nom_commune}}, il y a <strong>{{commune.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
+                                <strong> aucun établissement</strong>
+                                soit un total de <strong>{{commune.logements + commune.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
                     
 
@@ -62,16 +74,15 @@
                                     <p>Plus forte progression sur les 3 derniers trimestres</p>
                                     <ul>      
                                         <li v-bind:key="stattoparrondissement.id" v-for="stattoparrondissement in stattoparrondissements">                               
-                                            <strong>{{stattoparrondissement.arrondissement.nom_arrondissement}}</strong>-> <strong>{{stattoparrondissement.pourcentage_progression}}%</strong>
+                                            <strong><router-link class="" v-bind:to="`/arrondissement/${stattoparrondissement.arrondissement.id}`">{{stattoparrondissement.arrondissement.nom_arrondissement}}</router-link></strong>-> <strong>{{stattoparrondissement.pourcentage_progression}}%</strong>
                                         </li> 
                                     </ul>
                                 </div>
                                 <div v-show="commune.arrondissements>[]">
                                     <p>Plus fort pourcentage de locaux raccordables au dernier trimestre.</p>
                                     <ul>     
-                                        <li v-bind:key="ftthtoparrondissement.id" v-for="ftthtoparrondissement in ftthtoparrondissements">
-                                    
-                                            <strong>{{ftthtoparrondissement.arrondissement.nom_arrondissement}}</strong> -> <strong>{{ftthtoparrondissement.pourcentage}}</strong>
+                                        <li v-bind:key="ftthtoparrondissement.id" v-for="ftthtoparrondissement in ftthtoparrondissements">                                    
+                                            <strong><router-link class="" v-bind:to="`/arrondissement/${ftthtoparrondissement.arrondissement.id}`">{{ftthtoparrondissement.arrondissement.nom_arrondissement}}</router-link></strong> -> <strong>{{ftthtoparrondissement.pourcentage}}</strong>
                                         </li> 
                                     </ul> 
                                 </div>  
@@ -125,12 +136,10 @@
             axios.get('api/ftthtoparrondissements/commune/'+ this.id)
             .then(response => {
                 this.ftthtoparrondissements = response.data 
-                console.log(this.ftthtoparrondissements)
             }),
             axios.get('api/stattoparrondissements/commune/'+ this.id) 
             .then(response => {
                 this.stattoparrondissements = response.data 
-                console.log(this.stattoparrondissements)
             })
         },
     }

@@ -25,7 +25,7 @@ class EpciController extends Controller
     {
     
         return response()->json(
-            Epci::with('departement')->with('communes')->with('ftthepci')->with('ftthcommune')->with('statcommune')->findOrFail($id)
+            Epci::with('departement')->with('communes')->with('ftthepci')->with('ftthcommune')->with('statcommune')->orderBy('nom_epci')->findOrFail($id)
         );
     }
 
@@ -33,7 +33,7 @@ class EpciController extends Controller
         {
         
         return response()->json(
-            Epci::all()
+            Epci::orderBy('nom_epci')->get()
         );
     }
 }

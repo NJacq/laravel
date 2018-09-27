@@ -44,6 +44,7 @@ class ImportStatArrondissement extends Command
      */
     public function handle()
     {
+        $this->info('Début du script');
         $arrondissements = Arrondissement::all(); //Liste tous les arrondissements
 
         $periode = [ // tableau associatif

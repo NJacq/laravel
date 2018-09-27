@@ -24,7 +24,7 @@ class DepartementController extends Controller
     
     public function show($id) // Affiche le detail d'un département
     {
-        $departement = Departement::with('ftthdepartements')->with('region')->with('communes')->with('epci')->orderBy('nom_departement')->findOrFail($id);
+        $departement = Departement::with('ftthdepartements')->with('urlcartedepartement')->with('region')->with('communes')->with('epci')->orderBy('nom_departement')->findOrFail($id);
         // print_r($departement->toArray());
         foreach($departement->ftthdepartements as $pourcent) {
             echo $pourcent->mavariable;

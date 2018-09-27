@@ -45,6 +45,7 @@ class ImportStatCommune extends Command
      */
     public function handle()
     {
+        $this->info('Début du script');
         $communes = Commune::all(); //Liste toutes les régions
 
         $periode = [ // tableau associatif

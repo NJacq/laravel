@@ -42,7 +42,8 @@ class ImportStatDepartement extends Command
      * @return mixed
      */
     public function handle()
-    {
+    { 
+        $this->info('Début du script');
         $departements = Departement::all(); //Liste toutes les régions
 
         $periode = [ // tableau associatif

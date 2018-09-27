@@ -42,14 +42,26 @@
                             </tbody>
                         </table> 
                         <p v-else>Données indisponibles</p>
-                        <p v-if="epci.etablissements > 1"><small>Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
-                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        <p v-if="epci.etablissements > 1">
+                            <small>
+                                Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
+                                <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissements</strong>
+                                soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
-                        <p v-else-if="epci.etablissements > 0"><small>Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
-                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        <p v-else-if="epci.etablissements > 0">
+                            <small>
+                                Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
+                                <strong>{{epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} établissement</strong>
+                                soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
-                        <p v-else><small>Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et <strong>aucun établissement</strong>
-                        soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong></small>
+                        <p v-else>
+                            <small>
+                                Dans l'EPCI {{epci.nom_epci}}, il y a <strong>{{epci.logements | currency('', 0, { thousandsSeparator: ' ' })}} logements</strong> et 
+                                <strong>aucun établissement</strong>
+                                soit un total de <strong>{{epci.logements + epci.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux.</strong>
+                            </small>
                         </p>
                         <div class="row">
                             <div class="col-xl-6 col-md-6">
@@ -58,7 +70,7 @@
                                     <ul>      
                                         <li v-bind:key="statcommune.id" v-for="statcommune in statcommunes">                               
                                             <strong><router-link class="" v-bind:to="`/commune/${statcommune.commune.id}`">{{statcommune.commune.nom_commune}}</router-link></strong> -> <strong>{{statcommune.pourcentage_progression}}%</strong>
-                                    </li> 
+                                        </li> 
                                     </ul>
                                 </div>
                                 <div v-show="ftthtopcommunes.length>0">                                  
@@ -106,7 +118,7 @@
             return {
                 epci: [],
                 statcommunes: [],
-                ftthtopcommunes: [],                                    
+                ftthtopcommunes: []
             }
         },
         created () {
@@ -121,13 +133,13 @@
             }),
             axios.get('api/stattopcommunes/epci/'+ this.id) 
             .then(response =>{
-                this.statcommunes = response.data                          
+                this.statcommunes = response.data
             }),
             axios.get('api/ftthtopcommunes/epci/'+ this.id) 
             .then(response =>{
-                this.ftthtopcommunes = response.data               
-                this.isLoading = false;                 
-            })                                          
+                this.ftthtopcommunes = response.data
+                this.isLoading = false
+            })
         },
     }
     
