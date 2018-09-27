@@ -17,7 +17,7 @@
                             </h5>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" v-if="departement.urlcartedepartement">
                         Pourcentage de locaux raccordables (sur {{departement.logements + departement.etablissements | currency('', 0, { thousandsSeparator: ' ' })}} locaux au total)
                         <table class="table table-striped table-sm table-bordered" v-if="departement.ftthdepartements>[]">                                             
                             <thead class="table-secondary">                                      
@@ -120,11 +120,10 @@
                                 </v-select>
                             </div>
                         </div>
+                        En voir plus : <a target="blank" v-bind:href= "departement.urlcartedepartement[0].url">Carte de l'arcep des deploiements pour le département : {{departement.nom_departement}}</a>
                     </div>
-                    <div class="card-footer" v-if='departement.urlcartedepartement'>
-                        <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link>
-                        <a target="blank" v-bind:href= "departement.urlcartedepartement[0].url"><button type="button" class="btn btn-primary">Carte du département</button></a>              
-                    
+                    <div class="card-footer">
+                        <router-link class="" v-bind:to="`/`"><button type="button" class="btn btn-primary">Retour à l'accueil</button></router-link>                    
                     </div>
                 </div>
             </div>

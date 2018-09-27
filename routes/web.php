@@ -28,8 +28,10 @@ Route::get('/api/ftthregion/{id}', 'Api\FtthRegionController@show'); // API pour
 Route::get('/api/stattopregions', 'Api\StatRegionController@list'); // API pour récupèrer les plus fortes progressions des regions
 
 
+Route::get('/api/departements', 'Api\DepartementController@list'); // API pour récupèrer la liste des départements
 Route::get('/api/departement/{id}', 'Api\DepartementController@show');// API pour récupèrer un seul département
 Route::get('/api/departements/region/{id}', 'Api\RegionController@showdepartements');// API pour récupèrer les départements d'une region
+
 
 Route::get('/api/ftthdepartements', 'Api\FtthDepartementController@list');  // API pour récupèrer la liste des départements 
 Route::get('/api/ftthdepartement/{id}', 'Api\FtthDepartementController@show'); // API pour récupèrer un seul département
@@ -72,7 +74,14 @@ Route::get('/api/stattoparrondissements/commune/{id}', 'Api\StatArrondissementCo
 
 
 
-
 Auth::routes(); // routes ajoutées par Laravel pour l'authentification
 
 Route::get('/', 'Front\IndexController@index')->name('index');
+
+// route moteur de recherche communes
+
+Route::get('/api/communes/search', 'Api\CommuneController@search'); // API pour récupèrer les communes ayant pour nom "xxx" dans la liste des communes 
+
+
+
+
