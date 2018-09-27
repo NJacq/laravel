@@ -4,8 +4,4 @@ Vous trouverez ici un suivi des déploiements de la fibre optique jusqu'à l'abo
 
 Vous pouvez obtenir directement des informations sur une région, un département ou une commune en saisissant son nom dans le champ correspondant.
 
-Technologies utilisées :
-    - Laravel
-    - Laravel Mix
-    - Vue.js
-    - Bootstrap 4
+Technologies utilisées :Laravel, Laravel Mix, Vue.js, Bootstrap 4
