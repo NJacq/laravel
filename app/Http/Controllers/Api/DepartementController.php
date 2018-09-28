@@ -35,7 +35,7 @@ class DepartementController extends Controller
         );
     }
 
-    public function showepci($id) // Affiche les epci d'une région
+    public function showepci($id) // Affiche les epci d'un departement
     {
         $epci = Epci::where('departement_id', $id)->orderBy('nom_epci')->get();        
         return response()->json(
