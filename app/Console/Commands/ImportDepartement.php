@@ -85,20 +85,14 @@ class ImportDepartement extends Command
                     
 
                     $region = Region::where('code_region', $dataToInsert['code_region'])->first();
-                    $urlCarte = UrlCarteDepartement::where('code_departement', $dataToInsert['code_departement']);
-                    print_r($urlCarte);
-                    exit;
-                   
+                                     
                     if(empty($region->id)) {
                         $this->error('Impossible de trouver la région '.$dataToInsert['code_region'].' pour le département '.$dataToInsert['code_departement']);
                         // exit;
                     }
 
                     $dataToInsert['region_id'] = $region->id; 
-                    $dataToInsert['url'] = $urlCarte->$url;                                  
-            
-                    // exit;
-
+                  
                     $newDepartement = Departement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'code_departement' => $dataToInsert['code_departement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
                     ], $dataToInsert);    
