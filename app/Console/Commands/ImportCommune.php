@@ -92,17 +92,22 @@ class ImportCommune extends Command
                     $departement = Departement::where('code_departement', $dataToInsert['code_departement'])->first();
                     $epci = Epci::where('siren_epci', $dataToInsert['siren_epci'])->first();
 
+                
                     if(empty($departement->id)) {
                         $this->error('Impossible de trouver le département '.$dataToInsert['code_departement'].' pour la commune '.$dataToInsert['code_commune']);
                    
-                    }
-                    if(empty($epci->id)) {
-                        $this->error('Impossible de trouver l\'epci '.$dataToInsert['siren_epci'].' pour la commune '.$dataToInsert['code_commune']);
-                 
+                    } else {
+                        $dataToInsert['departement_id'] = $departement->id;
                     }
 
-                    $dataToInsert['departement_id'] = $departement->id;
-                    $dataToInsert['epci_id'] = $epci->id;
+                    if(empty($epci->id)) {
+                        $this->error('Impossible de trouver l\'epci '.$dataToInsert['siren_epci'].' pour la commune '.$dataToInsert['code_commune']);
+                    } else {
+                        $dataToInsert['epci_id'] = $epci->id;
+                    }
+
+              
+                    
                     $newCommune = Commune::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'code_commune' => $dataToInsert['code_commune'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
                     ], $dataToInsert);    
