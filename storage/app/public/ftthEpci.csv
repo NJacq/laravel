@@ -1,0 +1,2533 @@
+Réseaux en fibre optique jusqu'à l'abonné (FttH),,,,
+Déploiement par EPCI,,,,
+,,,,
+,,,,
+Siren EPCI,Champ,T3 2017,T4 2017,T1 2018
+200000172,Locaux Raccordables,1111,1455,1303
+200000172,Catégorie,5,10,5
+200000438,Locaux Raccordables,0,0,0
+200000438,Catégorie,0,0,0
+200000545,Locaux Raccordables,0,0,0
+200000545,Catégorie,0,0,0
+200000628,Locaux Raccordables,0,0,0
+200000628,Catégorie,0,0,0
+200000800,Locaux Raccordables,0,0,0
+200000800,Catégorie,0,0,0
+200000925,Locaux Raccordables,0,0,0
+200000925,Catégorie,0,0,0
+200000933,Locaux Raccordables,0,0,0
+200000933,Catégorie,0,0,0
+200004802,Locaux Raccordables,0,0,0
+200004802,Catégorie,0,0,0
+200005932,Locaux Raccordables,0,0,0
+200005932,Catégorie,0,0,0
+200005957,Locaux Raccordables,0,0,0
+200005957,Catégorie,0,0,0
+200006682,Locaux Raccordables,4632,5193,5501
+200006682,Catégorie,10,10,10
+200006716,Locaux Raccordables,0,0,0
+200006716,Catégorie,0,0,0
+200006930,Locaux Raccordables,0,0,0
+200006930,Catégorie,0,0,0
+200006971,Locaux Raccordables,0,0,0
+200006971,Catégorie,0,0,0
+200007052,Locaux Raccordables,0,0,0
+200007052,Catégorie,0,0,0
+200007177,Locaux Raccordables,1637,1645,1645
+200007177,Catégorie,50,50,50
+200010650,Locaux Raccordables,798,1433,1711
+200010650,Catégorie,5,5,5
+200010700,Locaux Raccordables,0,0,0
+200010700,Catégorie,0,0,0
+200011773,Locaux Raccordables,2657,3832,4726
+200011773,Catégorie,5,5,5
+200011781,Locaux Raccordables,0,0,0
+200011781,Catégorie,0,0,0
+200012060,Locaux Raccordables,0,0,0
+200012060,Catégorie,0,0,0
+200013050,Locaux Raccordables,0,0,0
+200013050,Catégorie,0,0,0
+200015162,Locaux Raccordables,0,0,0
+200015162,Catégorie,0,0,0
+200016905,Locaux Raccordables,0,0,0
+200016905,Catégorie,0,0,0
+200017341,Locaux Raccordables,0,0,0
+200017341,Catégorie,0,0,0
+200017846,Locaux Raccordables,0,0,0
+200017846,Catégorie,0,0,0
+200018083,Locaux Raccordables,0,0,0
+200018083,Catégorie,0,0,0
+200018166,Locaux Raccordables,0,0,0
+200018166,Catégorie,0,0,0
+200018406,Locaux Raccordables,476,837,1301
+200018406,Catégorie,5,5,5
+200018521,Locaux Raccordables,0,0,0
+200018521,Catégorie,0,0,0
+200018653,Locaux Raccordables,4230,4280,4423
+200018653,Catégorie,5,5,5
+200022986,Locaux Raccordables,0,0,0
+200022986,Catégorie,0,0,0
+200023075,Locaux Raccordables,3161,3336,3450
+200023075,Catégorie,25,25,25
+200023125,Locaux Raccordables,672,2251,2306
+200023125,Catégorie,5,10,10
+200023240,Locaux Raccordables,0,0,0
+200023240,Catégorie,0,0,0
+200023299,Locaux Raccordables,0,0,0
+200023299,Catégorie,0,0,0
+200023307,Locaux Raccordables,1128,1314,1532
+200023307,Catégorie,5,5,5
+200023372,Locaux Raccordables,0,0,0
+200023372,Catégorie,0,0,0
+200023414,Locaux Raccordables,44676,51090,58520
+200023414,Catégorie,10,10,10
+200023620,Locaux Raccordables,69,690,879
+200023620,Catégorie,5,5,5
+200023737,Locaux Raccordables,1994,2688,3189
+200023737,Catégorie,5,10,10
+200023778,Locaux Raccordables,0,0,0
+200023778,Catégorie,0,0,0
+200023794,Locaux Raccordables,0,0,0
+200023794,Catégorie,0,0,0
+200023919,Locaux Raccordables,0,0,0
+200023919,Catégorie,0,0,0
+200026573,Locaux Raccordables,496,496,496
+200026573,Catégorie,5,5,5
+200027027,Locaux Raccordables,1173,1180,1180
+200027027,Catégorie,5,5,5
+200027076,Locaux Raccordables,0,0,0
+200027076,Catégorie,0,0,0
+200027100,Locaux Raccordables,0,0,0
+200027100,Catégorie,0,0,0
+200027183,Locaux Raccordables,57265,61236,63716
+200027183,Catégorie,25,25,25
+200027217,Locaux Raccordables,0,0,0
+200027217,Catégorie,0,0,0
+200027308,Locaux Raccordables,0,0,0
+200027308,Catégorie,0,0,0
+200027548,Locaux Raccordables,0,0,0
+200027548,Catégorie,0,0,0
+200029734,Locaux Raccordables,0,0,0
+200029734,Catégorie,0,0,0
+200029999,Locaux Raccordables,539,563,543
+200029999,Catégorie,5,5,5
+200030195,Locaux Raccordables,200784,211039,218768
+200030195,Catégorie,50,50,50
+200030385,Locaux Raccordables,15219,16210,17141
+200030385,Catégorie,25,25,25
+200030435,Locaux Raccordables,0,0,0
+200030435,Catégorie,0,0,0
+200030526,Locaux Raccordables,0,0,0
+200030526,Catégorie,0,0,0
+200030633,Locaux Raccordables,0,0,0
+200030633,Catégorie,0,0,0
+200030658,Locaux Raccordables,0,0,0
+200030658,Catégorie,0,0,0
+200030674,Locaux Raccordables,1023,1466,1846
+200030674,Catégorie,5,5,5
+200032514,Locaux Raccordables,0,0,0
+200032514,Catégorie,0,0,0
+200033025,Locaux Raccordables,4186,4725,5047
+200033025,Catégorie,10,10,10
+200033090,Locaux Raccordables,0,0,0
+200033090,Catégorie,0,0,0
+200033116,Locaux Raccordables,2113,2394,3287
+200033116,Catégorie,5,5,10
+200033173,Locaux Raccordables,786,786,787
+200033173,Catégorie,5,5,5
+200033181,Locaux Raccordables,12417,13949,15471
+200033181,Catégorie,10,10,10
+200033207,Locaux Raccordables,1025,1074,1200
+200033207,Catégorie,5,5,5
+200033298,Locaux Raccordables,0,0,0
+200033298,Catégorie,0,0,0
+200033579,Locaux Raccordables,14131,16039,19311
+200033579,Catégorie,25,25,25
+200033827,Locaux Raccordables,0,0,0
+200033827,Catégorie,0,0,0
+200033868,Locaux Raccordables,0,0,0
+200033868,Catégorie,0,0,0
+200034023,Locaux Raccordables,0,0,0
+200034023,Catégorie,0,0,0
+200034031,Locaux Raccordables,0,0,0
+200034031,Catégorie,0,0,0
+200034049,Locaux Raccordables,0,0,0
+200034049,Catégorie,0,0,0
+200034056,Locaux Raccordables,0,0,0
+200034056,Catégorie,0,0,0
+200034064,Locaux Raccordables,0,0,0
+200034064,Catégorie,0,0,0
+200034098,Locaux Raccordables,0,0,0
+200034098,Catégorie,0,0,0
+200034130,Locaux Raccordables,2055,2108,2444
+200034130,Catégorie,10,10,25
+200034197,Locaux Raccordables,0,0,0
+200034197,Catégorie,0,0,0
+200034205,Locaux Raccordables,0,0,0
+200034205,Catégorie,0,0,0
+200034270,Locaux Raccordables,0,0,0
+200034270,Catégorie,0,0,0
+200034379,Locaux Raccordables,0,0,0
+200034379,Catégorie,0,0,0
+200034411,Locaux Raccordables,0,0,0
+200034411,Catégorie,0,0,0
+200034601,Locaux Raccordables,0,0,0
+200034601,Catégorie,0,0,0
+200034635,Locaux Raccordables,0,0,0
+200034635,Catégorie,0,0,0
+200034692,Locaux Raccordables,655,755,1067
+200034692,Catégorie,5,5,5
+200034700,Locaux Raccordables,2660,2924,3761
+200034700,Catégorie,5,5,5
+200034718,Locaux Raccordables,0,0,0
+200034718,Catégorie,0,0,0
+200034726,Locaux Raccordables,0,0,0
+200034726,Catégorie,0,0,0
+200034825,Locaux Raccordables,1738,1773,1773
+200034825,Catégorie,5,5,5
+200034833,Locaux Raccordables,0,0,0
+200034833,Catégorie,0,0,0
+200034874,Locaux Raccordables,0,0,0
+200034874,Catégorie,0,0,0
+200034882,Locaux Raccordables,1740,1740,1740
+200034882,Catégorie,5,5,5
+200034957,Locaux Raccordables,0,0,0
+200034957,Catégorie,0,0,0
+200035087,Locaux Raccordables,0,0,0
+200035087,Catégorie,0,0,0
+200035103,Locaux Raccordables,0,0,0
+200035103,Catégorie,0,0,0
+200035111,Locaux Raccordables,0,0,0
+200035111,Catégorie,0,0,0
+200035129,Locaux Raccordables,0,0,0
+200035129,Catégorie,0,0,0
+200035137,Locaux Raccordables,0,0,0
+200035137,Catégorie,0,0,0
+200035202,Locaux Raccordables,3993,5655,5554
+200035202,Catégorie,25,25,25
+200035319,Locaux Raccordables,15735,17065,17793
+200035319,Catégorie,10,10,10
+200035327,Locaux Raccordables,0,0,0
+200035327,Catégorie,0,0,0
+200035442,Locaux Raccordables,0,0,0
+200035442,Catégorie,0,0,0
+200035459,Locaux Raccordables,4828,6128,6926
+200035459,Catégorie,5,10,10
+200035533,Locaux Raccordables,0,0,0
+200035533,Catégorie,0,0,0
+200035541,Locaux Raccordables,0,0,0
+200035541,Catégorie,0,0,0
+200035632,Locaux Raccordables,0,0,0
+200035632,Catégorie,0,0,0
+200035665,Locaux Raccordables,3549,3603,3627
+200035665,Catégorie,10,10,10
+200035707,Locaux Raccordables,0,0,0
+200035707,Catégorie,0,0,0
+200035715,Locaux Raccordables,10361,10770,11430
+200035715,Catégorie,10,10,10
+200035723,Locaux Raccordables,0,0,0
+200035723,Catégorie,0,0,0
+200035731,Locaux Raccordables,20960,25405,29618
+200035731,Catégorie,25,25,50
+200035756,Locaux Raccordables,0,0,0
+200035756,Catégorie,0,0,0
+200035764,Locaux Raccordables,0,0,0
+200035764,Catégorie,0,0,0
+200035772,Locaux Raccordables,0,0,0
+200035772,Catégorie,0,0,0
+200035814,Locaux Raccordables,330,1466,2369
+200035814,Catégorie,5,5,5
+200035848,Locaux Raccordables,0,0,0
+200035848,Catégorie,0,0,0
+200035855,Locaux Raccordables,0,0,0
+200035855,Catégorie,0,0,0
+200035863,Locaux Raccordables,0,0,0
+200035863,Catégorie,0,0,0
+200035970,Locaux Raccordables,0,0,0
+200035970,Catégorie,0,0,0
+200036069,Locaux Raccordables,0,0,0
+200036069,Catégorie,0,0,0
+200036077,Locaux Raccordables,0,0,0
+200036077,Catégorie,0,0,0
+200036135,Locaux Raccordables,0,0,0
+200036135,Catégorie,0,0,0
+200036150,Locaux Raccordables,0,0,0
+200036150,Catégorie,0,0,0
+200036465,Locaux Raccordables,0,844,1496
+200036465,Catégorie,0,5,5
+200036473,Locaux Raccordables,3308,4133,4378
+200036473,Catégorie,5,10,10
+200036499,Locaux Raccordables,0,0,31
+200036499,Catégorie,0,0,5
+200036523,Locaux Raccordables,0,0,0
+200036523,Catégorie,0,0,0
+200036549,Locaux Raccordables,0,0,0
+200036549,Catégorie,0,0,0
+200036572,Locaux Raccordables,0,0,0
+200036572,Catégorie,0,0,0
+200037059,Locaux Raccordables,0,0,0
+200037059,Catégorie,0,0,0
+200037133,Locaux Raccordables,4754,5515,7986
+200037133,Catégorie,25,25,25
+200038958,Locaux Raccordables,0,0,0
+200038958,Catégorie,0,0,0
+200038990,Locaux Raccordables,0,0,0
+200038990,Catégorie,0,0,0
+200039022,Locaux Raccordables,2069,2249,2876
+200039022,Catégorie,5,5,5
+200039055,Locaux Raccordables,0,0,0
+200039055,Catégorie,0,0,0
+200039063,Locaux Raccordables,0,0,0
+200039063,Catégorie,0,0,0
+200039204,Locaux Raccordables,0,0,0
+200039204,Catégorie,0,0,0
+200039519,Locaux Raccordables,0,0,0
+200039519,Catégorie,0,0,0
+200039642,Locaux Raccordables,0,0,0
+200039642,Catégorie,0,0,0
+200039709,Locaux Raccordables,0,0,0
+200039709,Catégorie,0,0,0
+200039758,Locaux Raccordables,0,0,0
+200039758,Catégorie,0,0,0
+200039808,Locaux Raccordables,0,0,0
+200039808,Catégorie,0,0,0
+200039824,Locaux Raccordables,0,0,0
+200039824,Catégorie,0,0,0
+200039832,Locaux Raccordables,0,0,0
+200039832,Catégorie,0,0,0
+200039857,Locaux Raccordables,3267,3675,4730
+200039857,Catégorie,5,5,5
+200039865,Locaux Raccordables,78376,79828,81958
+200039865,Catégorie,50,50,50
+200039907,Locaux Raccordables,0,0,0
+200039907,Catégorie,0,0,0
+200039915,Locaux Raccordables,54863,57099,62113
+200039915,Catégorie,25,25,25
+200039931,Locaux Raccordables,0,0,0
+200039931,Catégorie,0,0,0
+200039949,Locaux Raccordables,10429,10466,10497
+200039949,Catégorie,25,25,25
+200040038,Locaux Raccordables,0,0,0
+200040038,Catégorie,0,0,0
+200040095,Locaux Raccordables,0,0,0
+200040095,Catégorie,0,0,0
+200040111,Locaux Raccordables,0,0,0
+200040111,Catégorie,0,0,0
+200040137,Locaux Raccordables,0,0,0
+200040137,Catégorie,0,0,0
+200040178,Locaux Raccordables,0,0,0
+200040178,Catégorie,0,0,0
+200040202,Locaux Raccordables,0,0,0
+200040202,Catégorie,0,0,0
+200040210,Locaux Raccordables,0,0,0
+200040210,Catégorie,0,0,0
+200040244,Locaux Raccordables,0,0,0
+200040244,Catégorie,0,0,0
+200040251,Locaux Raccordables,0,569,1697
+200040251,Catégorie,0,5,10
+200040277,Locaux Raccordables,14868,20695,23033
+200040277,Catégorie,25,25,25
+200040293,Locaux Raccordables,0,0,0
+200040293,Catégorie,0,0,0
+200040350,Locaux Raccordables,1890,1927,2081
+200040350,Catégorie,5,10,10
+200040384,Locaux Raccordables,0,0,0
+200040384,Catégorie,0,0,0
+200040392,Locaux Raccordables,2628,3895,4463
+200040392,Catégorie,5,5,5
+200040400,Locaux Raccordables,0,0,0
+200040400,Catégorie,0,0,0
+200040418,Locaux Raccordables,0,0,0
+200040418,Catégorie,0,0,0
+200040426,Locaux Raccordables,0,643,643
+200040426,Catégorie,0,5,5
+200040442,Locaux Raccordables,2209,4012,6468
+200040442,Catégorie,5,10,10
+200040459,Locaux Raccordables,7643,8253,9504
+200040459,Catégorie,10,10,25
+200040475,Locaux Raccordables,12,12,12
+200040475,Catégorie,5,5,5
+200040491,Locaux Raccordables,0,0,0
+200040491,Catégorie,0,0,0
+200040509,Locaux Raccordables,0,0,0
+200040509,Catégorie,0,0,0
+200040558,Locaux Raccordables,0,0,0
+200040558,Catégorie,0,0,0
+200040566,Locaux Raccordables,0,0,0
+200040566,Catégorie,0,0,0
+200040574,Locaux Raccordables,0,0,0
+200040574,Catégorie,0,0,0
+200040590,Locaux Raccordables,10022,10594,11384
+200040590,Catégorie,25,25,25
+200040624,Locaux Raccordables,3659,3700,3700
+200040624,Catégorie,10,10,10
+200040657,Locaux Raccordables,0,0,0
+200040657,Catégorie,0,0,0
+200040681,Locaux Raccordables,2816,2868,2869
+200040681,Catégorie,10,10,10
+200040715,Locaux Raccordables,120984,125077,130361
+200040715,Catégorie,50,50,50
+200040764,Locaux Raccordables,0,0,0
+200040764,Catégorie,0,0,0
+200040772,Locaux Raccordables,0,0,0
+200040772,Catégorie,0,0,0
+200040798,Locaux Raccordables,0,0,0
+200040798,Catégorie,0,0,0
+200040814,Locaux Raccordables,0,0,0
+200040814,Catégorie,0,0,0
+200040830,Locaux Raccordables,0,0,0
+200040830,Catégorie,0,0,0
+200040889,Locaux Raccordables,0,0,0
+200040889,Catégorie,0,0,0
+200040905,Locaux Raccordables,0,0,0
+200040905,Catégorie,0,0,0
+200040947,Locaux Raccordables,1,419,663
+200040947,Catégorie,5,5,5
+200040954,Locaux Raccordables,2227,2357,2483
+200040954,Catégorie,5,10,10
+200041010,Locaux Raccordables,0,0,0
+200041010,Catégorie,0,0,0
+200041051,Locaux Raccordables,0,0,0
+200041051,Catégorie,0,0,0
+200041150,Locaux Raccordables,0,0,0
+200041150,Catégorie,0,0,0
+200041168,Locaux Raccordables,0,0,0
+200041168,Catégorie,0,0,0
+200041283,Locaux Raccordables,0,1896,1960
+200041283,Catégorie,0,10,10
+200041317,Locaux Raccordables,22231,25752,26848
+200041317,Catégorie,25,25,25
+200041325,Locaux Raccordables,0,0,0
+200041325,Catégorie,0,0,0
+200041333,Locaux Raccordables,0,0,0
+200041333,Catégorie,0,0,0
+200041366,Locaux Raccordables,3515,3853,4128
+200041366,Catégorie,10,10,10
+200041416,Locaux Raccordables,0,0,0
+200041416,Catégorie,0,0,0
+200041440,Locaux Raccordables,0,0,0
+200041440,Catégorie,0,0,0
+200041465,Locaux Raccordables,0,0,0
+200041465,Catégorie,0,0,0
+200041499,Locaux Raccordables,0,0,0
+200041499,Catégorie,0,0,0
+200041507,Locaux Raccordables,18820,18820,18820
+200041507,Catégorie,25,25,25
+200041515,Locaux Raccordables,0,0,0
+200041515,Catégorie,0,0,0
+200041523,Locaux Raccordables,0,0,0
+200041523,Catégorie,0,0,0
+200041556,Locaux Raccordables,0,0,0
+200041556,Catégorie,0,0,0
+200041572,Locaux Raccordables,0,0,0
+200041572,Catégorie,0,0,0
+200041614,Locaux Raccordables,0,0,0
+200041614,Catégorie,0,0,0
+200041622,Locaux Raccordables,0,0,0
+200041622,Catégorie,0,0,0
+200041630,Locaux Raccordables,13867,16342,17815
+200041630,Catégorie,10,10,25
+200041689,Locaux Raccordables,0,0,0
+200041689,Catégorie,0,0,0
+200041721,Locaux Raccordables,0,0,0
+200041721,Catégorie,0,0,0
+200041762,Locaux Raccordables,3169,4419,4863
+200041762,Catégorie,5,10,10
+200041788,Locaux Raccordables,0,0,0
+200041788,Catégorie,0,0,0
+200041853,Locaux Raccordables,0,0,0
+200041853,Catégorie,0,0,0
+200041861,Locaux Raccordables,0,0,0
+200041861,Catégorie,0,0,0
+200041879,Locaux Raccordables,0,0,0
+200041879,Catégorie,0,0,0
+200041887,Locaux Raccordables,0,0,0
+200041887,Catégorie,0,0,0
+200041960,Locaux Raccordables,852,4794,7651
+200041960,Catégorie,5,10,10
+200041994,Locaux Raccordables,0,0,0
+200041994,Catégorie,0,0,0
+200042000,Locaux Raccordables,0,0,0
+200042000,Catégorie,0,0,0
+200042174,Locaux Raccordables,26726,29326,33307
+200042174,Catégorie,10,25,25
+200042182,Locaux Raccordables,0,0,0
+200042182,Catégorie,0,0,0
+200042190,Locaux Raccordables,0,13,4563
+200042190,Catégorie,0,5,5
+200042372,Locaux Raccordables,0,0,0
+200042372,Catégorie,0,0,0
+200042414,Locaux Raccordables,0,0,0
+200042414,Catégorie,0,0,0
+200042463,Locaux Raccordables,0,0,0
+200042463,Catégorie,0,0,0
+200042497,Locaux Raccordables,3058,3139,3158
+200042497,Catégorie,10,10,10
+200042604,Locaux Raccordables,0,0,0
+200042604,Catégorie,0,0,0
+200042620,Locaux Raccordables,0,0,0
+200042620,Catégorie,0,0,0
+200042646,Locaux Raccordables,0,0,0
+200042646,Catégorie,0,0,0
+200042653,Locaux Raccordables,0,0,0
+200042653,Catégorie,0,0,0
+200042703,Locaux Raccordables,0,0,0
+200042703,Catégorie,0,0,0
+200042729,Locaux Raccordables,0,0,0
+200042729,Catégorie,0,0,0
+200042901,Locaux Raccordables,1166,1166,1166
+200042901,Catégorie,5,5,5
+200042935,Locaux Raccordables,8230,8350,9393
+200042935,Catégorie,25,25,25
+200042943,Locaux Raccordables,0,0,0
+200042943,Catégorie,0,0,0
+200042992,Locaux Raccordables,0,0,0
+200042992,Catégorie,0,0,0
+200043016,Locaux Raccordables,0,0,0
+200043016,Catégorie,0,0,0
+200043065,Locaux Raccordables,0,0,0
+200043065,Catégorie,0,0,0
+200043081,Locaux Raccordables,0,0,0
+200043081,Catégorie,0,0,0
+200043123,Locaux Raccordables,6615,7168,7776
+200043123,Catégorie,5,10,10
+200043156,Locaux Raccordables,0,0,0
+200043156,Catégorie,0,0,0
+200043172,Locaux Raccordables,10543,11455,12296
+200043172,Catégorie,10,10,10
+200043263,Locaux Raccordables,0,0,0
+200043263,Catégorie,0,0,0
+200043321,Locaux Raccordables,0,0,0
+200043321,Catégorie,0,0,0
+200043354,Locaux Raccordables,0,293,456
+200043354,Catégorie,0,5,5
+200043396,Locaux Raccordables,3551,5152,7536
+200043396,Catégorie,5,5,10
+200043404,Locaux Raccordables,0,0,0
+200043404,Catégorie,0,0,0
+200043438,Locaux Raccordables,0,0,0
+200043438,Catégorie,0,0,0
+200043495,Locaux Raccordables,77,266,578
+200043495,Catégorie,5,5,5
+200043602,Locaux Raccordables,0,0,0
+200043602,Catégorie,0,0,0
+200043628,Locaux Raccordables,0,0,0
+200043628,Catégorie,0,0,0
+200043693,Locaux Raccordables,0,0,0
+200043693,Catégorie,0,0,0
+200043776,Locaux Raccordables,0,0,0
+200043776,Catégorie,0,0,0
+200043974,Locaux Raccordables,0,0,0
+200043974,Catégorie,0,0,0
+200043982,Locaux Raccordables,0,0,0
+200043982,Catégorie,0,0,0
+200043990,Locaux Raccordables,0,0,0
+200043990,Catégorie,0,0,0
+200044014,Locaux Raccordables,0,0,0
+200044014,Catégorie,0,0,0
+200044030,Locaux Raccordables,0,0,0
+200044030,Catégorie,0,0,0
+200044048,Locaux Raccordables,9,2316,2390
+200044048,Catégorie,5,10,10
+200044253,Locaux Raccordables,0,0,0
+200044253,Catégorie,0,0,0
+200044394,Locaux Raccordables,0,0,0
+200044394,Catégorie,0,0,0
+200044469,Locaux Raccordables,0,0,0
+200044469,Catégorie,0,0,0
+200044618,Locaux Raccordables,5793,7115,9020
+200044618,Catégorie,5,5,10
+200044691,Locaux Raccordables,0,0,0
+200044691,Catégorie,0,0,0
+200046977,Locaux Raccordables,506870,532009,555322
+200046977,Catégorie,50,50,50
+200048551,Locaux Raccordables,0,0,0
+200048551,Catégorie,0,0,0
+200049187,Locaux Raccordables,1160,1199,1493
+200049187,Catégorie,5,5,5
+200049211,Locaux Raccordables,0,0,0
+200049211,Catégorie,0,0,0
+200049484,Locaux Raccordables,0,0,1
+200049484,Catégorie,0,0,5
+200050532,Locaux Raccordables,0,0,0
+200050532,Catégorie,0,0,0
+200054781,Locaux Raccordables,2785444,2859160,2962443
+200054781,Catégorie,50,50,50
+200054807,Locaux Raccordables,339584,347403,358291
+200054807,Catégorie,25,25,25
+200055481,Locaux Raccordables,0,0,0
+200055481,Catégorie,0,0,0
+200055655,Locaux Raccordables,45920,52468,57096
+200055655,Catégorie,25,25,25
+200055887,Locaux Raccordables,0,0,0
+200055887,Catégorie,0,0,0
+200056232,Locaux Raccordables,103576,109041,113294
+200056232,Catégorie,50,50,80
+200056380,Locaux Raccordables,31873,36729,40107
+200056380,Catégorie,25,25,25
+200057859,Locaux Raccordables,17464,17751,18384
+200057859,Catégorie,10,10,10
+200057958,Locaux Raccordables,26278,32463,38209
+200057958,Catégorie,25,25,25
+200058360,Locaux Raccordables,0,0,0
+200058360,Catégorie,0,0,0
+200058477,Locaux Raccordables,45888,49558,52238
+200058477,Catégorie,50,50,50
+200058485,Locaux Raccordables,56178,62079,65604
+200058485,Catégorie,25,50,50
+200058519,Locaux Raccordables,94692,103830,109910
+200058519,Catégorie,50,50,50
+200058782,Locaux Raccordables,45092,47152,48688
+200058782,Catégorie,25,25,25
+200059228,Locaux Raccordables,36031,43547,46319
+200059228,Catégorie,25,25,25
+200059392,Locaux Raccordables,0,0,0
+200059392,Catégorie,0,0,0
+200059400,Locaux Raccordables,0,0,0
+200059400,Catégorie,0,0,0
+200059871,Locaux Raccordables,0,0,0
+200059871,Catégorie,0,0,0
+200059889,Locaux Raccordables,71083,81059,85164
+200059889,Catégorie,25,25,25
+200060010,Locaux Raccordables,0,0,0
+200060010,Catégorie,0,0,0
+200060457,Locaux Raccordables,0,0,0
+200060457,Catégorie,0,0,0
+200060465,Locaux Raccordables,0,0,0
+200060465,Catégorie,0,0,0
+200060473,Locaux Raccordables,0,0,0
+200060473,Catégorie,0,0,0
+200065563,Locaux Raccordables,18877,15225,15261
+200065563,Catégorie,50,25,25
+200065589,Locaux Raccordables,1510,1483,1511
+200065589,Catégorie,10,10,10
+200065597,Locaux Raccordables,96298,97659,99258
+200065597,Catégorie,50,50,50
+200065647,Locaux Raccordables,11486,12669,14155
+200065647,Catégorie,10,10,10
+200065787,Locaux Raccordables,0,800,2127
+200065787,Catégorie,0,5,10
+200065886,Locaux Raccordables,8235,11238,16505
+200065886,Catégorie,10,10,25
+200065894,Locaux Raccordables,10389,14413,16581
+200065894,Catégorie,25,25,50
+200065928,Locaux Raccordables,6271,7682,8782
+200065928,Catégorie,5,10,10
+200066009,Locaux Raccordables,46659,50664,60465
+200066009,Catégorie,25,25,25
+200066017,Locaux Raccordables,0,0,0
+200066017,Catégorie,0,0,0
+200066025,Locaux Raccordables,369,369,369
+200066025,Catégorie,5,5,5
+200066033,Locaux Raccordables,0,732,734
+200066033,Catégorie,0,5,5
+200066041,Locaux Raccordables,0,0,587
+200066041,Catégorie,0,0,5
+200066058,Locaux Raccordables,2775,6775,9099
+200066058,Catégorie,5,10,10
+200066108,Locaux Raccordables,0,0,0
+200066108,Catégorie,0,0,0
+200066116,Locaux Raccordables,0,0,0
+200066116,Catégorie,0,0,0
+200066124,Locaux Raccordables,613,167,167
+200066124,Catégorie,5,5,5
+200066132,Locaux Raccordables,0,0,0
+200066132,Catégorie,0,0,0
+200066140,Locaux Raccordables,0,0,0
+200066140,Catégorie,0,0,0
+200066157,Locaux Raccordables,0,0,0
+200066157,Catégorie,0,0,0
+200066165,Locaux Raccordables,0,0,0
+200066165,Catégorie,0,0,0
+200066173,Locaux Raccordables,0,0,0
+200066173,Catégorie,0,0,0
+200066223,Locaux Raccordables,0,0,0
+200066223,Catégorie,0,0,0
+200066231,Locaux Raccordables,3171,3392,3865
+200066231,Catégorie,10,10,10
+200066280,Locaux Raccordables,1313,1828,2077
+200066280,Catégorie,5,10,10
+200066322,Locaux Raccordables,0,0,0
+200066322,Catégorie,0,0,0
+200066330,Locaux Raccordables,0,0,0
+200066330,Catégorie,0,0,0
+200066348,Locaux Raccordables,0,0,0
+200066348,Catégorie,0,0,0
+200066355,Locaux Raccordables,950,1119,3294
+200066355,Catégorie,5,5,5
+200066363,Locaux Raccordables,0,0,0
+200066363,Catégorie,0,0,0
+200066371,Locaux Raccordables,0,0,0
+200066371,Catégorie,0,0,0
+200066389,Locaux Raccordables,4937,4937,5274
+200066389,Catégorie,10,10,10
+200066405,Locaux Raccordables,0,0,0
+200066405,Catégorie,0,0,0
+200066413,Locaux Raccordables,0,0,0
+200066413,Catégorie,0,0,0
+200066462,Locaux Raccordables,0,0,0
+200066462,Catégorie,0,0,0
+200066512,Locaux Raccordables,0,0,0
+200066512,Catégorie,0,0,0
+200066520,Locaux Raccordables,0,0,0
+200066520,Catégorie,0,0,0
+200066553,Locaux Raccordables,0,0,0
+200066553,Catégorie,0,0,0
+200066561,Locaux Raccordables,0,0,0
+200066561,Catégorie,0,0,0
+200066587,Locaux Raccordables,333,1294,2131
+200066587,Catégorie,5,5,10
+200066603,Locaux Raccordables,0,0,0
+200066603,Catégorie,0,0,0
+200066637,Locaux Raccordables,2482,2484,2486
+200066637,Catégorie,10,10,10
+200066645,Locaux Raccordables,0,0,0
+200066645,Catégorie,0,0,0
+200066652,Locaux Raccordables,220,293,293
+200066652,Catégorie,5,5,5
+200066660,Locaux Raccordables,312,473,856
+200066660,Catégorie,5,5,5
+200066678,Locaux Raccordables,1873,1877,1886
+200066678,Catégorie,10,10,10
+200066710,Locaux Raccordables,0,0,0
+200066710,Catégorie,0,0,0
+200066728,Locaux Raccordables,5945,6031,6042
+200066728,Catégorie,50,50,50
+200066744,Locaux Raccordables,0,0,0
+200066744,Catégorie,0,0,0
+200066751,Locaux Raccordables,0,0,0
+200066751,Catégorie,0,0,0
+200066769,Locaux Raccordables,0,0,0
+200066769,Catégorie,0,0,0
+200066777,Locaux Raccordables,0,0,0
+200066777,Catégorie,0,0,0
+200066785,Locaux Raccordables,994,1012,1014
+200066785,Catégorie,5,5,5
+200066793,Locaux Raccordables,32978,34152,36562
+200066793,Catégorie,25,25,25
+200066801,Locaux Raccordables,0,0,0
+200066801,Catégorie,0,0,0
+200066819,Locaux Raccordables,0,0,0
+200066819,Catégorie,0,0,0
+200066827,Locaux Raccordables,68,70,91
+200066827,Catégorie,5,5,5
+200066835,Locaux Raccordables,0,0,0
+200066835,Catégorie,0,0,0
+200066850,Locaux Raccordables,0,0,0
+200066850,Catégorie,0,0,0
+200066868,Locaux Raccordables,0,0,0
+200066868,Catégorie,0,0,0
+200066876,Locaux Raccordables,13642,14498,15714
+200066876,Catégorie,25,25,25
+200066884,Locaux Raccordables,0,0,0
+200066884,Catégorie,0,0,0
+200066892,Locaux Raccordables,0,0,0
+200066892,Catégorie,0,0,0
+200066918,Locaux Raccordables,1589,2350,2727
+200066918,Catégorie,5,5,5
+200066926,Locaux Raccordables,5087,5625,6103
+200066926,Catégorie,10,10,25
+200066975,Locaux Raccordables,7974,9177,9403
+200066975,Catégorie,50,50,50
+200067023,Locaux Raccordables,0,0,0
+200067023,Catégorie,0,0,0
+200067031,Locaux Raccordables,0,0,866
+200067031,Catégorie,0,0,5
+200067049,Locaux Raccordables,0,0,0
+200067049,Catégorie,0,0,0
+200067064,Locaux Raccordables,0,0,0
+200067064,Catégorie,0,0,0
+200067072,Locaux Raccordables,0,0,0
+200067072,Catégorie,0,0,0
+200067080,Locaux Raccordables,0,0,0
+200067080,Catégorie,0,0,0
+200067106,Locaux Raccordables,53078,59110,64816
+200067106,Catégorie,25,25,25
+200067114,Locaux Raccordables,7823,9939,10755
+200067114,Catégorie,10,25,25
+200067122,Locaux Raccordables,0,0,0
+200067122,Catégorie,0,0,0
+200067130,Locaux Raccordables,0,0,0
+200067130,Catégorie,0,0,0
+200067155,Locaux Raccordables,0,0,0
+200067155,Catégorie,0,0,0
+200067163,Locaux Raccordables,0,0,0
+200067163,Catégorie,0,0,0
+200067171,Locaux Raccordables,0,0,0
+200067171,Catégorie,0,0,0
+200067189,Locaux Raccordables,0,0,0
+200067189,Catégorie,0,0,0
+200067197,Locaux Raccordables,0,0,0
+200067197,Catégorie,0,0,0
+200067205,Locaux Raccordables,20075,22342,25504
+200067205,Catégorie,10,10,10
+200067213,Locaux Raccordables,49581,52537,54533
+200067213,Catégorie,25,25,25
+200067221,Locaux Raccordables,2297,2920,3296
+200067221,Catégorie,10,10,10
+200067239,Locaux Raccordables,0,0,0
+200067239,Catégorie,0,0,0
+200067247,Locaux Raccordables,0,0,0
+200067247,Catégorie,0,0,0
+200067254,Locaux Raccordables,61928,62389,62907
+200067254,Catégorie,50,50,50
+200067262,Locaux Raccordables,0,0,0
+200067262,Catégorie,0,0,0
+200067288,Locaux Raccordables,0,0,0
+200067288,Catégorie,0,0,0
+200067296,Locaux Raccordables,0,0,0
+200067296,Catégorie,0,0,0
+200067304,Locaux Raccordables,0,0,0
+200067304,Catégorie,0,0,0
+200067320,Locaux Raccordables,0,0,0
+200067320,Catégorie,0,0,0
+200067346,Locaux Raccordables,0,0,276
+200067346,Catégorie,0,0,5
+200067361,Locaux Raccordables,0,0,0
+200067361,Catégorie,0,0,0
+200067379,Locaux Raccordables,0,0,0
+200067379,Catégorie,0,0,0
+200067429,Locaux Raccordables,0,0,0
+200067429,Catégorie,0,0,0
+200067437,Locaux Raccordables,1914,2242,2676
+200067437,Catégorie,5,5,5
+200067445,Locaux Raccordables,0,0,0
+200067445,Catégorie,0,0,0
+200067452,Locaux Raccordables,0,0,0
+200067452,Catégorie,0,0,0
+200067460,Locaux Raccordables,691,898,1026
+200067460,Catégorie,5,5,5
+200067478,Locaux Raccordables,0,0,0
+200067478,Catégorie,0,0,0
+200067486,Locaux Raccordables,0,0,0
+200067486,Catégorie,0,0,0
+200067502,Locaux Raccordables,1752,2176,2236
+200067502,Catégorie,5,5,5
+200067510,Locaux Raccordables,0,0,0
+200067510,Catégorie,0,0,0
+200067544,Locaux Raccordables,0,0,0
+200067544,Catégorie,0,0,0
+200067551,Locaux Raccordables,120,472,1541
+200067551,Catégorie,5,5,5
+200067593,Locaux Raccordables,0,0,0
+200067593,Catégorie,0,0,0
+200067627,Locaux Raccordables,0,0,0
+200067627,Catégorie,0,0,0
+200067635,Locaux Raccordables,1,52,245
+200067635,Catégorie,5,5,5
+200067643,Locaux Raccordables,0,0,0
+200067643,Catégorie,0,0,0
+200067650,Locaux Raccordables,1860,1860,1860
+200067650,Catégorie,10,10,10
+200067668,Locaux Raccordables,0,0,0
+200067668,Catégorie,0,0,0
+200067676,Locaux Raccordables,0,0,0
+200067676,Catégorie,0,0,0
+200067684,Locaux Raccordables,7392,7925,8129
+200067684,Catégorie,25,25,25
+200067692,Locaux Raccordables,0,0,0
+200067692,Catégorie,0,0,0
+200067700,Locaux Raccordables,0,0,0
+200067700,Catégorie,0,0,0
+200067742,Locaux Raccordables,0,0,0
+200067742,Catégorie,0,0,0
+200067759,Locaux Raccordables,0,0,0
+200067759,Catégorie,0,0,0
+200067767,Locaux Raccordables,0,0,0
+200067767,Catégorie,0,0,0
+200067783,Locaux Raccordables,0,0,519
+200067783,Catégorie,0,0,5
+200067791,Locaux Raccordables,633,786,1164
+200067791,Catégorie,5,5,5
+200067817,Locaux Raccordables,1388,1491,1708
+200067817,Catégorie,5,5,5
+200067825,Locaux Raccordables,10876,11088,11414
+200067825,Catégorie,25,25,25
+200067841,Locaux Raccordables,0,312,1262
+200067841,Catégorie,0,5,10
+200067866,Locaux Raccordables,0,0,77
+200067866,Catégorie,0,0,5
+200067874,Locaux Raccordables,4086,4852,6418
+200067874,Catégorie,5,10,10
+200067882,Locaux Raccordables,0,0,0
+200067882,Catégorie,0,0,0
+200067890,Locaux Raccordables,1070,1087,1099
+200067890,Catégorie,5,5,5
+200067908,Locaux Raccordables,0,0,0
+200067908,Catégorie,0,0,0
+200067916,Locaux Raccordables,0,0,0
+200067916,Catégorie,0,0,0
+200067924,Locaux Raccordables,1835,1839,1861
+200067924,Catégorie,5,5,5
+200067932,Locaux Raccordables,33618,33874,33948
+200067932,Catégorie,25,25,25
+200067940,Locaux Raccordables,0,0,0
+200067940,Catégorie,0,0,0
+200067957,Locaux Raccordables,0,2063,2123
+200067957,Catégorie,0,25,25
+200067965,Locaux Raccordables,5667,7075,7918
+200067965,Catégorie,10,10,10
+200067973,Locaux Raccordables,23479,24516,24625
+200067973,Catégorie,80,80,80
+200067981,Locaux Raccordables,3908,5212,6348
+200067981,Catégorie,5,10,10
+200067999,Locaux Raccordables,13548,18261,20454
+200067999,Catégorie,25,25,25
+200068005,Locaux Raccordables,1762,2845,2864
+200068005,Catégorie,10,25,25
+200068047,Locaux Raccordables,8103,10751,12050
+200068047,Catégorie,10,25,25
+200068070,Locaux Raccordables,0,0,0
+200068070,Catégorie,0,0,0
+200068088,Locaux Raccordables,0,0,0
+200068088,Catégorie,0,0,0
+200068096,Locaux Raccordables,0,0,0
+200068096,Catégorie,0,0,0
+200068104,Locaux Raccordables,0,0,0
+200068104,Catégorie,0,0,0
+200068112,Locaux Raccordables,0,0,1140
+200068112,Catégorie,0,0,5
+200068120,Locaux Raccordables,16257,16867,17166
+200068120,Catégorie,25,25,25
+200068146,Locaux Raccordables,2525,2526,2536
+200068146,Catégorie,5,5,5
+200068229,Locaux Raccordables,0,0,0
+200068229,Catégorie,0,0,0
+200068278,Locaux Raccordables,1547,1537,1931
+200068278,Catégorie,10,10,10
+200068294,Locaux Raccordables,1454,1498,1498
+200068294,Catégorie,10,10,10
+200068369,Locaux Raccordables,0,0,0
+200068369,Catégorie,0,0,0
+200068377,Locaux Raccordables,0,0,0
+200068377,Catégorie,0,0,0
+200068435,Locaux Raccordables,0,0,0
+200068435,Catégorie,0,0,0
+200068443,Locaux Raccordables,0,0,0
+200068443,Catégorie,0,0,0
+200068450,Locaux Raccordables,0,0,0
+200068450,Catégorie,0,0,0
+200068468,Locaux Raccordables,0,0,0
+200068468,Catégorie,0,0,0
+200068484,Locaux Raccordables,0,0,0
+200068484,Catégorie,0,0,0
+200068500,Locaux Raccordables,375,858,1386
+200068500,Catégorie,5,5,5
+200068534,Locaux Raccordables,0,0,0
+200068534,Catégorie,0,0,0
+200068542,Locaux Raccordables,0,0,0
+200068542,Catégorie,0,0,0
+200068559,Locaux Raccordables,0,0,0
+200068559,Catégorie,0,0,0
+200068567,Locaux Raccordables,0,0,0
+200068567,Catégorie,0,0,0
+200068625,Locaux Raccordables,0,0,0
+200068625,Catégorie,0,0,0
+200068641,Locaux Raccordables,2200,3486,4500
+200068641,Catégorie,5,5,5
+200068658,Locaux Raccordables,5372,5374,5374
+200068658,Catégorie,10,10,10
+200068666,Locaux Raccordables,0,0,0
+200068666,Catégorie,0,0,0
+200068674,Locaux Raccordables,2050,2476,3284
+200068674,Catégorie,5,5,5
+200068682,Locaux Raccordables,0,0,0
+200068682,Catégorie,0,0,0
+200068757,Locaux Raccordables,843,926,1729
+200068757,Catégorie,5,5,5
+200068765,Locaux Raccordables,0,0,0
+200068765,Catégorie,0,0,0
+200068773,Locaux Raccordables,0,0,0
+200068773,Catégorie,0,0,0
+200068781,Locaux Raccordables,25403,28261,30490
+200068781,Catégorie,10,10,25
+200068799,Locaux Raccordables,5702,5417,6000
+200068799,Catégorie,10,10,10
+200068807,Locaux Raccordables,0,0,0
+200068807,Catégorie,0,0,0
+200068815,Locaux Raccordables,0,0,0
+200068815,Catégorie,0,0,0
+200068831,Locaux Raccordables,0,0,0
+200068831,Catégorie,0,0,0
+200068856,Locaux Raccordables,0,0,0
+200068856,Catégorie,0,0,0
+200068864,Locaux Raccordables,0,0,0
+200068864,Catégorie,0,0,0
+200068872,Locaux Raccordables,0,0,0
+200068872,Catégorie,0,0,0
+200068880,Locaux Raccordables,0,0,0
+200068880,Catégorie,0,0,0
+200068914,Locaux Raccordables,0,0,0
+200068914,Catégorie,0,0,0
+200068922,Locaux Raccordables,0,0,0
+200068922,Catégorie,0,0,0
+200068930,Locaux Raccordables,0,0,0
+200068930,Catégorie,0,0,0
+200068948,Locaux Raccordables,0,0,0
+200068948,Catégorie,0,0,0
+200068955,Locaux Raccordables,0,0,0
+200068955,Catégorie,0,0,0
+200068963,Locaux Raccordables,6,24,576
+200068963,Catégorie,5,5,5
+200068989,Locaux Raccordables,263,263,264
+200068989,Catégorie,5,5,5
+200068997,Locaux Raccordables,2961,3276,3681
+200068997,Catégorie,5,5,5
+200069003,Locaux Raccordables,0,0,0
+200069003,Catégorie,0,0,0
+200069029,Locaux Raccordables,47,88,222
+200069029,Catégorie,5,5,5
+200069037,Locaux Raccordables,272,2504,5973
+200069037,Catégorie,5,5,10
+200069052,Locaux Raccordables,9120,9902,12080
+200069052,Catégorie,10,10,10
+200069060,Locaux Raccordables,0,0,0
+200069060,Catégorie,0,0,0
+200069086,Locaux Raccordables,0,2,3
+200069086,Catégorie,0,5,5
+200069094,Locaux Raccordables,0,0,0
+200069094,Catégorie,0,0,0
+200069102,Locaux Raccordables,0,0,0
+200069102,Catégorie,0,0,0
+200069110,Locaux Raccordables,23099,25084,26372
+200069110,Catégorie,25,25,25
+200069128,Locaux Raccordables,0,0,0
+200069128,Catégorie,0,0,0
+200069136,Locaux Raccordables,0,0,0
+200069136,Catégorie,0,0,0
+200069144,Locaux Raccordables,889,889,891
+200069144,Catégorie,10,10,10
+200069151,Locaux Raccordables,0,0,0
+200069151,Catégorie,0,0,0
+200069169,Locaux Raccordables,0,0,0
+200069169,Catégorie,0,0,0
+200069177,Locaux Raccordables,11757,12369,12938
+200069177,Catégorie,50,50,50
+200069185,Locaux Raccordables,0,0,0
+200069185,Catégorie,0,0,0
+200069193,Locaux Raccordables,3219,3883,3651
+200069193,Catégorie,10,10,10
+200069227,Locaux Raccordables,0,0,0
+200069227,Catégorie,0,0,0
+200069235,Locaux Raccordables,0,0,0
+200069235,Catégorie,0,0,0
+200069250,Locaux Raccordables,13921,15915,16888
+200069250,Catégorie,10,10,10
+200069268,Locaux Raccordables,0,0,0
+200069268,Catégorie,0,0,0
+200069300,Locaux Raccordables,11383,14527,16450
+200069300,Catégorie,10,10,10
+200069383,Locaux Raccordables,0,0,0
+200069383,Catégorie,0,0,0
+200069391,Locaux Raccordables,4445,5221,6564
+200069391,Catégorie,10,10,10
+200069409,Locaux Raccordables,12537,14536,18879
+200069409,Catégorie,10,10,10
+200069417,Locaux Raccordables,0,0,0
+200069417,Catégorie,0,0,0
+200069425,Locaux Raccordables,6484,10050,10105
+200069425,Catégorie,10,10,10
+200069433,Locaux Raccordables,0,0,0
+200069433,Catégorie,0,0,0
+200069441,Locaux Raccordables,17712,17712,17712
+200069441,Catégorie,80,80,80
+200069458,Locaux Raccordables,0,0,0
+200069458,Catégorie,0,0,0
+200069482,Locaux Raccordables,0,0,0
+200069482,Catégorie,0,0,0
+200069516,Locaux Raccordables,1517,1447,1455
+200069516,Catégorie,10,10,10
+200069524,Locaux Raccordables,0,0,0
+200069524,Catégorie,0,0,0
+200069532,Locaux Raccordables,10489,10491,10494
+200069532,Catégorie,25,25,25
+200069540,Locaux Raccordables,0,0,0
+200069540,Catégorie,0,0,0
+200069565,Locaux Raccordables,0,0,0
+200069565,Catégorie,0,0,0
+200069581,Locaux Raccordables,0,0,0
+200069581,Catégorie,0,0,0
+200069599,Locaux Raccordables,0,0,0
+200069599,Catégorie,0,0,0
+200069615,Locaux Raccordables,0,0,0
+200069615,Catégorie,0,0,0
+200069623,Locaux Raccordables,0,0,0
+200069623,Catégorie,0,0,0
+200069631,Locaux Raccordables,0,0,0
+200069631,Catégorie,0,0,0
+200069649,Locaux Raccordables,0,0,0
+200069649,Catégorie,0,0,0
+200069656,Locaux Raccordables,0,0,0
+200069656,Catégorie,0,0,0
+200069664,Locaux Raccordables,0,0,0
+200069664,Catégorie,0,0,0
+200069672,Locaux Raccordables,0,0,0
+200069672,Catégorie,0,0,0
+200069698,Locaux Raccordables,0,0,0
+200069698,Catégorie,0,0,0
+200069722,Locaux Raccordables,0,0,0
+200069722,Catégorie,0,0,0
+200069730,Locaux Raccordables,0,0,0
+200069730,Catégorie,0,0,0
+200069748,Locaux Raccordables,0,0,0
+200069748,Catégorie,0,0,0
+200069755,Locaux Raccordables,0,0,0
+200069755,Catégorie,0,0,0
+200069763,Locaux Raccordables,0,0,0
+200069763,Catégorie,0,0,0
+200069821,Locaux Raccordables,60,186,771
+200069821,Catégorie,5,5,5
+200069839,Locaux Raccordables,0,0,0
+200069839,Catégorie,0,0,0
+200069847,Locaux Raccordables,0,0,0
+200069847,Catégorie,0,0,0
+200069854,Locaux Raccordables,29910,33228,35270
+200069854,Catégorie,25,25,25
+200069912,Locaux Raccordables,0,0,0
+200069912,Catégorie,0,0,0
+200069953,Locaux Raccordables,11752,13045,13442
+200069953,Catégorie,50,50,50
+200069961,Locaux Raccordables,5789,7348,7328
+200069961,Catégorie,10,25,25
+200069995,Locaux Raccordables,0,0,0
+200069995,Catégorie,0,0,0
+200070035,Locaux Raccordables,0,0,0
+200070035,Catégorie,0,0,0
+200070043,Locaux Raccordables,0,0,0
+200070043,Catégorie,0,0,0
+200070068,Locaux Raccordables,0,0,0
+200070068,Catégorie,0,0,0
+200070092,Locaux Raccordables,382,828,1339
+200070092,Catégorie,5,5,5
+200070100,Locaux Raccordables,0,0,0
+200070100,Catégorie,0,0,0
+200070118,Locaux Raccordables,2074,2100,2580
+200070118,Catégorie,10,10,25
+200070126,Locaux Raccordables,0,0,0
+200070126,Catégorie,0,0,0
+200070142,Locaux Raccordables,0,0,0
+200070142,Catégorie,0,0,0
+200070159,Locaux Raccordables,0,1346,1693
+200070159,Catégorie,0,10,10
+200070167,Locaux Raccordables,0,0,0
+200070167,Catégorie,0,0,0
+200070183,Locaux Raccordables,0,0,0
+200070183,Catégorie,0,0,0
+200070233,Locaux Raccordables,0,0,0
+200070233,Catégorie,0,0,0
+200070282,Locaux Raccordables,0,0,0
+200070282,Catégorie,0,0,0
+200070290,Locaux Raccordables,0,0,0
+200070290,Catégorie,0,0,0
+200070308,Locaux Raccordables,2828,3618,3999
+200070308,Catégorie,5,5,5
+200070316,Locaux Raccordables,0,0,0
+200070316,Catégorie,0,0,0
+200070324,Locaux Raccordables,1417,1423,1465
+200070324,Catégorie,5,5,5
+200070332,Locaux Raccordables,0,0,0
+200070332,Catégorie,0,0,0
+200070340,Locaux Raccordables,0,0,0
+200070340,Catégorie,0,0,0
+200070365,Locaux Raccordables,0,0,0
+200070365,Catégorie,0,0,0
+200070373,Locaux Raccordables,1040,1040,1042
+200070373,Catégorie,5,5,5
+200070407,Locaux Raccordables,11942,12007,12166
+200070407,Catégorie,25,25,25
+200070431,Locaux Raccordables,0,0,0
+200070431,Catégorie,0,0,0
+200070449,Locaux Raccordables,0,0,0
+200070449,Catégorie,0,0,0
+200070464,Locaux Raccordables,0,0,0
+200070464,Catégorie,0,0,0
+200070506,Locaux Raccordables,0,0,0
+200070506,Catégorie,0,0,0
+200070514,Locaux Raccordables,2601,3278,3779
+200070514,Catégorie,5,5,5
+200070530,Locaux Raccordables,83,221,799
+200070530,Catégorie,5,5,5
+200070548,Locaux Raccordables,0,0,0
+200070548,Catégorie,0,0,0
+200070555,Locaux Raccordables,5149,5244,5250
+200070555,Catégorie,50,50,50
+200070563,Locaux Raccordables,0,0,0
+200070563,Catégorie,0,0,0
+200070571,Locaux Raccordables,5206,5296,5301
+200070571,Catégorie,50,50,50
+200070589,Locaux Raccordables,0,0,0
+200070589,Catégorie,0,0,0
+200070647,Locaux Raccordables,1686,2262,2395
+200070647,Catégorie,5,5,5
+200070662,Locaux Raccordables,0,0,0
+200070662,Catégorie,0,0,0
+200070670,Locaux Raccordables,266,934,1290
+200070670,Catégorie,5,5,5
+200070688,Locaux Raccordables,580,1394,1887
+200070688,Catégorie,5,10,10
+200070712,Locaux Raccordables,6519,6716,7939
+200070712,Catégorie,25,25,25
+200070720,Locaux Raccordables,0,0,0
+200070720,Catégorie,0,0,0
+200070738,Locaux Raccordables,0,0,0
+200070738,Catégorie,0,0,0
+200070746,Locaux Raccordables,1265,1862,2181
+200070746,Catégorie,5,5,5
+200070753,Locaux Raccordables,8602,10223,10951
+200070753,Catégorie,25,25,25
+200070761,Locaux Raccordables,3450,3450,3507
+200070761,Catégorie,10,10,10
+200070779,Locaux Raccordables,1288,1330,1666
+200070779,Catégorie,5,5,5
+200070787,Locaux Raccordables,0,0,0
+200070787,Catégorie,0,0,0
+200070795,Locaux Raccordables,0,0,0
+200070795,Catégorie,0,0,0
+200070803,Locaux Raccordables,0,0,0
+200070803,Catégorie,0,0,0
+200070811,Locaux Raccordables,0,0,0
+200070811,Catégorie,0,0,0
+200070829,Locaux Raccordables,0,0,0
+200070829,Catégorie,0,0,0
+200070845,Locaux Raccordables,0,0,0
+200070845,Catégorie,0,0,0
+200070852,Locaux Raccordables,1085,1126,1120
+200070852,Catégorie,10,10,10
+200070894,Locaux Raccordables,0,0,0
+200070894,Catégorie,0,0,0
+200070902,Locaux Raccordables,0,0,0
+200070902,Catégorie,0,0,0
+200070910,Locaux Raccordables,0,0,0
+200070910,Catégorie,0,0,0
+200070928,Locaux Raccordables,0,0,0
+200070928,Catégorie,0,0,0
+200070936,Locaux Raccordables,0,0,50
+200070936,Catégorie,0,0,5
+200070944,Locaux Raccordables,7231,7254,7398
+200070944,Catégorie,50,50,50
+200070951,Locaux Raccordables,843,844,849
+200070951,Catégorie,5,5,5
+200070969,Locaux Raccordables,0,0,0
+200070969,Catégorie,0,0,0
+200070977,Locaux Raccordables,0,0,0
+200070977,Catégorie,0,0,0
+200070985,Locaux Raccordables,0,0,0
+200070985,Catégorie,0,0,0
+200070993,Locaux Raccordables,3674,3943,4231
+200070993,Catégorie,10,10,10
+200071017,Locaux Raccordables,0,0,0
+200071017,Catégorie,0,0,0
+200071025,Locaux Raccordables,0,0,0
+200071025,Catégorie,0,0,0
+200071033,Locaux Raccordables,0,0,0
+200071033,Catégorie,0,0,0
+200071041,Locaux Raccordables,0,0,0
+200071041,Catégorie,0,0,0
+200071058,Locaux Raccordables,0,0,0
+200071058,Catégorie,0,0,0
+200071066,Locaux Raccordables,4520,4525,4559
+200071066,Catégorie,5,5,5
+200071074,Locaux Raccordables,0,0,0
+200071074,Catégorie,0,0,0
+200071082,Locaux Raccordables,8028,8868,9292
+200071082,Catégorie,10,10,10
+200071116,Locaux Raccordables,897,1555,1774
+200071116,Catégorie,5,5,5
+200071140,Locaux Raccordables,6419,6639,6963
+200071140,Catégorie,10,10,10
+200071157,Locaux Raccordables,0,0,0
+200071157,Catégorie,0,0,0
+200071165,Locaux Raccordables,3657,7797,9235
+200071165,Catégorie,5,10,10
+200071173,Locaux Raccordables,0,0,0
+200071173,Catégorie,0,0,0
+200071181,Locaux Raccordables,0,0,0
+200071181,Catégorie,0,0,0
+200071199,Locaux Raccordables,0,0,0
+200071199,Catégorie,0,0,0
+200071207,Locaux Raccordables,0,0,0
+200071207,Catégorie,0,0,0
+200071215,Locaux Raccordables,0,0,0
+200071215,Catégorie,0,0,0
+200071223,Locaux Raccordables,1117,1738,3558
+200071223,Catégorie,5,10,25
+200071298,Locaux Raccordables,0,0,0
+200071298,Catégorie,0,0,0
+200071314,Locaux Raccordables,0,0,0
+200071314,Catégorie,0,0,0
+200071363,Locaux Raccordables,4510,6263,8896
+200071363,Catégorie,5,10,10
+200071371,Locaux Raccordables,4311,4318,4317
+200071371,Catégorie,25,25,25
+200071389,Locaux Raccordables,4191,4192,4199
+200071389,Catégorie,10,10,10
+200071405,Locaux Raccordables,0,0,0
+200071405,Catégorie,0,0,0
+200071413,Locaux Raccordables,768,1203,1559
+200071413,Catégorie,5,5,5
+200071454,Locaux Raccordables,6582,8114,11165
+200071454,Catégorie,10,10,10
+200071470,Locaux Raccordables,2361,2361,2361
+200071470,Catégorie,10,10,10
+200071496,Locaux Raccordables,1533,1533,1665
+200071496,Catégorie,10,10,10
+200071504,Locaux Raccordables,0,0,0
+200071504,Catégorie,0,0,0
+200071512,Locaux Raccordables,7173,7288,7429
+200071512,Catégorie,25,25,25
+200071520,Locaux Raccordables,0,0,0
+200071520,Catégorie,0,0,0
+200071538,Locaux Raccordables,0,0,0
+200071538,Catégorie,0,0,0
+200071546,Locaux Raccordables,0,0,0
+200071546,Catégorie,0,0,0
+200071553,Locaux Raccordables,0,0,0
+200071553,Catégorie,0,0,0
+200071579,Locaux Raccordables,0,0,0
+200071579,Catégorie,0,0,0
+200071587,Locaux Raccordables,0,0,0
+200071587,Catégorie,0,0,0
+200071595,Locaux Raccordables,735,735,735
+200071595,Catégorie,5,5,5
+200071629,Locaux Raccordables,0,381,818
+200071629,Catégorie,0,5,5
+200071645,Locaux Raccordables,0,0,0
+200071645,Catégorie,0,0,0
+200071652,Locaux Raccordables,0,0,0
+200071652,Catégorie,0,0,0
+200071678,Locaux Raccordables,8075,9249,11245
+200071678,Catégorie,10,10,10
+200071751,Locaux Raccordables,33248,33921,34609
+200071751,Catégorie,25,25,50
+200071769,Locaux Raccordables,0,0,0
+200071769,Catégorie,0,0,0
+200071777,Locaux Raccordables,0,0,0
+200071777,Catégorie,0,0,0
+200071785,Locaux Raccordables,15548,16193,17652
+200071785,Catégorie,50,50,50
+200071819,Locaux Raccordables,0,0,0
+200071819,Catégorie,0,0,0
+200071827,Locaux Raccordables,10484,13699,16073
+200071827,Catégorie,10,10,10
+200071843,Locaux Raccordables,0,0,0
+200071843,Catégorie,0,0,0
+200071850,Locaux Raccordables,0,0,0
+200071850,Catégorie,0,0,0
+200071868,Locaux Raccordables,0,0,0
+200071868,Catégorie,0,0,0
+200071876,Locaux Raccordables,2226,2389,2481
+200071876,Catégorie,5,5,5
+200071884,Locaux Raccordables,0,0,0
+200071884,Catégorie,0,0,0
+200071892,Locaux Raccordables,8155,9215,11063
+200071892,Catégorie,10,10,25
+200071900,Locaux Raccordables,0,0,0
+200071900,Catégorie,0,0,0
+200071918,Locaux Raccordables,0,0,0
+200071918,Catégorie,0,0,0
+200071926,Locaux Raccordables,0,0,0
+200071926,Catégorie,0,0,0
+200071934,Locaux Raccordables,0,0,282
+200071934,Catégorie,0,0,5
+200071942,Locaux Raccordables,0,0,0
+200071942,Catégorie,0,0,0
+200071967,Locaux Raccordables,0,0,0
+200071967,Catégorie,0,0,0
+200071983,Locaux Raccordables,2605,2738,2745
+200071983,Catégorie,25,25,25
+200071991,Locaux Raccordables,2827,3347,4695
+200071991,Catégorie,10,10,25
+200072007,Locaux Raccordables,0,0,0
+200072007,Catégorie,0,0,0
+200072015,Locaux Raccordables,3438,4095,4537
+200072015,Catégorie,10,10,10
+200072023,Locaux Raccordables,0,0,0
+200072023,Catégorie,0,0,0
+200072031,Locaux Raccordables,0,6,396
+200072031,Catégorie,0,5,5
+200072049,Locaux Raccordables,0,0,0
+200072049,Catégorie,0,0,0
+200072056,Locaux Raccordables,0,0,0
+200072056,Catégorie,0,0,0
+200072064,Locaux Raccordables,0,0,0
+200072064,Catégorie,0,0,0
+200072072,Locaux Raccordables,944,1909,2136
+200072072,Catégorie,5,5,5
+200072080,Locaux Raccordables,0,0,0
+200072080,Catégorie,0,0,0
+200072098,Locaux Raccordables,161,161,161
+200072098,Catégorie,5,5,5
+200072106,Locaux Raccordables,0,0,0
+200072106,Catégorie,0,0,0
+200072130,Locaux Raccordables,25189,26828,28364
+200072130,Catégorie,50,50,50
+200072304,Locaux Raccordables,0,0,0
+200072304,Catégorie,0,0,0
+200072312,Locaux Raccordables,4444,4468,4474
+200072312,Catégorie,10,10,10
+200072320,Locaux Raccordables,0,0,0
+200072320,Catégorie,0,0,0
+200072346,Locaux Raccordables,1358,1638,2638
+200072346,Catégorie,5,5,5
+200072452,Locaux Raccordables,3418,4442,5755
+200072452,Catégorie,10,10,10
+200072460,Locaux Raccordables,1698,6734,11688
+200072460,Catégorie,5,5,5
+200072478,Locaux Raccordables,0,0,0
+200072478,Catégorie,0,0,0
+200072544,Locaux Raccordables,4427,7621,7770
+200072544,Catégorie,25,50,50
+200072635,Locaux Raccordables,0,0,0
+200072635,Catégorie,0,0,0
+200072643,Locaux Raccordables,0,0,0
+200072643,Catégorie,0,0,0
+200072650,Locaux Raccordables,0,0,0
+200072650,Catégorie,0,0,0
+200072668,Locaux Raccordables,0,0,0
+200072668,Catégorie,0,0,0
+200072676,Locaux Raccordables,1752,1755,2069
+200072676,Catégorie,10,10,10
+200072684,Locaux Raccordables,333,947,947
+200072684,Catégorie,5,5,5
+200072692,Locaux Raccordables,0,0,0
+200072692,Catégorie,0,0,0
+200072700,Locaux Raccordables,902,902,905
+200072700,Catégorie,5,5,5
+200072718,Locaux Raccordables,610,790,1176
+200072718,Catégorie,5,5,10
+200072726,Locaux Raccordables,0,0,0
+200072726,Catégorie,0,0,0
+200072734,Locaux Raccordables,0,6,51
+200072734,Catégorie,0,5,5
+200072825,Locaux Raccordables,0,0,0
+200072825,Catégorie,0,0,0
+200072874,Locaux Raccordables,1663,2414,5177
+200072874,Catégorie,10,10,25
+200072882,Locaux Raccordables,0,0,0
+200072882,Catégorie,0,0,0
+200072981,Locaux Raccordables,0,0,0
+200072981,Catégorie,0,0,0
+200072999,Locaux Raccordables,0,0,0
+200072999,Catégorie,0,0,0
+200073013,Locaux Raccordables,0,0,0
+200073013,Catégorie,0,0,0
+200073096,Locaux Raccordables,0,0,0
+200073096,Catégorie,0,0,0
+200073104,Locaux Raccordables,0,0,0
+200073104,Catégorie,0,0,0
+200073112,Locaux Raccordables,0,985,1367
+200073112,Catégorie,0,5,10
+200073120,Locaux Raccordables,0,0,0
+200073120,Catégorie,0,0,0
+200073138,Locaux Raccordables,0,0,0
+200073138,Catégorie,0,0,0
+200073146,Locaux Raccordables,0,0,0
+200073146,Catégorie,0,0,0
+200073161,Locaux Raccordables,0,0,0
+200073161,Catégorie,0,0,0
+200073237,Locaux Raccordables,0,0,0
+200073237,Catégorie,0,0,0
+200073245,Locaux Raccordables,327,327,327
+200073245,Catégorie,5,5,5
+200073252,Locaux Raccordables,0,0,0
+200073252,Catégorie,0,0,0
+200073260,Locaux Raccordables,1,1,1
+200073260,Catégorie,5,5,5
+200073344,Locaux Raccordables,7876,7958,9319
+200073344,Catégorie,10,10,25
+200073393,Locaux Raccordables,0,0,0
+200073393,Catégorie,0,0,0
+200073401,Locaux Raccordables,0,0,0
+200073401,Catégorie,0,0,0
+200073419,Locaux Raccordables,6720,7757,8472
+200073419,Catégorie,10,10,10
+200073427,Locaux Raccordables,10111,10664,10789
+200073427,Catégorie,50,50,50
+200077014,Locaux Raccordables,4496,4983,5921
+200077014,Catégorie,10,10,10
+200077055,Locaux Raccordables,3058,4753,5165
+200077055,Catégorie,5,10,10
+240100578,Locaux Raccordables,492,506,500
+240100578,Catégorie,10,10,10
+240100610,Locaux Raccordables,2619,2746,2808
+240100610,Catégorie,25,25,25
+240100750,Locaux Raccordables,25549,27433,27778
+240100750,Catégorie,50,50,50
+240100800,Locaux Raccordables,222,427,1110
+240100800,Catégorie,5,5,10
+240100883,Locaux Raccordables,9480,11301,11691
+240100883,Catégorie,10,25,25
+240100891,Locaux Raccordables,5703,5833,5814
+240100891,Catégorie,50,50,50
+240200444,Locaux Raccordables,2572,3500,3648
+240200444,Catégorie,10,25,25
+240200469,Locaux Raccordables,1071,1226,1267
+240200469,Catégorie,10,10,10
+240200477,Locaux Raccordables,5775,7135,8543
+240200477,Catégorie,10,25,25
+240200493,Locaux Raccordables,4457,5402,8352
+240200493,Catégorie,25,25,50
+240200501,Locaux Raccordables,1,240,516
+240200501,Catégorie,5,5,5
+240200519,Locaux Raccordables,0,0,0
+240200519,Catégorie,0,0,0
+240200576,Locaux Raccordables,0,0,0
+240200576,Catégorie,0,0,0
+240200584,Locaux Raccordables,0,0,0
+240200584,Catégorie,0,0,0
+240200592,Locaux Raccordables,0,0,0
+240200592,Catégorie,0,0,0
+240200600,Locaux Raccordables,0,4017,5711
+240200600,Catégorie,0,25,50
+240200634,Locaux Raccordables,0,0,0
+240200634,Catégorie,0,0,0
+240300491,Locaux Raccordables,0,0,0
+240300491,Catégorie,0,0,0
+240300558,Locaux Raccordables,0,0,0
+240300558,Catégorie,0,0,0
+240300566,Locaux Raccordables,0,0,0
+240300566,Catégorie,0,0,0
+240300657,Locaux Raccordables,1241,1241,1267
+240300657,Catégorie,25,25,25
+240400440,Locaux Raccordables,0,0,0
+240400440,Catégorie,0,0,0
+240500439,Locaux Raccordables,0,0,0
+240500439,Catégorie,0,0,0
+240500462,Locaux Raccordables,0,0,0
+240500462,Catégorie,0,0,0
+240600551,Locaux Raccordables,10369,10708,11000
+240600551,Catégorie,10,10,10
+240600585,Locaux Raccordables,34686,37850,42178
+240600585,Catégorie,25,25,25
+240600593,Locaux Raccordables,0,0,0
+240600593,Catégorie,0,0,0
+240700302,Locaux Raccordables,0,0,0
+240700302,Catégorie,0,0,0
+240700617,Locaux Raccordables,0,0,0
+240700617,Catégorie,0,0,0
+240700716,Locaux Raccordables,0,0,0
+240700716,Catégorie,0,0,0
+240700815,Locaux Raccordables,0,0,0
+240700815,Catégorie,0,0,0
+240700864,Locaux Raccordables,0,0,0
+240700864,Catégorie,0,0,0
+240800821,Locaux Raccordables,425,425,425
+240800821,Catégorie,5,5,5
+240800847,Locaux Raccordables,0,0,0
+240800847,Catégorie,0,0,0
+240800862,Locaux Raccordables,0,0,0
+240800862,Catégorie,0,0,0
+240800920,Locaux Raccordables,0,0,0
+240800920,Catégorie,0,0,0
+240900431,Locaux Raccordables,0,0,0
+240900431,Catégorie,0,0,0
+240900464,Locaux Raccordables,0,0,0
+240900464,Catégorie,0,0,0
+241000223,Locaux Raccordables,0,0,0
+241000223,Catégorie,0,0,0
+241000405,Locaux Raccordables,0,0,0
+241000405,Catégorie,0,0,0
+241000447,Locaux Raccordables,0,0,0
+241000447,Catégorie,0,0,0
+241000488,Locaux Raccordables,0,0,0
+241000488,Catégorie,0,0,0
+241100593,Locaux Raccordables,6793,7619,8205
+241100593,Catégorie,5,5,5
+241200187,Locaux Raccordables,4732,5411,6550
+241200187,Catégorie,10,10,10
+241200542,Locaux Raccordables,0,0,0
+241200542,Catégorie,0,0,0
+241200567,Locaux Raccordables,784,1055,1455
+241200567,Catégorie,5,5,5
+241200625,Locaux Raccordables,0,0,0
+241200625,Catégorie,0,0,0
+241200641,Locaux Raccordables,0,0,0
+241200641,Catégorie,0,0,0
+241200658,Locaux Raccordables,0,0,0
+241200658,Catégorie,0,0,0
+241200674,Locaux Raccordables,0,0,0
+241200674,Catégorie,0,0,0
+241200765,Locaux Raccordables,0,0,0
+241200765,Catégorie,0,0,0
+241200807,Locaux Raccordables,0,0,0
+241200807,Catégorie,0,0,0
+241200906,Locaux Raccordables,0,0,0
+241200906,Catégorie,0,0,0
+241200914,Locaux Raccordables,0,0,0
+241200914,Catégorie,0,0,0
+241300375,Locaux Raccordables,0,0,0
+241300375,Catégorie,0,0,0
+241300417,Locaux Raccordables,9991,10842,11340
+241300417,Catégorie,10,10,10
+241400415,Locaux Raccordables,24002,24299,24276
+241400415,Catégorie,50,50,50
+241400514,Locaux Raccordables,2763,2582,2619
+241400514,Catégorie,10,10,10
+241400555,Locaux Raccordables,5913,5534,5566
+241400555,Catégorie,25,25,25
+241400860,Locaux Raccordables,7580,7087,7121
+241400860,Catégorie,25,25,25
+241400878,Locaux Raccordables,2033,1688,1876
+241400878,Catégorie,10,10,10
+241500230,Locaux Raccordables,8113,9190,9777
+241500230,Catégorie,10,25,25
+241500255,Locaux Raccordables,1501,1542,1582
+241500255,Catégorie,25,25,25
+241500271,Locaux Raccordables,3091,3109,3133
+241500271,Catégorie,50,50,50
+241501055,Locaux Raccordables,2336,2410,2410
+241501055,Catégorie,25,25,25
+241501089,Locaux Raccordables,1239,1298,1298
+241501089,Catégorie,25,25,25
+241501139,Locaux Raccordables,0,0,0
+241501139,Catégorie,0,0,0
+241600303,Locaux Raccordables,0,0,0
+241600303,Catégorie,0,0,0
+241700434,Locaux Raccordables,38926,42453,44901
+241700434,Catégorie,25,25,25
+241700459,Locaux Raccordables,0,0,0
+241700459,Catégorie,0,0,0
+241700517,Locaux Raccordables,0,0,0
+241700517,Catégorie,0,0,0
+241700624,Locaux Raccordables,0,0,0
+241700624,Catégorie,0,0,0
+241700632,Locaux Raccordables,0,0,0
+241700632,Catégorie,0,0,0
+241700640,Locaux Raccordables,1007,1693,1753
+241700640,Catégorie,5,5,5
+241700699,Locaux Raccordables,0,0,0
+241700699,Catégorie,0,0,0
+241800325,Locaux Raccordables,0,0,0
+241800325,Catégorie,0,0,0
+241800374,Locaux Raccordables,0,0,0
+241800374,Catégorie,0,0,0
+241800424,Locaux Raccordables,0,0,13
+241800424,Catégorie,0,0,5
+241800432,Locaux Raccordables,0,0,0
+241800432,Catégorie,0,0,0
+241800457,Locaux Raccordables,0,0,0
+241800457,Catégorie,0,0,0
+241800507,Locaux Raccordables,21318,22140,23119
+241800507,Catégorie,25,25,25
+241900133,Locaux Raccordables,0,0,0
+241900133,Catégorie,0,0,0
+241927201,Locaux Raccordables,3862,4582,4730
+241927201,Catégorie,10,10,10
+241927243,Locaux Raccordables,0,0,0
+241927243,Catégorie,0,0,0
+242000354,Locaux Raccordables,8634,10212,11186
+242000354,Catégorie,25,25,25
+242000495,Locaux Raccordables,0,0,0
+242000495,Catégorie,0,0,0
+242000503,Locaux Raccordables,0,0,0
+242000503,Catégorie,0,0,0
+242010056,Locaux Raccordables,29574,31076,32882
+242010056,Catégorie,50,50,50
+242010130,Locaux Raccordables,0,0,0
+242010130,Catégorie,0,0,0
+242020071,Locaux Raccordables,0,0,0
+242020071,Catégorie,0,0,0
+242020105,Locaux Raccordables,0,0,0
+242020105,Catégorie,0,0,0
+242100154,Locaux Raccordables,0,0,0
+242100154,Catégorie,0,0,0
+242100410,Locaux Raccordables,63003,70368,76378
+242100410,Catégorie,25,25,50
+242101434,Locaux Raccordables,0,0,0
+242101434,Catégorie,0,0,0
+242101442,Locaux Raccordables,0,0,0
+242101442,Catégorie,0,0,0
+242101459,Locaux Raccordables,0,0,0
+242101459,Catégorie,0,0,0
+242101491,Locaux Raccordables,0,0,0
+242101491,Catégorie,0,0,0
+242101509,Locaux Raccordables,0,0,0
+242101509,Catégorie,0,0,0
+242200715,Locaux Raccordables,1481,1835,1983
+242200715,Catégorie,10,10,10
+242400752,Locaux Raccordables,0,0,0
+242400752,Catégorie,0,0,0
+242400935,Locaux Raccordables,0,0,0
+242400935,Catégorie,0,0,0
+242401024,Locaux Raccordables,0,0,0
+242401024,Catégorie,0,0,0
+242500320,Locaux Raccordables,0,0,0
+242500320,Catégorie,0,0,0
+242500338,Locaux Raccordables,3952,4865,5132
+242500338,Catégorie,25,25,25
+242500361,Locaux Raccordables,32203,35832,40675
+242500361,Catégorie,25,25,25
+242504116,Locaux Raccordables,6061,7056,8859
+242504116,Catégorie,50,50,80
+242504181,Locaux Raccordables,768,862,862
+242504181,Catégorie,5,5,5
+242504355,Locaux Raccordables,18,1547,2008
+242504355,Catégorie,5,50,50
+242504371,Locaux Raccordables,0,0,0
+242504371,Catégorie,0,0,0
+242504447,Locaux Raccordables,4862,5410,5711
+242504447,Catégorie,50,50,50
+242504488,Locaux Raccordables,2313,2989,2990
+242504488,Catégorie,50,80,80
+242504496,Locaux Raccordables,1570,1821,1823
+242504496,Catégorie,50,50,50
+242600252,Locaux Raccordables,0,0,0
+242600252,Catégorie,0,0,0
+242600492,Locaux Raccordables,0,0,0
+242600492,Catégorie,0,0,0
+242600534,Locaux Raccordables,0,0,0
+242600534,Catégorie,0,0,0
+242700276,Locaux Raccordables,934,1101,1190
+242700276,Catégorie,10,10,10
+242700607,Locaux Raccordables,0,0,0
+242700607,Catégorie,0,0,0
+242700623,Locaux Raccordables,0,0,0
+242700623,Catégorie,0,0,0
+242852465,Locaux Raccordables,0,0,0
+242852465,Catégorie,0,0,0
+242900074,Locaux Raccordables,0,0,0
+242900074,Catégorie,0,0,0
+242900314,Locaux Raccordables,82936,85719,89046
+242900314,Catégorie,50,50,50
+242900553,Locaux Raccordables,903,1268,1396
+242900553,Catégorie,5,5,5
+242900561,Locaux Raccordables,0,0,0
+242900561,Catégorie,0,0,0
+242900629,Locaux Raccordables,0,0,0
+242900629,Catégorie,0,0,0
+242900645,Locaux Raccordables,157,217,407
+242900645,Catégorie,5,5,5
+242900660,Locaux Raccordables,0,0,0
+242900660,Catégorie,0,0,0
+242900694,Locaux Raccordables,292,675,732
+242900694,Catégorie,5,5,5
+242900702,Locaux Raccordables,0,0,0
+242900702,Catégorie,0,0,0
+242900710,Locaux Raccordables,186,1020,1158
+242900710,Catégorie,5,5,10
+242900744,Locaux Raccordables,4952,5595,5785
+242900744,Catégorie,50,50,50
+242900751,Locaux Raccordables,1810,2779,3029
+242900751,Catégorie,10,10,10
+242900769,Locaux Raccordables,3717,4390,5122
+242900769,Catégorie,10,10,10
+242900793,Locaux Raccordables,1959,2064,2076
+242900793,Catégorie,10,10,10
+242900801,Locaux Raccordables,0,0,0
+242900801,Catégorie,0,0,0
+242900835,Locaux Raccordables,2450,2816,3538
+242900835,Catégorie,5,5,5
+243000270,Locaux Raccordables,0,0,0
+243000270,Catégorie,0,0,0
+243000296,Locaux Raccordables,0,0,0
+243000296,Catégorie,0,0,0
+243000569,Locaux Raccordables,0,0,0
+243000569,Catégorie,0,0,0
+243000585,Locaux Raccordables,0,0,0
+243000585,Catégorie,0,0,0
+243000593,Locaux Raccordables,0,0,0
+243000593,Catégorie,0,0,0
+243000643,Locaux Raccordables,37432,44516,49160
+243000643,Catégorie,25,25,25
+243000650,Locaux Raccordables,0,0,0
+243000650,Catégorie,0,0,0
+243000684,Locaux Raccordables,0,0,0
+243000684,Catégorie,0,0,0
+243100518,Locaux Raccordables,250895,261629,276236
+243100518,Catégorie,50,50,50
+243100567,Locaux Raccordables,0,0,0
+243100567,Catégorie,0,0,0
+243100633,Locaux Raccordables,4142,4736,4794
+243100633,Catégorie,10,10,10
+243100732,Locaux Raccordables,0,0,0
+243100732,Catégorie,0,0,0
+243100773,Locaux Raccordables,0,0,0
+243100773,Catégorie,0,0,0
+243100781,Locaux Raccordables,2539,3118,3133
+243100781,Catégorie,10,10,10
+243100815,Locaux Raccordables,0,0,0
+243100815,Catégorie,0,0,0
+243200391,Locaux Raccordables,0,0,0
+243200391,Catégorie,0,0,0
+243200409,Locaux Raccordables,0,0,0
+243200409,Catégorie,0,0,0
+243200417,Locaux Raccordables,0,0,0
+243200417,Catégorie,0,0,0
+243200425,Locaux Raccordables,0,12,12
+243200425,Catégorie,0,5,5
+243200458,Locaux Raccordables,0,0,0
+243200458,Catégorie,0,0,0
+243200508,Locaux Raccordables,0,0,0
+243200508,Catégorie,0,0,0
+243200599,Locaux Raccordables,33,703,840
+243200599,Catégorie,5,10,10
+243200607,Locaux Raccordables,0,0,0
+243200607,Catégorie,0,0,0
+243300316,Locaux Raccordables,241482,268567,281474
+243300316,Catégorie,50,50,50
+243300563,Locaux Raccordables,0,0,0
+243300563,Catégorie,0,0,0
+243300811,Locaux Raccordables,0,0,0
+243300811,Catégorie,0,0,0
+243301165,Locaux Raccordables,0,21,21
+243301165,Catégorie,0,5,5
+243301181,Locaux Raccordables,0,0,0
+243301181,Catégorie,0,0,0
+243301215,Locaux Raccordables,0,0,0
+243301215,Catégorie,0,0,0
+243301223,Locaux Raccordables,0,0,0
+243301223,Catégorie,0,0,0
+243301249,Locaux Raccordables,0,0,0
+243301249,Catégorie,0,0,0
+243301264,Locaux Raccordables,0,0,0
+243301264,Catégorie,0,0,0
+243301355,Locaux Raccordables,0,0,0
+243301355,Catégorie,0,0,0
+243301371,Locaux Raccordables,0,0,0
+243301371,Catégorie,0,0,0
+243301389,Locaux Raccordables,0,0,0
+243301389,Catégorie,0,0,0
+243301397,Locaux Raccordables,0,0,0
+243301397,Catégorie,0,0,0
+243301405,Locaux Raccordables,0,0,0
+243301405,Catégorie,0,0,0
+243301439,Locaux Raccordables,0,0,0
+243301439,Catégorie,0,0,0
+243301447,Locaux Raccordables,0,0,0
+243301447,Catégorie,0,0,0
+243301454,Locaux Raccordables,0,0,0
+243301454,Catégorie,0,0,0
+243301504,Locaux Raccordables,0,0,0
+243301504,Catégorie,0,0,0
+243400017,Locaux Raccordables,155255,161717,167628
+243400017,Catégorie,50,50,50
+243400355,Locaux Raccordables,0,0,0
+243400355,Catégorie,0,0,0
+243400470,Locaux Raccordables,0,0,602
+243400470,Catégorie,0,0,5
+243400488,Locaux Raccordables,0,0,0
+243400488,Catégorie,0,0,0
+243400520,Locaux Raccordables,1513,2292,2468
+243400520,Catégorie,5,5,10
+243400694,Locaux Raccordables,0,0,0
+243400694,Catégorie,0,0,0
+243400736,Locaux Raccordables,0,0,0
+243400736,Catégorie,0,0,0
+243400769,Locaux Raccordables,14717,16813,19236
+243400769,Catégorie,10,10,10
+243400819,Locaux Raccordables,0,0,0
+243400819,Catégorie,0,0,0
+243500139,Locaux Raccordables,89785,97922,106890
+243500139,Catégorie,25,25,25
+243500550,Locaux Raccordables,0,0,0
+243500550,Catégorie,0,0,0
+243500618,Locaux Raccordables,0,0,0
+243500618,Catégorie,0,0,0
+243500634,Locaux Raccordables,0,0,0
+243500634,Catégorie,0,0,0
+243500659,Locaux Raccordables,0,0,0
+243500659,Catégorie,0,0,0
+243500667,Locaux Raccordables,706,813,816
+243500667,Catégorie,5,5,5
+243500725,Locaux Raccordables,0,0,0
+243500725,Catégorie,0,0,0
+243500733,Locaux Raccordables,0,0,0
+243500733,Catégorie,0,0,0
+243500741,Locaux Raccordables,3741,5240,6087
+243500741,Catégorie,10,10,10
+243500774,Locaux Raccordables,0,0,0
+243500774,Catégorie,0,0,0
+243500782,Locaux Raccordables,8787,9635,10560
+243500782,Catégorie,10,10,10
+243600202,Locaux Raccordables,0,0,0
+243600202,Catégorie,0,0,0
+243600236,Locaux Raccordables,0,0,0
+243600236,Catégorie,0,0,0
+243600293,Locaux Raccordables,0,0,0
+243600293,Catégorie,0,0,0
+243600301,Locaux Raccordables,0,0,0
+243600301,Catégorie,0,0,0
+243600319,Locaux Raccordables,0,0,0
+243600319,Catégorie,0,0,0
+243600327,Locaux Raccordables,6573,7973,9146
+243600327,Catégorie,10,10,10
+243600343,Locaux Raccordables,0,0,0
+243600343,Catégorie,0,0,0
+243600350,Locaux Raccordables,0,0,0
+243600350,Catégorie,0,0,0
+243700499,Locaux Raccordables,0,0,0
+243700499,Catégorie,0,0,0
+243700754,Locaux Raccordables,71820,78424,84716
+243700754,Catégorie,25,25,50
+243700820,Locaux Raccordables,0,0,0
+243700820,Catégorie,0,0,0
+243800604,Locaux Raccordables,1371,2094,2606
+243800604,Catégorie,5,5,5
+243800745,Locaux Raccordables,0,0,0
+243800745,Catégorie,0,0,0
+243800778,Locaux Raccordables,0,0,0
+243800778,Catégorie,0,0,0
+243800844,Locaux Raccordables,0,0,0
+243800844,Catégorie,0,0,0
+243800935,Locaux Raccordables,0,0,0
+243800935,Catégorie,0,0,0
+243800984,Locaux Raccordables,988,1839,2114
+243800984,Catégorie,5,5,5
+243801024,Locaux Raccordables,0,0,0
+243801024,Catégorie,0,0,0
+243801073,Locaux Raccordables,0,0,0
+243801073,Catégorie,0,0,0
+243801255,Locaux Raccordables,0,0,0
+243801255,Catégorie,0,0,0
+243900354,Locaux Raccordables,0,0,0
+243900354,Catégorie,0,0,0
+243900412,Locaux Raccordables,0,0,0
+243900412,Catégorie,0,0,0
+243900420,Locaux Raccordables,170,170,170
+243900420,Catégorie,5,5,5
+243900479,Locaux Raccordables,0,0,0
+243900479,Catégorie,0,0,0
+243900560,Locaux Raccordables,0,0,0
+243900560,Catégorie,0,0,0
+243900610,Locaux Raccordables,0,0,0
+243900610,Catégorie,0,0,0
+243900719,Locaux Raccordables,0,0,0
+243900719,Catégorie,0,0,0
+243901071,Locaux Raccordables,0,0,0
+243901071,Catégorie,0,0,0
+243901089,Locaux Raccordables,0,0,0
+243901089,Catégorie,0,0,0
+244000543,Locaux Raccordables,0,0,0
+244000543,Catégorie,0,0,0
+244000659,Locaux Raccordables,0,0,0
+244000659,Catégorie,0,0,0
+244000675,Locaux Raccordables,30908,31483,31606
+244000675,Catégorie,80,80,80
+244000691,Locaux Raccordables,1364,1364,1364
+244000691,Catégorie,25,25,25
+244000766,Locaux Raccordables,0,0,0
+244000766,Catégorie,0,0,0
+244000774,Locaux Raccordables,0,0,0
+244000774,Catégorie,0,0,0
+244000808,Locaux Raccordables,4736,6757,8631
+244000808,Catégorie,10,10,25
+244000824,Locaux Raccordables,0,0,0
+244000824,Catégorie,0,0,0
+244000857,Locaux Raccordables,0,0,0
+244000857,Catégorie,0,0,0
+244000865,Locaux Raccordables,0,0,0
+244000865,Catégorie,0,0,0
+244000873,Locaux Raccordables,0,0,0
+244000873,Catégorie,0,0,0
+244000881,Locaux Raccordables,0,0,0
+244000881,Catégorie,0,0,0
+244100293,Locaux Raccordables,0,0,0
+244100293,Catégorie,0,0,0
+244100780,Locaux Raccordables,0,0,0
+244100780,Catégorie,0,0,0
+244100798,Locaux Raccordables,0,0,0
+244100798,Catégorie,0,0,0
+244100806,Locaux Raccordables,0,0,0
+244100806,Catégorie,0,0,0
+244200614,Locaux Raccordables,2097,2127,2129
+244200614,Catégorie,50,50,50
+244200622,Locaux Raccordables,0,1856,2857
+244200622,Catégorie,0,10,25
+244200630,Locaux Raccordables,1555,1558,1595
+244200630,Catégorie,10,10,10
+244200770,Locaux Raccordables,56165,61703,67763
+244200770,Catégorie,25,25,25
+244200820,Locaux Raccordables,2754,2756,2663
+244200820,Catégorie,50,50,50
+244200895,Locaux Raccordables,2759,4835,4807
+244200895,Catégorie,25,50,50
+244300307,Locaux Raccordables,0,0,0
+244300307,Catégorie,0,0,0
+244301016,Locaux Raccordables,3954,3971,4045
+244301016,Catégorie,25,25,25
+244301032,Locaux Raccordables,6363,6406,6416
+244301032,Catégorie,50,50,50
+244301099,Locaux Raccordables,2933,2941,3050
+244301099,Catégorie,25,25,50
+244301107,Locaux Raccordables,0,0,0
+244301107,Catégorie,0,0,0
+244301123,Locaux Raccordables,0,0,0
+244301123,Catégorie,0,0,0
+244301131,Locaux Raccordables,9336,9538,9776
+244301131,Catégorie,80,80,80
+244400404,Locaux Raccordables,133757,142589,151872
+244400404,Catégorie,25,25,25
+244400438,Locaux Raccordables,0,0,0
+244400438,Catégorie,0,0,0
+244400453,Locaux Raccordables,0,0,0
+244400453,Catégorie,0,0,0
+244400503,Locaux Raccordables,0,0,0
+244400503,Catégorie,0,0,0
+244400537,Locaux Raccordables,0,0,76
+244400537,Catégorie,0,0,5
+244400552,Locaux Raccordables,0,0,0
+244400552,Catégorie,0,0,0
+244400586,Locaux Raccordables,0,0,0
+244400586,Catégorie,0,0,0
+244400610,Locaux Raccordables,1679,2685,3160
+244400610,Catégorie,5,5,5
+244400644,Locaux Raccordables,7383,7589,7863
+244400644,Catégorie,10,10,10
+244500203,Locaux Raccordables,7049,7746,8573
+244500203,Catégorie,10,10,25
+244500211,Locaux Raccordables,1959,2738,3258
+244500211,Catégorie,10,10,10
+244500419,Locaux Raccordables,0,0,0
+244500419,Catégorie,0,0,0
+244500427,Locaux Raccordables,785,886,1057
+244500427,Catégorie,5,5,5
+244500468,Locaux Raccordables,59756,66759,72990
+244500468,Catégorie,25,25,25
+244500484,Locaux Raccordables,715,878,883
+244500484,Catégorie,10,10,10
+244500542,Locaux Raccordables,0,0,0
+244500542,Catégorie,0,0,0
+244600433,Locaux Raccordables,0,0,0
+244600433,Catégorie,0,0,0
+244600482,Locaux Raccordables,0,0,0
+244600482,Catégorie,0,0,0
+244600532,Locaux Raccordables,0,0,0
+244600532,Catégorie,0,0,0
+244600573,Locaux Raccordables,0,0,0
+244600573,Catégorie,0,0,0
+244700449,Locaux Raccordables,0,0,0
+244700449,Catégorie,0,0,0
+244700464,Locaux Raccordables,0,0,0
+244700464,Catégorie,0,0,0
+244701355,Locaux Raccordables,0,0,0
+244701355,Catégorie,0,0,0
+244701405,Locaux Raccordables,0,0,0
+244701405,Catégorie,0,0,0
+244800405,Locaux Raccordables,699,1478,1683
+244800405,Catégorie,5,10,10
+244800470,Locaux Raccordables,0,0,0
+244800470,Catégorie,0,0,0
+244900015,Locaux Raccordables,63162,65804,70165
+244900015,Catégorie,25,25,25
+244900809,Locaux Raccordables,0,0,0
+244900809,Catégorie,0,0,0
+244900882,Locaux Raccordables,0,0,0
+244900882,Catégorie,0,0,0
+245100615,Locaux Raccordables,0,0,0
+245100615,Catégorie,0,0,0
+245100888,Locaux Raccordables,0,0,0
+245100888,Catégorie,0,0,0
+245100979,Locaux Raccordables,0,0,0
+245100979,Catégorie,0,0,0
+245200597,Locaux Raccordables,0,0,0
+245200597,Catégorie,0,0,0
+245300223,Locaux Raccordables,0,0,0
+245300223,Catégorie,0,0,0
+245300306,Locaux Raccordables,0,0,0
+245300306,Catégorie,0,0,0
+245300330,Locaux Raccordables,41428,44668,45028
+245300330,Catégorie,80,80,80
+245300355,Locaux Raccordables,0,0,0
+245300355,Catégorie,0,0,0
+245300389,Locaux Raccordables,0,0,0
+245300389,Catégorie,0,0,0
+245300447,Locaux Raccordables,1350,1824,2426
+245300447,Catégorie,5,10,10
+245400171,Locaux Raccordables,0,0,0
+245400171,Catégorie,0,0,0
+245400189,Locaux Raccordables,0,0,0
+245400189,Catégorie,0,0,0
+245400262,Locaux Raccordables,0,0,0
+245400262,Catégorie,0,0,0
+245400510,Locaux Raccordables,0,0,0
+245400510,Catégorie,0,0,0
+245400601,Locaux Raccordables,0,0,0
+245400601,Catégorie,0,0,0
+245400676,Locaux Raccordables,71084,78861,83006
+245400676,Catégorie,25,50,50
+245400759,Locaux Raccordables,0,0,0
+245400759,Catégorie,0,0,0
+245500327,Locaux Raccordables,0,0,0
+245500327,Catégorie,0,0,0
+245501176,Locaux Raccordables,0,0,0
+245501176,Catégorie,0,0,0
+245501184,Locaux Raccordables,0,0,0
+245501184,Catégorie,0,0,0
+245501242,Locaux Raccordables,0,0,0
+245501242,Catégorie,0,0,0
+245501259,Locaux Raccordables,0,0,0
+245501259,Catégorie,0,0,0
+245600440,Locaux Raccordables,0,0,0
+245600440,Catégorie,0,0,0
+245600465,Locaux Raccordables,0,0,0
+245600465,Catégorie,0,0,0
+245614383,Locaux Raccordables,0,0,0
+245614383,Catégorie,0,0,0
+245614417,Locaux Raccordables,1031,1049,1049
+245614417,Catégorie,5,5,5
+245614433,Locaux Raccordables,204,204,204
+245614433,Catégorie,5,5,5
+245700133,Locaux Raccordables,0,0,0
+245700133,Catégorie,0,0,0
+245700372,Locaux Raccordables,4475,6885,9089
+245700372,Catégorie,10,10,10
+245700398,Locaux Raccordables,15877,15971,15999
+245700398,Catégorie,80,80,80
+245700695,Locaux Raccordables,0,0,1527
+245700695,Catégorie,0,0,10
+245700950,Locaux Raccordables,0,0,0
+245700950,Catégorie,0,0,0
+245701164,Locaux Raccordables,9540,9556,9569
+245701164,Catégorie,80,80,80
+245701206,Locaux Raccordables,0,0,0
+245701206,Catégorie,0,0,0
+245701222,Locaux Raccordables,0,0,0
+245701222,Catégorie,0,0,0
+245701271,Locaux Raccordables,0,0,0
+245701271,Catégorie,0,0,0
+245701354,Locaux Raccordables,0,0,0
+245701354,Catégorie,0,0,0
+245701362,Locaux Raccordables,17895,21422,22993
+245701362,Catégorie,25,50,50
+245701404,Locaux Raccordables,0,0,0
+245701404,Catégorie,0,0,0
+245801063,Locaux Raccordables,0,0,0
+245801063,Catégorie,0,0,0
+245804406,Locaux Raccordables,5816,6204,6873
+245804406,Catégorie,10,10,10
+245804497,Locaux Raccordables,0,0,0
+245804497,Catégorie,0,0,0
+245900410,Locaux Raccordables,166903,185807,201696
+245900410,Catégorie,25,25,25
+245900428,Locaux Raccordables,36410,38580,40358
+245900428,Catégorie,25,25,25
+245900758,Locaux Raccordables,0,0,26
+245900758,Catégorie,0,0,5
+245901038,Locaux Raccordables,0,0,0
+245901038,Catégorie,0,0,0
+245901061,Locaux Raccordables,0,0,291
+245901061,Catégorie,0,0,5
+245901152,Locaux Raccordables,0,73,2814
+245901152,Catégorie,0,5,5
+245901160,Locaux Raccordables,19505,20908,22409
+245901160,Catégorie,10,10,10
+246000129,Locaux Raccordables,0,0,0
+246000129,Catégorie,0,0,0
+246000376,Locaux Raccordables,11421,11737,12021
+246000376,Catégorie,50,50,50
+246000566,Locaux Raccordables,4095,9680,10209
+246000566,Catégorie,25,50,50
+246000582,Locaux Raccordables,4452,4908,4979
+246000582,Catégorie,25,25,25
+246000707,Locaux Raccordables,0,0,0
+246000707,Catégorie,0,0,0
+246000749,Locaux Raccordables,4330,4388,4426
+246000749,Catégorie,50,50,50
+246000756,Locaux Raccordables,12007,12153,12265
+246000756,Catégorie,50,50,50
+246000764,Locaux Raccordables,14044,15658,15969
+246000764,Catégorie,50,50,50
+246000772,Locaux Raccordables,5837,5849,5850
+246000772,Catégorie,50,50,50
+246000848,Locaux Raccordables,6417,7131,7150
+246000848,Catégorie,25,25,25
+246000855,Locaux Raccordables,1359,5856,6441
+246000855,Catégorie,10,50,50
+246000871,Locaux Raccordables,2803,2832,2849
+246000871,Catégorie,10,10,10
+246000897,Locaux Raccordables,7155,7256,7395
+246000897,Catégorie,80,80,80
+246000913,Locaux Raccordables,5870,5892,5943
+246000913,Catégorie,50,50,50
+246000921,Locaux Raccordables,8671,11156,11245
+246000921,Catégorie,50,50,50
+246100390,Locaux Raccordables,0,0,0
+246100390,Catégorie,0,0,0
+246100663,Locaux Raccordables,15295,16400,17846
+246100663,Catégorie,25,50,50
+246200299,Locaux Raccordables,7870,8859,11105
+246200299,Catégorie,10,10,10
+246200364,Locaux Raccordables,38295,40265,43062
+246200364,Catégorie,25,25,25
+246200380,Locaux Raccordables,0,0,0
+246200380,Catégorie,0,0,0
+246200729,Locaux Raccordables,9708,12829,15146
+246200729,Catégorie,10,10,10
+246200844,Locaux Raccordables,0,0,0
+246200844,Catégorie,0,0,0
+246201016,Locaux Raccordables,0,3,893
+246201016,Catégorie,0,5,5
+246201149,Locaux Raccordables,10899,18392,22170
+246201149,Catégorie,10,25,25
+246300701,Locaux Raccordables,36823,39760,42083
+246300701,Catégorie,10,10,10
+246300966,Locaux Raccordables,0,0,0
+246300966,Catégorie,0,0,0
+246301097,Locaux Raccordables,0,0,0
+246301097,Catégorie,0,0,0
+246400337,Locaux Raccordables,0,0,0
+246400337,Catégorie,0,0,0
+246401756,Locaux Raccordables,0,0,0
+246401756,Catégorie,0,0,0
+246500482,Locaux Raccordables,0,0,0
+246500482,Catégorie,0,0,0
+246500573,Locaux Raccordables,0,0,0
+246500573,Catégorie,0,0,0
+246600282,Locaux Raccordables,0,0,0
+246600282,Catégorie,0,0,0
+246600373,Locaux Raccordables,0,0,0
+246600373,Catégorie,0,0,0
+246600399,Locaux Raccordables,0,0,0
+246600399,Catégorie,0,0,0
+246600415,Locaux Raccordables,0,0,0
+246600415,Catégorie,0,0,0
+246600423,Locaux Raccordables,0,0,0
+246600423,Catégorie,0,0,0
+246600449,Locaux Raccordables,0,0,0
+246600449,Catégorie,0,0,0
+246600464,Locaux Raccordables,0,0,0
+246600464,Catégorie,0,0,0
+246600548,Locaux Raccordables,0,0,0
+246600548,Catégorie,0,0,0
+246700306,Locaux Raccordables,0,0,0
+246700306,Catégorie,0,0,0
+246700488,Locaux Raccordables,140955,152893,161934
+246700488,Catégorie,50,50,50
+246700744,Locaux Raccordables,0,0,0
+246700744,Catégorie,0,0,0
+246700777,Locaux Raccordables,0,0,0
+246700777,Catégorie,0,0,0
+246700843,Locaux Raccordables,0,0,0
+246700843,Catégorie,0,0,0
+246700926,Locaux Raccordables,0,2213,2869
+246700926,Catégorie,0,25,25
+246700959,Locaux Raccordables,0,0,0
+246700959,Catégorie,0,0,0
+246700967,Locaux Raccordables,2373,2544,3113
+246700967,Catégorie,10,10,10
+246701064,Locaux Raccordables,0,0,0
+246701064,Catégorie,0,0,0
+246701080,Locaux Raccordables,1310,1529,1532
+246701080,Catégorie,10,10,10
+246701098,Locaux Raccordables,0,0,0
+246701098,Catégorie,0,0,0
+246800205,Locaux Raccordables,0,0,0
+246800205,Catégorie,0,0,0
+246800395,Locaux Raccordables,0,0,0
+246800395,Catégorie,0,0,0
+246800445,Locaux Raccordables,202,680,681
+246800445,Catégorie,5,10,10
+246800494,Locaux Raccordables,1746,1954,1990
+246800494,Catégorie,25,25,25
+246800551,Locaux Raccordables,0,1356,1543
+246800551,Catégorie,0,10,10
+246800569,Locaux Raccordables,0,0,0
+246800569,Catégorie,0,0,0
+246800577,Locaux Raccordables,0,0,0
+246800577,Catégorie,0,0,0
+246800585,Locaux Raccordables,0,0,62
+246800585,Catégorie,0,0,5
+246800676,Locaux Raccordables,0,0,0
+246800676,Catégorie,0,0,0
+246800726,Locaux Raccordables,3850,5788,6942
+246800726,Catégorie,5,5,10
+246900575,Locaux Raccordables,891,891,1769
+246900575,Catégorie,5,5,10
+246900625,Locaux Raccordables,0,0,0
+246900625,Catégorie,0,0,0
+246900724,Locaux Raccordables,259,451,585
+246900724,Catégorie,5,5,5
+246900740,Locaux Raccordables,81,180,261
+246900740,Catégorie,5,5,5
+246900757,Locaux Raccordables,3701,5779,7216
+246900757,Catégorie,25,25,50
+246900765,Locaux Raccordables,787,798,820
+246900765,Catégorie,5,5,5
+247000011,Locaux Raccordables,3512,4323,5298
+247000011,Catégorie,10,10,25
+247000367,Locaux Raccordables,0,0,0
+247000367,Catégorie,0,0,0
+247000623,Locaux Raccordables,0,0,0
+247000623,Catégorie,0,0,0
+247000664,Locaux Raccordables,0,0,0
+247000664,Catégorie,0,0,0
+247000698,Locaux Raccordables,0,0,0
+247000698,Catégorie,0,0,0
+247000706,Locaux Raccordables,0,0,0
+247000706,Catégorie,0,0,0
+247000714,Locaux Raccordables,0,0,0
+247000714,Catégorie,0,0,0
+247000722,Locaux Raccordables,0,0,0
+247000722,Catégorie,0,0,0
+247000755,Locaux Raccordables,0,0,0
+247000755,Catégorie,0,0,0
+247000821,Locaux Raccordables,0,0,0
+247000821,Catégorie,0,0,0
+247000854,Locaux Raccordables,0,0,0
+247000854,Catégorie,0,0,0
+247100290,Locaux Raccordables,549,896,1950
+247100290,Catégorie,5,5,5
+247100589,Locaux Raccordables,24277,24644,26020
+247100589,Catégorie,25,25,25
+247100639,Locaux Raccordables,0,0,0
+247100639,Catégorie,0,0,0
+247100647,Locaux Raccordables,0,0,0
+247100647,Catégorie,0,0,0
+247103765,Locaux Raccordables,0,0,0
+247103765,Catégorie,0,0,0
+247103864,Locaux Raccordables,0,0,0
+247103864,Catégorie,0,0,0
+247104094,Locaux Raccordables,0,0,0
+247104094,Catégorie,0,0,0
+247200090,Locaux Raccordables,1654,1750,2409
+247200090,Catégorie,10,10,10
+247200132,Locaux Raccordables,51231,55370,58840
+247200132,Catégorie,25,25,50
+247200348,Locaux Raccordables,0,1624,1630
+247200348,Catégorie,0,10,10
+247200421,Locaux Raccordables,0,0,0
+247200421,Catégorie,0,0,0
+247200447,Locaux Raccordables,0,0,0
+247200447,Catégorie,0,0,0
+247200629,Locaux Raccordables,0,1061,1062
+247200629,Catégorie,0,5,5
+247200686,Locaux Raccordables,0,0,304
+247200686,Catégorie,0,0,5
+247300015,Locaux Raccordables,0,0,0
+247300015,Catégorie,0,0,0
+247300254,Locaux Raccordables,0,0,0
+247300254,Catégorie,0,0,0
+247300262,Locaux Raccordables,0,0,0
+247300262,Catégorie,0,0,0
+247300361,Locaux Raccordables,0,0,0
+247300361,Catégorie,0,0,0
+247300452,Locaux Raccordables,0,0,0
+247300452,Catégorie,0,0,0
+247300528,Locaux Raccordables,0,0,0
+247300528,Catégorie,0,0,0
+247300668,Locaux Raccordables,0,0,0
+247300668,Catégorie,0,0,0
+247300676,Locaux Raccordables,0,0,0
+247300676,Catégorie,0,0,0
+247300817,Locaux Raccordables,0,0,0
+247300817,Catégorie,0,0,0
+247400047,Locaux Raccordables,0,0,0
+247400047,Catégorie,0,0,0
+247400112,Locaux Raccordables,0,0,0
+247400112,Catégorie,0,0,0
+247400567,Locaux Raccordables,0,0,0
+247400567,Catégorie,0,0,0
+247400583,Locaux Raccordables,0,0,0
+247400583,Catégorie,0,0,0
+247400617,Locaux Raccordables,0,0,0
+247400617,Catégorie,0,0,0
+247400666,Locaux Raccordables,0,0,0
+247400666,Catégorie,0,0,0
+247400682,Locaux Raccordables,0,0,0
+247400682,Catégorie,0,0,0
+247400690,Locaux Raccordables,0,0,1915
+247400690,Catégorie,0,0,5
+247400724,Locaux Raccordables,0,0,0
+247400724,Catégorie,0,0,0
+247400740,Locaux Raccordables,0,0,0
+247400740,Catégorie,0,0,0
+247400773,Locaux Raccordables,0,0,0
+247400773,Catégorie,0,0,0
+247600497,Locaux Raccordables,0,0,0
+247600497,Catégorie,0,0,0
+247600505,Locaux Raccordables,0,0,0
+247600505,Catégorie,0,0,0
+247600539,Locaux Raccordables,0,0,0
+247600539,Catégorie,0,0,0
+247600588,Locaux Raccordables,0,0,0
+247600588,Catégorie,0,0,0
+247600596,Locaux Raccordables,61315,65539,69475
+247600596,Catégorie,25,50,50
+247600604,Locaux Raccordables,0,0,0
+247600604,Catégorie,0,0,0
+247600620,Locaux Raccordables,0,0,0
+247600620,Catégorie,0,0,0
+247600646,Locaux Raccordables,0,0,0
+247600646,Catégorie,0,0,0
+247600729,Locaux Raccordables,0,0,0
+247600729,Catégorie,0,0,0
+247600786,Locaux Raccordables,4709,5508,6056
+247600786,Catégorie,10,10,10
+247700032,Locaux Raccordables,0,0,0
+247700032,Catégorie,0,0,0
+247700057,Locaux Raccordables,25430,27066,28422
+247700057,Catégorie,25,25,25
+247700065,Locaux Raccordables,0,0,0
+247700065,Catégorie,0,0,0
+247700107,Locaux Raccordables,2470,3290,3338
+247700107,Catégorie,10,10,10
+247700339,Locaux Raccordables,14041,14433,14735
+247700339,Catégorie,80,80,80
+247700438,Locaux Raccordables,8036,10303,11029
+247700438,Catégorie,50,50,50
+247700594,Locaux Raccordables,2052,3217,5422
+247700594,Catégorie,5,5,10
+247700644,Locaux Raccordables,1625,1646,1664
+247700644,Catégorie,10,10,10
+247700701,Locaux Raccordables,3578,3836,3859
+247700701,Catégorie,25,25,25
+247800550,Locaux Raccordables,0,1227,1334
+247800550,Catégorie,0,5,5
+247800584,Locaux Raccordables,35195,46191,53575
+247800584,Catégorie,25,25,25
+247800618,Locaux Raccordables,0,0,0
+247800618,Catégorie,0,0,0
+247900798,Locaux Raccordables,0,0,0
+247900798,Catégorie,0,0,0
+248000499,Locaux Raccordables,4454,4454,4454
+248000499,Catégorie,25,25,25
+248000531,Locaux Raccordables,24437,28700,31126
+248000531,Catégorie,25,25,25
+248000747,Locaux Raccordables,0,0,4905
+248000747,Catégorie,0,0,25
+248100158,Locaux Raccordables,0,0,0
+248100158,Catégorie,0,0,0
+248100430,Locaux Raccordables,8925,9687,10610
+248100430,Catégorie,10,10,10
+248100497,Locaux Raccordables,0,0,0
+248100497,Catégorie,0,0,0
+248100737,Locaux Raccordables,13146,13824,14593
+248100737,Catégorie,25,25,25
+248100745,Locaux Raccordables,0,0,0
+248100745,Catégorie,0,0,0
+248200016,Locaux Raccordables,0,0,0
+248200016,Catégorie,0,0,0
+248200057,Locaux Raccordables,0,0,0
+248200057,Catégorie,0,0,0
+248200065,Locaux Raccordables,0,0,0
+248200065,Catégorie,0,0,0
+248200099,Locaux Raccordables,21710,22644,23381
+248200099,Catégorie,50,50,50
+248200107,Locaux Raccordables,0,0,0
+248200107,Catégorie,0,0,0
+248300394,Locaux Raccordables,0,0,0
+248300394,Catégorie,0,0,0
+248300410,Locaux Raccordables,900,1061,1068
+248300410,Catégorie,5,5,5
+248300493,Locaux Raccordables,5236,5362,5508
+248300493,Catégorie,5,5,5
+248300543,Locaux Raccordables,61997,66120,70725
+248300543,Catégorie,10,25,25
+248300550,Locaux Raccordables,0,0,0
+248300550,Catégorie,0,0,0
+248400053,Locaux Raccordables,2979,3797,4478
+248400053,Catégorie,5,5,10
+248400160,Locaux Raccordables,0,0,0
+248400160,Catégorie,0,0,0
+248400236,Locaux Raccordables,699,874,1411
+248400236,Catégorie,5,5,5
+248400251,Locaux Raccordables,23902,25594,27720
+248400251,Catégorie,10,10,25
+248400285,Locaux Raccordables,0,0,0
+248400285,Catégorie,0,0,0
+248400293,Locaux Raccordables,0,220,559
+248400293,Catégorie,0,5,5
+248400319,Locaux Raccordables,2266,2643,3357
+248400319,Catégorie,10,10,10
+248400335,Locaux Raccordables,2498,2519,2519
+248400335,Catégorie,10,10,10
+248500191,Locaux Raccordables,0,0,0
+248500191,Catégorie,0,0,0
+248500258,Locaux Raccordables,0,0,0
+248500258,Catégorie,0,0,0
+248500340,Locaux Raccordables,0,0,0
+248500340,Catégorie,0,0,0
+248500415,Locaux Raccordables,0,0,0
+248500415,Catégorie,0,0,0
+248500464,Locaux Raccordables,0,0,0
+248500464,Catégorie,0,0,0
+248500530,Locaux Raccordables,0,0,0
+248500530,Catégorie,0,0,0
+248500563,Locaux Raccordables,0,0,0
+248500563,Catégorie,0,0,0
+248500589,Locaux Raccordables,12894,13267,14692
+248500589,Catégorie,25,25,25
+248500621,Locaux Raccordables,0,0,0
+248500621,Catégorie,0,0,0
+248500662,Locaux Raccordables,0,0,0
+248500662,Catégorie,0,0,0
+248600413,Locaux Raccordables,4882,5470,5646
+248600413,Catégorie,10,10,10
+248600447,Locaux Raccordables,0,0,0
+248600447,Catégorie,0,0,0
+248700189,Locaux Raccordables,0,0,0
+248700189,Catégorie,0,0,0
+248719262,Locaux Raccordables,0,0,0
+248719262,Catégorie,0,0,0
+248719288,Locaux Raccordables,0,0,0
+248719288,Catégorie,0,0,0
+248719312,Locaux Raccordables,51939,57804,59688
+248719312,Catégorie,25,25,25
+248719338,Locaux Raccordables,0,0,0
+248719338,Catégorie,0,0,0
+248719353,Locaux Raccordables,0,0,0
+248719353,Catégorie,0,0,0
+248719361,Locaux Raccordables,0,0,0
+248719361,Catégorie,0,0,0
+248900334,Locaux Raccordables,669,1204,1842
+248900334,Catégorie,5,5,5
+248900383,Locaux Raccordables,0,0,0
+248900383,Catégorie,0,0,0
+248900524,Locaux Raccordables,0,0,0
+248900524,Catégorie,0,0,0
+248900664,Locaux Raccordables,0,0,0
+248900664,Catégorie,0,0,0
+248900748,Locaux Raccordables,0,0,0
+248900748,Catégorie,0,0,0
+248900896,Locaux Raccordables,0,0,0
+248900896,Catégorie,0,0,0
+248900938,Locaux Raccordables,0,0,0
+248900938,Catégorie,0,0,0
+249000241,Locaux Raccordables,0,0,0
+249000241,Catégorie,0,0,0
+249100074,Locaux Raccordables,0,0,0
+249100074,Catégorie,0,0,0
+249100157,Locaux Raccordables,0,0,0
+249100157,Catégorie,0,0,0
+249100546,Locaux Raccordables,0,0,0
+249100546,Catégorie,0,0,0
+249100553,Locaux Raccordables,0,0,0
+249100553,Catégorie,0,0,0
+249100595,Locaux Raccordables,0,0,0
+249100595,Catégorie,0,0,0
+249500109,Locaux Raccordables,78716,82528,84076
+249500109,Catégorie,80,80,80
+249500430,Locaux Raccordables,0,0,0
+249500430,Catégorie,0,0,0
+249500455,Locaux Raccordables,0,0,0
+249500455,Catégorie,0,0,0
+249500489,Locaux Raccordables,0,0,0
+249500489,Catégorie,0,0,0
+249500513,Locaux Raccordables,0,0,0
+249500513,Catégorie,0,0,0
+249710047,Locaux Raccordables,0,0,0
+249710047,Catégorie,0,0,0
+249710062,Locaux Raccordables,2168,3663,3926
+249710062,Catégorie,5,5,5
+249710070,Locaux Raccordables,3523,3631,3674
+249710070,Catégorie,5,5,5
+249720053,Locaux Raccordables,0,0,0
+249720053,Catégorie,0,0,0
+249720061,Locaux Raccordables,11683,15129,18979
+249720061,Catégorie,10,10,10
+249730037,Locaux Raccordables,0,0,0
+249730037,Catégorie,0,0,0
+249730045,Locaux Raccordables,6936,7760,8742
+249730045,Catégorie,10,10,10
+249730052,Locaux Raccordables,0,0,0
+249730052,Catégorie,0,0,0
+249740077,Locaux Raccordables,19066,28916,34252
+249740077,Catégorie,10,25,25
+249740085,Locaux Raccordables,9916,14197,16741
+249740085,Catégorie,10,25,25
+249740093,Locaux Raccordables,37132,40305,40869
+249740093,Catégorie,50,50,50
+249740101,Locaux Raccordables,53926,58117,62238
+249740101,Catégorie,50,50,50
+249740119,Locaux Raccordables,49160,56734,60470
+249740119,Catégorie,50,50,50

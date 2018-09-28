@@ -1,0 +1,50 @@
+Réseaux en fibre optique jusqu'à l'abonné (FttH),,,,,,,,,
+Informations à l'échelle de l'Arrondissement (Paris-Lyon-Marseille),,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Code arrondissement,Nom arrondissement,Code région,Code département,Siren EPCI,Code commune,Logements,Établissements,Zones très denses,OI 2018 T1
+13201,Marseille 1er Arrondissement,93,13,200054807,13055, 3 150    , 173    ,1,FREE-FRTE-SFR0
+13202,Marseille 2e Arrondissement,93,13,200054807,13055, 23 775    , 2 890    ,1,FREE-FRTE-SFR0
+13203,Marseille 3e Arrondissement,93,13,200054807,13055, 15 079    , 1 448    ,1,FREE-FRTE-SFR0
+13204,Marseille 4e Arrondissement,93,13,200054807,13055, 23 467    , 947    ,1,FREE-FRTE-SFR0
+13205,Marseille 5e Arrondissement,93,13,200054807,13055, 27 722    , 983    ,1,FREE-FRTE-SFR0
+13206,Marseille 6e Arrondissement,93,13,200054807,13055, 29 115    , 867    ,1,FREE-FRTE-SFR0
+13207,Marseille 7e Arrondissement,93,13,200054807,13055, 26 618    , 2 672    ,1,FREE-FRTE-SFR0
+13208,Marseille 8e Arrondissement,93,13,200054807,13055, 22 009    , 911    ,1,FREE-FRTE-SFR0
+13209,Marseille 9e Arrondissement,93,13,200054807,13055, 44 782    , 2 945    ,1,FREE-FRTE-SFR0-UPCF
+13210,Marseille 10e Arrondissement,93,13,200054807,13055, 35 568    , 1 277    ,1,FREE-FRTE-SFR0
+13211,Marseille 11e Arrondissement,93,13,200054807,13055, 27 520    , 992    ,1,FREE-FRTE-SFR0
+13212,Marseille 12e Arrondissement,93,13,200054807,13055, 23 657    , 1 487    ,1,FREE-FRTE-SFR0
+13213,Marseille 13e Arrondissement,93,13,200054807,13055, 28 475    , 1 207    ,1,FREE-FRTE-SFR0
+13214,Marseille 14e Arrondissement,93,13,200054807,13055, 39 156    , 1 280    ,1,FREE-FRTE-SFR0
+13215,Marseille 15e Arrondissement,93,13,200054807,13055, 25 921    , 1 413    ,1,FREE-FRTE-SFR0
+13216,Marseille 16e Arrondissement,93,13,200054807,13055, 31 951    , 1 685    ,1,FREE-SFR0
+69381,Lyon 1er Arrondissement,84,69,200046977,69123, 18 026    , 1 495    ,1,FREE-FRTE-SFR0
+69382,Lyon 2e Arrondissement,84,69,200046977,69123, 18 947    , 3 358    ,1,FREE-FRTE-SFR0-UPCF
+69383,Lyon 3e Arrondissement,84,69,200046977,69123, 58 928    , 4 337    ,1,FREE-FRTE-SFR0-UPCF
+69384,Lyon 4e Arrondissement,84,69,200046977,69123, 20 197    , 1 042    ,1,FREE-FRTE-SFR0
+69385,Lyon 5e Arrondissement,84,69,200046977,69123, 24 502    , 1 089    ,1,FREE-FRTE-SFR0
+69386,Lyon 6e Arrondissement,84,69,200046977,69123, 30 638    , 3 329    ,1,FREE-FRTE-SFR0-UPCF
+69387,Lyon 7e Arrondissement,84,69,200046977,69123, 47 822    , 2 796    ,1,FREE-FRTE-SFR0
+69388,Lyon 8e Arrondissement,84,69,200046977,69123, 45 075    , 1 554    ,1,FREE-FRTE-SFR0
+69389,Lyon 9e Arrondissement,84,69,200046977,69123, 26 648    , 1 885    ,1,FREE-FRTE-SFR0
+75101,Paris 1er Arrondissement,11,75,200054781,75056, 13 594    , 5 604    ,1,FREE-FRTE-SFR0-UPCF
+75102,Paris 2e Arrondissement,11,75,200054781,75056, 17 191    , 6 127    ,1,FREE-FRTE-SFR0-UPCF
+75103,Paris 3e Arrondissement,11,75,200054781,75056, 25 983    , 4 156    ,1,FREE-FRTE-SFR0-UPCF
+75104,Paris 4e Arrondissement,11,75,200054781,75056, 22 550    , 3 261    ,1,FREE-FRTE-SFR0-UPCF
+75105,Paris 5e Arrondissement,11,75,200054781,75056, 39 776    , 4 075    ,1,FREE-FRTE-SFR0-UPCF
+75106,Paris 6e Arrondissement,11,75,200054781,75056, 31 432    , 5 492    ,1,FREE-FRTE-SFR0-UPCF
+75107,Paris 7e Arrondissement,11,75,200054781,75056, 39 235    , 5 935    ,1,FREE-FRTE-SFR0-UPCF
+75108,Paris 8e Arrondissement,11,75,200054781,75056, 26 864    , 17 425    ,1,FREE-FRTE-SFR0-UPCF
+75109,Paris 9e Arrondissement,11,75,200054781,75056, 40 397    , 9 944    ,1,FREE-FRTE-SFR0-UPCF
+75110,Paris 10e Arrondissement,11,75,200054781,75056, 58 476    , 7 871    ,1,FREE-FRTE-SFR0-UPCF
+75111,Paris 11e Arrondissement,11,75,200054781,75056, 99 557    , 8 877    ,1,FREE-FRTE-SFR0-UPCF
+75112,Paris 12e Arrondissement,11,75,200054781,75056, 84 888    , 6 939    ,1,FREE-FRTE-SFR0-UPCF
+75113,Paris 13e Arrondissement,11,75,200054781,75056, 101 353    , 5 750    ,1,FREE-FRTE-SFR0-UPCF
+75114,Paris 14e Arrondissement,11,75,200054781,75056, 83 065    , 5 683    ,1,FREE-FRTE-SFR0-UPCF
+75115,Paris 15e Arrondissement,11,75,200054781,75056, 149 162    , 10 359    ,1,FREE-FRTE-SFR0-UPCF
+75116,Paris 16e Arrondissement,11,75,200054781,75056, 102 622    , 12 199    ,1,CO92-FREE-FRTE-SFR0-UPCF
+75117,Paris 17e Arrondissement,11,75,200054781,75056, 104 753    , 11 571    ,1,FREE-FRTE-SFR0-UPCF
+75118,Paris 18e Arrondissement,11,75,200054781,75056, 121 525    , 7 256    ,1,FREE-FRTE-SFR0-UPCF
+75119,Paris 19e Arrondissement,11,75,200054781,75056, 94 332    , 5 055    ,1,FREE-FRTE-SFR0-UPCF
+75120,Paris 20e Arrondissement,11,75,200054781,75056, 105 430    , 5 710    ,1,FREE-FRTE-SFR0-UPCF

@@ -1,0 +1,113 @@
+Réseaux en fibre optique jusqu'à l'abonné (FttH),,,,
+Déploiement et mutualisation par Région,,,,
+,,,,
+,,,,
+Code région,Champ,T3 2017,T4 2017,T1 2018
+01,Locaux Raccordables,29000,30000,31000
+01,Catégorie,10,10,10
+01,Au moins un opérateur au PM via la mutualisation passive,99%,100%,100%
+01,Au moins deux opérateurs au PM via la mutualisation passive,21%,20%,20%
+01,Au moins trois opérateurs au PM via la mutualisation passive,0%,0%,0%
+01,Au moins quatre opérateurs au PM via la mutualisation passive,0%,0%,0%
+02,Locaux Raccordables,12000,15000,19000
+02,Catégorie,5,5,5
+02,Au moins un opérateur au PM via la mutualisation passive,97%,100%,100%
+02,Au moins deux opérateurs au PM via la mutualisation passive,57%,49%,45%
+02,Au moins trois opérateurs au PM via la mutualisation passive,0%,0%,0%
+02,Au moins quatre opérateurs au PM via la mutualisation passive,0%,0%,0%
+03,Locaux Raccordables,7000,8000,9000
+03,Catégorie,5,5,10
+03,Au moins un opérateur au PM via la mutualisation passive,99%,100%,100%
+03,Au moins deux opérateurs au PM via la mutualisation passive,45%,47%,44%
+03,Au moins trois opérateurs au PM via la mutualisation passive,0%,0%,0%
+03,Au moins quatre opérateurs au PM via la mutualisation passive,0%,0%,0%
+04,Locaux Raccordables,169000,198000,215000
+04,Catégorie,25,50,50
+04,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+04,Au moins deux opérateurs au PM via la mutualisation passive,64%,54%,65%
+04,Au moins trois opérateurs au PM via la mutualisation passive,27%,25%,36%
+04,Au moins quatre opérateurs au PM via la mutualisation passive,0%,0%,1%
+06,Locaux Raccordables,0,0,0
+06,Catégorie,0,0,0
+06,Au moins un opérateur au PM via la mutualisation passive,0%,0%,0%
+06,Au moins deux opérateurs au PM via la mutualisation passive,0%,0%,0%
+06,Au moins trois opérateurs au PM via la mutualisation passive,0%,0%,0%
+06,Au moins quatre opérateurs au PM via la mutualisation passive,0%,0%,0%
+11,Locaux Raccordables,3584000,3751000,3919000
+11,Catégorie,50,50,50
+11,Au moins un opérateur au PM via la mutualisation passive,99%,99%,99%
+11,Au moins deux opérateurs au PM via la mutualisation passive,78%,81%,85%
+11,Au moins trois opérateurs au PM via la mutualisation passive,52%,52%,59%
+11,Au moins quatre opérateurs au PM via la mutualisation passive,33%,35%,42%
+24,Locaux Raccordables,242000,274000,297000
+24,Catégorie,10,10,10
+24,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+24,Au moins deux opérateurs au PM via la mutualisation passive,46%,49%,69%
+24,Au moins trois opérateurs au PM via la mutualisation passive,6%,12%,13%
+24,Au moins quatre opérateurs au PM via la mutualisation passive,0%,5%,5%
+27,Locaux Raccordables,194000,220000,245000
+27,Catégorie,10,10,10
+27,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+27,Au moins deux opérateurs au PM via la mutualisation passive,74%,75%,74%
+27,Au moins trois opérateurs au PM via la mutualisation passive,57%,59%,56%
+27,Au moins quatre opérateurs au PM via la mutualisation passive,24%,52%,50%
+28,Locaux Raccordables,356000,376000,404000
+28,Catégorie,10,10,10
+28,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+28,Au moins deux opérateurs au PM via la mutualisation passive,69%,69%,68%
+28,Au moins trois opérateurs au PM via la mutualisation passive,47%,46%,44%
+28,Au moins quatre opérateurs au PM via la mutualisation passive,32%,32%,31%
+32,Locaux Raccordables,552000,652000,739000
+32,Catégorie,10,10,25
+32,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+32,Au moins deux opérateurs au PM via la mutualisation passive,52%,58%,55%
+32,Au moins trois opérateurs au PM via la mutualisation passive,19%,23%,23%
+32,Au moins quatre opérateurs au PM via la mutualisation passive,4%,10%,11%
+44,Locaux Raccordables,555000,614000,663000
+44,Catégorie,10,10,10
+44,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+44,Au moins deux opérateurs au PM via la mutualisation passive,60%,61%,62%
+44,Au moins trois opérateurs au PM via la mutualisation passive,22%,25%,27%
+44,Au moins quatre opérateurs au PM via la mutualisation passive,0%,7%,10%
+52,Locaux Raccordables,333000,365000,392000
+52,Catégorie,10,10,10
+52,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+52,Au moins deux opérateurs au PM via la mutualisation passive,78%,76%,76%
+52,Au moins trois opérateurs au PM via la mutualisation passive,43%,45%,46%
+52,Au moins quatre opérateurs au PM via la mutualisation passive,13%,29%,28%
+53,Locaux Raccordables,327000,358000,391000
+53,Catégorie,10,10,10
+53,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+53,Au moins deux opérateurs au PM via la mutualisation passive,73%,71%,70%
+53,Au moins trois opérateurs au PM via la mutualisation passive,41%,47%,45%
+53,Au moins quatre opérateurs au PM via la mutualisation passive,18%,29%,30%
+75,Locaux Raccordables,590000,655000,691000
+75,Catégorie,10,10,10
+75,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+75,Au moins deux opérateurs au PM via la mutualisation passive,68%,71%,72%
+75,Au moins trois opérateurs au PM via la mutualisation passive,35%,43%,43%
+75,Au moins quatre opérateurs au PM via la mutualisation passive,11%,15%,19%
+76,Locaux Raccordables,620000,666000,712000
+76,Catégorie,10,10,10
+76,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+76,Au moins deux opérateurs au PM via la mutualisation passive,76%,81%,83%
+76,Au moins trois opérateurs au PM via la mutualisation passive,49%,53%,54%
+76,Au moins quatre opérateurs au PM via la mutualisation passive,17%,23%,26%
+84,Locaux Raccordables,1154000,1241000,1323000
+84,Catégorie,25,25,25
+84,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+84,Au moins deux opérateurs au PM via la mutualisation passive,58%,65%,68%
+84,Au moins trois opérateurs au PM via la mutualisation passive,38%,40%,41%
+84,Au moins quatre opérateurs au PM via la mutualisation passive,18%,21%,22%
+93,Locaux Raccordables,794000,830000,873000
+93,Catégorie,25,25,25
+93,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+93,Au moins deux opérateurs au PM via la mutualisation passive,74%,79%,81%
+93,Au moins trois opérateurs au PM via la mutualisation passive,50%,55%,58%
+93,Au moins quatre opérateurs au PM via la mutualisation passive,20%,24%,31%
+94,Locaux Raccordables,38000,41000,44000
+94,Catégorie,10,10,10
+94,Au moins un opérateur au PM via la mutualisation passive,100%,100%,100%
+94,Au moins deux opérateurs au PM via la mutualisation passive,65%,62%,59%
+94,Au moins trois opérateurs au PM via la mutualisation passive,0%,0%,0%
+94,Au moins quatre opérateurs au PM via la mutualisation passive,0%,0%,0%

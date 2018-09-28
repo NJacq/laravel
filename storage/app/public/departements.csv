@@ -1,0 +1,109 @@
+Réseaux en fibre optique jusqu'à l'abonné (FttH),,,,
+Informations à l'échelle du Département,,,,
+,,,,
+,,,,
+Code département,Nom département,Code région,Logements,Établissements
+01,Ain,84, 298 064    , 16 129    
+02,Aisne,32, 261 764    , 13 066    
+03,Allier,84, 204 978    , 9 391    
+04,Alpes-de-Haute-Provence,93, 124 525    , 5 506    
+05,Hautes-Alpes,93, 132 509    , 5 617    
+06,Alpes-Maritimes,93, 752 913    , 40 003    
+07,Ardèche,84, 196 642    , 8 945    
+08,Ardennes,44, 140 947    , 7 169    
+09,Ariège,76, 106 958    , 4 500    
+10,Aube,44, 160 196    , 9 287    
+11,Aude,76, 253 243    , 11 059    
+12,Aveyron,76, 177 322    , 9 476    
+13,Bouches-du-Rhône,93, 988 532    , 60 029    
+14,Calvados,28, 403 887    , 20 416    
+15,Cantal,84, 99 913    , 4 906    
+16,Charente,75, 193 481    , 10 882    
+17,Charente-Maritime,75, 419 362    , 20 261    
+18,Cher,24, 176 123    , 8 495    
+19,Corrèze,75, 152 086    , 7 448    
+2A,Corse-du-Sud,94, 112 493    , 6 309    
+2B,Haute-Corse,94, 125 816    , 6 809    
+21,Côte-d'Or,27, 279 886    , 16 080    
+22,Côtes-d'Armor,53, 357 513    , 16 887    
+23,Creuse,75, 87 670    , 3 604    
+24,Dordogne,75, 252 947    , 12 888    
+25,Doubs,27, 272 882    , 14 012    
+26,Drôme,84, 262 019    , 16 391    
+27,Eure,28, 287 022    , 14 460    
+28,Eure-et-Loir,24, 210 980    , 11 069    
+29,Finistère,53, 529 002    , 24 418    
+30,Gard,76, 411 051    , 20 228    
+31,Haute-Garonne,76, 679 240    , 37 591    
+32,Gers,76, 107 409    , 6 623    
+33,Gironde,75, 814 134    , 46 710    
+34,Hérault,76, 685 136    , 33 694    
+35,Ille-et-Vilaine,53, 523 150    , 28 014    
+36,Indre,24, 137 359    , 6 664    
+37,Indre-et-Loire,24, 311 772    , 16 164    
+38,Isère,84, 625 906    , 34 255    
+39,Jura,27, 146 342    , 7 915    
+40,Landes,75, 245 317    , 11 752    
+41,Loir-et-Cher,24, 180 669    , 9 247    
+42,Loire,84, 388 717    , 20 538    
+43,Haute-Loire,84, 140 509    , 6 722    
+44,Loire-Atlantique,52, 704 956    , 36 138    
+45,Loiret,24, 335 149    , 16 913    
+46,Lot,76, 115 520    , 5 702    
+47,Lot-et-Garonne,75, 181 623    , 10 477    
+48,Lozère,76, 59 682    , 2 846    
+49,Maine-et-Loire,52, 385 207    , 21 384    
+50,Manche,28, 291 260    , 13 805    
+51,Marne,44, 286 811    , 18 088    
+52,Haute-Marne,44, 100 478    , 5 129    
+53,Mayenne,52, 153 596    , 8 322    
+54,Meurthe-et-Moselle,44, 366 476    , 16 938    
+55,Meuse,44, 98 978    , 4 824    
+56,Morbihan,53, 450 148    , 20 733    
+57,Moselle,44, 502 089    , 24 116    
+58,Nièvre,27, 141 307    , 6 043    
+59,Nord,32, 1 181 744    , 57 234    
+60,Oise,32, 362 138    , 18 895    
+61,Orne,28, 163 497    , 8 385    
+62,Pas-de-Calais,32, 698 003    , 30 960    
+63,Puy-de-Dôme,84, 375 452    , 17 801    
+64,Pyrénées-Atlantiques,75, 389 009    , 22 025    
+65,Hautes-Pyrénées,76, 157 951    , 7 165    
+66,Pyrénées-Orientales,76, 338 669    , 13 519    
+67,Bas-Rhin,44, 532 541    , 32 291    
+68,Haut-Rhin,44, 367 294    , 20 281    
+69,Rhône,84, 876 143    , 58 529    
+70,Haute-Saône,27, 124 849    , 5 941    
+71,Saône-et-Loire,27, 305 579    , 16 067    
+72,Sarthe,52, 285 877    , 13 581    
+73,Savoie,84, 335 506    , 16 408    
+74,Haute-Savoie,84, 483 803    , 24 973    
+75,Paris,11, 1 362 182    , 149 289    
+76,Seine-Maritime,28, 622 893    , 31 212    
+77,Seine-et-Marne,11, 589 570    , 32 083    
+78,Yvelines,11, 614 740    , 33 041    
+79,Deux-Sèvres,75, 189 886    , 10 056    
+80,Somme,32, 291 496    , 14 193    
+81,Tarn,76, 205 303    , 11 092    
+82,Tarn-et-Garonne,76, 127 191    , 7 022    
+83,Var,93, 693 165    , 31 620    
+84,Vaucluse,93, 291 302    , 18 770    
+85,Vendée,52, 407 607    , 18 545    
+86,Vienne,75, 233 865    , 11 120    
+87,Haute-Vienne,75, 217 078    , 9 717    
+88,Vosges,44, 210 267    , 10 349    
+89,Yonne,27, 193 488    , 9 621    
+90,Territoire de Belfort,27, 70 757    , 3 223    
+91,Essonne,11, 535 391    , 27 688    
+92,Hauts-de-Seine,11, 776 700    , 46 454    
+93,Seine-Saint-Denis,11, 641 970    , 38 560    
+94,Val-de-Marne,11, 612 851    , 32 938    
+95,Val-d'Oise,11, 485 712    , 26 506    
+971,Guadeloupe,01, 220 069    , 11 039    
+972,Martinique,02, 207 001    , 10 528    
+973,Guyane,03, 81 392    , 4 491    
+974,La Réunion,04, 348 781    , 19 884    
+975,Saint-Pierre-et-Miquelon,05, 3 274    , -    
+976,Mayotte,06, 60 076    , -    
+977,Saint-Barthélemy,07, 4 978    , -    
+978,Saint-Martin,08, 17 677    , -    
