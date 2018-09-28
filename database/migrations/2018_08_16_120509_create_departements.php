@@ -15,8 +15,8 @@ class CreateDepartements extends Migration
     {
         Schema::create('departements', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('region_id')->nullable();
-            $table->string('epci_id')->nullable();
+            $table->integer('region_id')->nullable();
+            $table->integer('epci_id')->nullable();
             $table->string('code_departement', 255)->nullable(); // Création d'un champs texte de 255 caractères
             $table->string('nom_departement', 255)->nullable(); 
             $table->string('code_region', 255)->nullable(); 
