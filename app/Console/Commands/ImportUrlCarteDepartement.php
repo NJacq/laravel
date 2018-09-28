@@ -11,7 +11,7 @@ use App\Models\UrlCarteDepartement;
 use App\Models\Departement;
 
 
-class ImportStatRegion extends Command
+class ImportUrlCarteDepartement extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.

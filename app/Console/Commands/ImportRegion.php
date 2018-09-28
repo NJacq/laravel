@@ -15,7 +15,7 @@ class ImportRegion extends Command
      *
      * @var string
      */
-    protected $signature = 'import:region {file}';
+    protected $signature = 'import:regions {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
