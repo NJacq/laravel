@@ -4,13 +4,17 @@ Vous trouverez ici un suivi des déploiements de la fibre optique jusqu'à l'abo
 
 Vous pouvez obtenir directement des informations sur une région, un département ou une commune en saisissant son nom dans le champ correspondant.
 
-Technologies utilisées : Laravel, Laravel Mix, Vue.js, Bootstrap 4
+Technologies utilisées : 
+- Laravel
+- Laravel Mix
+- Vue.js
+- Bootstrap 4
 
 
 Procédure d'installation:
 
-- Lancer la commande compser install 
+- Lancer la commande composer install 
 - Lancer la commande npm install
 - Lancer la commande composer require box/spout
 - Modifier le fichier .env (nom de la bdd, identifiant, mot de passe...)
-- Lancer la commande php artisan migrate
+- Lancer la commande php artisan migrate 
