@@ -75,7 +75,7 @@ class ImportRegion extends Command
                         'logements' => (int)str_replace(' ','',$row[2]),
                         'etablissements' => (int)str_replace(' ','',$row[3])
                     ];
-                    // print_r($dataToInsert); 
+                    // print_r($dataToInsert);
                     
                     $newRegion = Region::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'code_region' => $dataToInsert['code_region'] // On se base sur la clé 'code_region" pour véfifier les modifications des autres clés. 
