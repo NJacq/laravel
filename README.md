@@ -21,7 +21,9 @@ Vous pouvez obtenir directement des informations sur une région, un départemen
 2. Lancer la commande ``` composer require box/spout ``` 
 3. Lancer la commande ``` npm install ``` 
 4. Créer une base de données
-5. Modifier dans le fichier .env 
+5. Renommer le fichier .env.example en .env.
+6. Dans ce fichier complèter :
+   - ``` DB_HOST=``` : l'adresse du serveur où est stockée la base de données
    - ``` DB_DATABASE=``` : le nom de la base de données précédemment créée
    - ``` DB_USERNAME=``` : l'identifiant pour se connecter à cette base
    - ``` DB_PASSWORD=``` : le mot de passeacq
