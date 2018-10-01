@@ -50,4 +50,7 @@ Veuillez respecter l'ordre des commandes suuivantes :
 17. Lancer la commande ``` php artisan import:fttharrondissements ftthArrondissements.csv ``` 
 18. Lancer la commande ``` php artisan import:statarrondissements ``` 
 
-@NJacq
+
+    function(){
+        
+    }
