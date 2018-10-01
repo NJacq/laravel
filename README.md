@@ -49,8 +49,3 @@ Veuillez respecter l'ordre des commandes suuivantes :
 16. Lancer la commande ``` php artisan import:arrondissements arrondissements.csv ``` 
 17. Lancer la commande ``` php artisan import:fttharrondissements ftthArrondissements.csv ``` 
 18. Lancer la commande ``` php artisan import:statarrondissements ``` 
-
-
-    function(){
-        
-    }
