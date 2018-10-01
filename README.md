@@ -29,6 +29,8 @@ Vous pouvez obtenir directement des informations sur une région, un départemen
 
 **Importation des données**
 
+Veuillez respecter l'ordre des commandes suuivantes : 
+
 1. Lancer la commande ``` php artisan import:regions regions.csv ``` 
 2. Lancer la commande ``` php artisan import:ajoutRegions ``` 
 3. Lancer la commande ``` php artisan import:regions ftthRegions.csv ``` 
