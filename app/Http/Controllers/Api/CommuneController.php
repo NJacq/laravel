@@ -41,7 +41,6 @@ class CommuneController extends Controller
         {
                 
         return response()->json(            
-            //Commune::where('nom_commune', 'like', '%'.$request->q.'%')->get()->pluck('nom_commune', 'id')
             Commune::where('nom_commune', 'like', '%'.$request->q.'%')->get()
         );
     }

@@ -26,7 +26,7 @@ class ImportAjoutInfoEpci extends Command
      *
      * @var string
      */
-    protected $description = 'Importer departement id dans epci';
+    protected $description = 'Importer departement_id et commune_id dans epci';
 
     /**
      * Créer une nouvelle instance de commande.
