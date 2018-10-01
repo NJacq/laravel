@@ -72,8 +72,7 @@ import axios from 'axios'
             onSelectDepartement(departement) {
                 this.$router.push({ path: '/departement/' + departement.id })
             },
-            onSelectCommune(commune) {
-                console.log(commune)
+            onSelectCommune(commune) {         
                 this.$router.push({ path: '/commune/' + commune.id })
             },
             onSearch(search, loading) {
@@ -85,7 +84,6 @@ import axios from 'axios'
                 fetch(`/api/communes/search?q=${escape(search)}`)
                 .then(res => {
                     res.json().then(json => {
-                        console.log(json)
                         vm.options = json
                     });
                     loading(false);
@@ -97,8 +95,7 @@ import axios from 'axios'
             this.id = this.$route.params.id  
             axios.get('/api/regions')
             .then(response => {
-                this.regions = response.data
-                console.log(this.regions)
+                this.regions = response.data             
             })
             .catch(Err => {
                 // console.log(err)
