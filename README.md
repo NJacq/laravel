@@ -12,6 +12,7 @@ Vous pouvez obtenir directement des informations sur une région, un départemen
 - Vue2Filters
 - vSelect
 - Bootstrap 4
+- phpMyAdmin
 
 
 **Procédure d'installation**
