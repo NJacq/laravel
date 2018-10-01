@@ -4,10 +4,13 @@ Vous trouverez ici un suivi des déploiements de la fibre optique jusqu'à l'abo
 
 Vous pouvez obtenir directement des informations sur une région, un département ou une commune en saisissant son nom dans le champ correspondant.
 
-**Technologies utilisées :** 
+**Technologies utilisées** 
 - Laravel
 - Laravel Mix
 - Vue.js
+- Axios
+- Vue2Filters
+- vSelect
 - Bootstrap 4
 
 
@@ -20,8 +23,8 @@ Vous pouvez obtenir directement des informations sur une région, un départemen
 5. Modifier dans le fichier .env 
    - ``` DB_DATABASE=``` : le nom de la base de données précédemment créée
    - ``` DB_USERNAME=``` : l'identifiant pour se connecter à cette base
-   - ``` DB_PASSWORD=``` : le mot de passe
-
+   - ``` DB_PASSWORD=``` : le mot de passeacq
+   
 
 **Importation des données**
 
