@@ -6,7 +6,7 @@ Vous pouvez obtenir directement des informations sur une région, un départemen
 
 **Technologies utilisées** 
 - [Laravel](https://laravel.com)
-- [Laravel Mix](ttps://laravel.com/docs/5.6/mix)
+- [Laravel Mix](https://laravel.com/docs/5.6/mix)
 - [Vue.js](https://vuejs.org/)
 - [Axios](https://github.com/axios/axios)
 - [Vue2Filters](https://github.com/freearhey/vue2-filters)
