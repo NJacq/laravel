@@ -5,14 +5,14 @@ Vous trouverez ici un suivi des déploiements de la fibre optique jusqu'à l'abo
 Vous pouvez obtenir directement des informations sur une région, un département ou une commune en saisissant son nom dans le champ correspondant.
 
 **Technologies utilisées** 
-- Laravel
-- Laravel Mix
-- Vue.js
-- Axios
-- Vue2Filters
-- vSelect
-- Bootstrap 4
-- phpMyAdmin
+- [Laravel](https://laravel.com)
+- [Laravel Mix](ttps://laravel.com/docs/5.6/mix)
+- [Vue.js](https://vuejs.org/)
+- [Axios](https://github.com/axios/axios)
+- [Vue2Filters](https://github.com/freearhey/vue2-filters)
+- [vue-select](https://github.com/sagalbot/vue-select)
+- [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+- [phpMyAdmin](https://www.phpmyadmin.net/)
 
 
 **Procédure d'installation**
