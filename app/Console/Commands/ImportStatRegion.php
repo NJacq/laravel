@@ -76,18 +76,7 @@ class ImportStatRegion extends Command
             if($nb_locaux_debut>0 && $nb_locaux_fin>0 && ($nb_locaux_debut < $nb_locaux_fin)) {
                 $pourcentage = round(($nb_locaux_fin - $nb_locaux_debut)/$nb_locaux_debut*100); //Calcul du pourcentage d'augmentation du nombre de locaux entre le 3è trimestre 2017 et le 1er trimestre 2018
                 $this->info('Le nombre de locaux a augmenté de '.$pourcentage.'%');
-            }
-            
-            // if ($nb_locaux_debut === 0){ // si nombre de locaux au 3è trimestre 2017 est égal à 0 alors erreur
-            //     $this->error('Impossible de diviser par 0');
-            //     $pourcentage = '0';
-            // } else {
-            //     $pourcentage = ($nb_locaux_fin - $nb_locaux_debut)/$nb_locaux_debut*100; //Calcul du pourcentage d'augmentation du nombre de locaux entre le 3è trimestre 2017 et le 1er trimestre 2018
-            //     $this->info('Le nombre de locaux a augmenté de '.$pourcentage.'%');    
-            // }
-            // $this->line('===> Région '.$region->nom_region.' : T3-2017 = '.$nb_locaux_debut.' / T1-2018 = '.$nb_locaux_fin);
-        
-                  
+            }                  
             
             $dataToInsert = [
                 'region_id' => $region->id,
@@ -100,7 +89,7 @@ class ImportStatRegion extends Command
                 'pourcentage_progression' => $pourcentage,
             ];
             print_r($dataToInsert);
-            // exit;
+       
 
             $newStatRegion = StatRegion::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                 'region_id' => $dataToInsert['region_id'] // On se base sur la clé 'region_id" pour véfifier les modifications des autres clés. 

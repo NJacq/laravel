@@ -90,9 +90,10 @@ class ImportArrondissement extends Command
                     if(empty($commune->id)) {
                         $this->error('Impossible de trouver l\'arrondissement '.$dataToInsert['code_commune'].' pour la commune '.$dataToInsert['code_arrondissement']);
                
+                    } else {
+                        $dataToInsert['commune_id'] = $commune->id;
                     }
-
-                    $dataToInsert['commune_id'] = $commune->id;
+                    
                     $newArrondissement = Arrondissement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'code_arrondissement' => $dataToInsert['code_arrondissement'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
                     ], $dataToInsert);    

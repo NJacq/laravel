@@ -122,10 +122,18 @@ class ImportFtthArrondissement extends Command
                             if(empty($arrondissement->id)) {
                                 $this->error('Impossible de trouver l\'arrondissement '.$lineForThisArrondissement['code_arrondissement'].' pour la commune '.$lineForThisArrondissement['code_arrondissement']);
                                 // exit;
+                            } else {
+                                $lineForThisArrondissement['arrondissement_id'] = $arrondissement->id;
+                            }
+                            if(empty($arrondissement->commune_id)) {
+                                $this->error('Impossible de trouver l\'arrondissement '.$lineForThisArrondissement['code_arrondissement'].' pour la commune '.$lineForThisArrondissement['code_arrondissement']);
+                                // exit;
+                            } else {
+                                $lineForThisArrondissement['commune_id'] = $arrondissement->commune_id;
                             }
             
-                            $lineForThisArrondissement['arrondissement_id'] = $arrondissement->id;
-                            $lineForThisArrondissement['commune_id'] = $arrondissement->commune_id;
+                            
+                       
                             FtthArrondissement::updateOrCreate([
                                 'code_arrondissement' => $lineForThisArrondissement['code_arrondissement'],
                                 'trimestre' => $lineForThisArrondissement['trimestre'],

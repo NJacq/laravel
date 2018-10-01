@@ -90,10 +90,10 @@ class ImportDepartement extends Command
                     if(empty($region->id)) {
                         $this->error('Impossible de trouver la région '.$dataToInsert['code_region'].' pour le département '.$dataToInsert['code_departement']);
                         // exit;
-                    }
+                    } else {
 
-                    $dataToInsert['region_id'] = $region->id; 
-                                          
+                        $dataToInsert['region_id'] = $region->id; 
+                    }                   
             
                     // exit;
 

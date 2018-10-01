@@ -149,10 +149,10 @@ class ImportFtthRegion extends Command
 
                             if(empty($region->id)) {
                                 $this->error('Impossible de trouver la région '.$lineForThisRegion['code_region'].' pour le département '.$lineForThisRegion['code_departement']);
-                                // exit;
+                            } else {
+                                $lineForThisRegion['region_id'] = $region->id; 
                             }
-            
-                            $lineForThisRegion['region_id'] = $region->id;                                
+ 
                             FtthRegion::updateOrCreate([
                                 'code_region' => $lineForThisRegion['code_region'],
                                 'trimestre' => $lineForThisRegion['trimestre'],

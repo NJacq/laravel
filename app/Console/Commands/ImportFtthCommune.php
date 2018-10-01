@@ -119,16 +119,22 @@ class ImportFtthCommune extends Command
                             //exit;
                             $commune = Commune::where('code_commune', $lineForThisCommune['code_commune'])->first();
 
-                            // if(empty($Commune->id)) {
-                            //     $this->error('Impossible de trouver la région '.$lineForThisCommune['code_Commune'].' pour le département '.$lineForThisCommune['code_Commune']);
-                            //     // exit;
-                            // }
-            
-                            $lineForThisCommune['commune_id'] = $commune->id;
-                            $lineForThisCommune['departement_id'] = $commune->departement_id;                           
-                            $lineForThisCommune['epci_id'] = $commune->epci_id; 
-                                       
-                           
+                            if(empty($Commune->id)) {
+                                $this->error('Impossible de trouver la commune '.$lineForThisCommune['code_Commune'].' pour la commune '.$lineForThisCommune['code_Commune']);
+                            } else {
+                                $lineForThisCommune['commune_id'] = $commune->id;
+                            }
+                            if(empty($Commune->departement_id)) {
+                                $this->error();
+                            } else {
+                                $lineForThisCommune['departement_id'] = $commune->departement_id;  
+                            }
+                            if(empty($commune->epci_id)) {
+                                $this->error();
+                            } else {
+                                $lineForThisCommune['epci_id'] = $commune->epci_id; 
+                            }
+                                                       
                             FtthCommune::updateOrCreate([
                                 'code_commune' => $lineForThisCommune['code_commune'],
                                 'trimestre' => $lineForThisCommune['trimestre'],

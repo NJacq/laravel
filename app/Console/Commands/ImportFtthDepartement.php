@@ -120,15 +120,18 @@ class ImportFtthDepartement extends Command
                             $departement = Departement::where('code_departement', $lineForThisDepartement['code_departement'])->first();
            
 
-                            // if(empty($departement->id)) {
-                            //     $this->error('Impossible de trouver la région '.$lineForThisDepartement['code_departement'].' pour le département '.$lineForThisDepartement['code_departement']);
-                            //     // exit;
-                            // }
-            
-                            $lineForThisDepartement['departement_id'] = $departement->id;
-                            $lineForThisDepartement['region_id'] = $departement->region_id;
+                            if(empty($departement->id)) {
+                                $this->error();
+                            } else {
+                                $lineForThisDepartement['departement_id'] = $departement->id;
+                            }
 
-                            // exit;
+                            if(empty($departement->region_id)) {
+                                $this->error();
+                            } else {
+                                $lineForThisDepartement['region_id'] = $departement->region_id;
+                            }            
+
                             FtthDepartement::updateOrCreate([
                                 'code_departement' => $lineForThisDepartement['code_departement'],
                                 'trimestre' => $lineForThisDepartement['trimestre'],
