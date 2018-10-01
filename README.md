@@ -26,7 +26,7 @@ Vous pouvez obtenir directement des informations sur une région, un départemen
    - ``` DB_HOST=``` : l'adresse du serveur où est stockée la base de données
    - ``` DB_DATABASE=``` : le nom de la base de données précédemment créée
    - ``` DB_USERNAME=``` : l'identifiant pour se connecter à cette base
-   - ``` DB_PASSWORD=``` : le mot de passeacq
+   - ``` DB_PASSWORD=``` : le mot de passe
    
 
 **Importation des données**
