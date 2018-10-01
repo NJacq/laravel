@@ -16,7 +16,6 @@ class CreateEpciTable extends Migration
         Schema::create('epci', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('departement_id')->nullable();
-            $table->integer('commune_id')->nullable();
             $table->string('siren_epci', 255)->nullable();
             $table->string('nom_epci', 255)->nullable();
             $table->integer('logements')->nullable();

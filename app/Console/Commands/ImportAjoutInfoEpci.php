@@ -10,22 +10,23 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Departement;
 use App\Models\Commune;
 use App\Models\Epci;
+use App\Models\AjoutInfoEpci;
 
-class ImportEpci extends Command
+class ImportAjoutInfoEpci extends Command
 {
     /**
      * Indique le nom de la commande dans php artisan.
      *
      * @var string
      */
-    protected $signature = 'import:epci {file}';
+    protected $signature = 'import:ajoutinfoepci {file}';
 
     /**
      * Description de la commande : imporer un fichier csv.
      *
      * @var string
      */
-    protected $description = 'Importer les communes depuis le fichier csv arcep';
+    protected $description = 'Importer departement id dans epci';
 
     /**
      * Créer une nouvelle instance de commande.
@@ -77,12 +78,12 @@ class ImportEpci extends Command
                     $dataToInsert = [ // Creation d'un tableau avec la même structure que la base de données
                         'siren_epci' => $row[0],
                         'nom_epci' => $row[1],                        
-                        'logements' => (int)str_replace(' ','',$row[2]),
-                        'etablissements' => (int)str_replace(' ','',$row[3])                           
+                              
                     ];
 
-                    // $commune = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();            
-                    // $dataToInsert['departement_id'] = $commune->departement_id;
+                    $commune = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();            
+                    $dataToInsert['departement_id'] = $commune->departement_id;
+                    $dataToInsert['commune_id'] = $commune->id;
                  
                     $newEpci = Epci::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'siren_epci' => $dataToInsert['siren_epci'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
