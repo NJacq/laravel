@@ -117,7 +117,7 @@ import axios from 'axios'
 
 <style>
     .logo1{      
-       width: 10%;
+       width: 8%;
    }
 
 </style>
