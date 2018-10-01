@@ -15,8 +15,8 @@ class CreateCommunesTable extends Migration
     {
         Schema::create('communes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('departement_id', 11)->nullable();
-            $table->integer('epci_id', 11)->nullable();
+            $table->integer('departement_id')->nullable();
+            $table->integer('epci_id')->nullable();
             $table->string('code_commune', 255)->nullable();
             $table->string('nom_commune', 255)->nullable(); 
             $table->string('code_region', 255)->nullable(); 
