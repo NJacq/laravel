@@ -71,8 +71,8 @@ class ImportArrondissement extends Command
                     }
                     // print_r($row); // Le résultat obtenu apparait sous la forme d'un tableau  
 
-                    $name = array('2e', '3e', '4e', '5e', '6e', '7e', '8e', '9e', '10e', '11e', '12e', '13e', '14e', '15e', '16e', '17e', '18e', '19e', '20e');
-                    $newName = array('2ème', '3ème', '4ème', '4ème', '5ème', '6ème', '7ème', '8ème', '9ème', '10ème', '11ème', '12ème', '13ème', '14ème', '15ème', '16ème', '17ème', '18ème', '19ème', '20ème');
+                    $name = ['2e', '3e', '4e', '5e', '6e', '7e', '8e', '9e', '10e', '11e', '12e', '13e', '14e', '15e', '16e', '17e', '18e', '19e', '20e'];
+                    $newName = ['2ème', '3ème', '4ème', '4ème', '5ème', '6ème', '7ème', '8ème', '9ème', '10ème', '11ème', '12ème', '13ème', '14ème', '15ème', '16ème', '17ème', '18ème', '19ème', '20ème'];
 
                     $dataToInsert = [ // Creation d'un tableau avec la même structure que la base de données
                         'code_arrondissement' => $row[0],
