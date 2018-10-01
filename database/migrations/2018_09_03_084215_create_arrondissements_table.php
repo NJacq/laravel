@@ -15,7 +15,7 @@ class CreateArrondissementsTable extends Migration
     {
         Schema::create('arrondissements', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('commune_id', 255)->nullable();
+            $table->integer('commune_id')->nullable();
             $table->string('code_arrondissement', 255)->nullable();
             $table->string('nom_arrondissement', 255)->nullable(); 
             $table->string('code_region', 255)->nullable(); 
