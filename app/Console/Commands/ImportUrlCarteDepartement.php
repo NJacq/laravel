@@ -3,13 +3,11 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Box\Spout\Reader\ReaderFactory;
+
 use Box\Spout\Common\Type;
 use Illuminate\Support\Facades\Storage;
-
 use App\Models\UrlCarteDepartement;
 use App\Models\Departement;
-
 
 class ImportUrlCarteDepartement extends Command
 {
@@ -19,14 +17,12 @@ class ImportUrlCarteDepartement extends Command
      * @var string
      */
     protected $signature = 'import:urlcartedepartements';
-
     /**
      * Description de la commande : imporer donnees depuis ftthregions.
      *
      * @var string
      */
-    protected $description = 'Importer url carte departements';
-
+    protected $description = 'Importer l\'url de la carte des departements';
     /**
      * Créer une nouvelle instance de commande.
      *
@@ -36,7 +32,6 @@ class ImportUrlCarteDepartement extends Command
     {
         parent::__construct();
     }
-
     /**
      * Exécuter la commande
      *
@@ -161,7 +156,6 @@ class ImportUrlCarteDepartement extends Command
                 'url' => $url
             ];
             print_r($dataToInsert);
-
             $departement = Departement::where('code_departement', $dataToInsert['code_departement'])->first();                          
             
             if(empty($departement->id)) {
@@ -174,8 +168,7 @@ class ImportUrlCarteDepartement extends Command
             $newUrlCarteDepartement = UrlCarteDepartement::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                 'code_departement' => $dataToInsert['code_departement'] // On se base sur la clé 'region_id" pour véfifier les modifications des autres clés. 
             ], $dataToInsert);    
-        };  
-
+        }
         $this->info('Fin du script');
     }
 }

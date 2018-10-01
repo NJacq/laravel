@@ -1,7 +1,7 @@
 <template> 
     <div class="container">
         <div class="row justify-content-center">
-        <div class="col-md-8">
+            <div class="col-md-8">
                 <div class="card text-center" v-show="isLoading">
                     <div class="card-body p-5">
                         <i class="fas fa-3x fa-sync fa-spin"></i>

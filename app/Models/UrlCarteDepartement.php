@@ -10,7 +10,7 @@ class UrlCarteDepartement extends Model
     protected $guarded = ['id'];   
 
    
-    public function departement()
+    public function departements()
     {
         return $this->belongsTo('App\Models\Departement');
     }
