@@ -80,10 +80,18 @@ class ImportAjoutInfoEpci extends Command
                         'nom_epci' => $row[1],                        
                               
                     ];
-
-                    $commune = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();            
-                    $dataToInsert['departement_id'] = $commune->departement_id;
-                    $dataToInsert['commune_id'] = $commune->id;
+                    $commune = Commune::where('siren_epci', $dataToInsert['siren_epci'])->first();
+                    
+                    if(empty($commune->departement_id)) {
+                        $this->error('Impossible de trouver les communes pour lepci '.$dataToInsert['nom_epci']);
+                    } else {
+                        $dataToInsert['departement_id'] = $commune->departement_id;
+                    }
+                    if(empty($commune->commune->id)) {
+                        $this->error('Impossible de trouver les communes pour lepci '.$dataToInsert['nom_epci']);
+                    } else {                
+                        $dataToInsert['commune_id'] = $commune->id;
+                    }
                  
                     $newEpci = Epci::updateOrCreate([ // fonction qui permet d'ajouter ou de modifier des éléments à la base de données
                         'siren_epci' => $dataToInsert['siren_epci'] // On se base sur la clé 'code_departement" pour véfifier les modifications des autres clés. 
