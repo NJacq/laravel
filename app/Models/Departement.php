@@ -41,7 +41,7 @@ class Departement extends Model
     {
         return $this->hasMany('App\Models\StatCommune');
     }
-    public function urlcartedepartements()
+    public function urlcartedepartement()
     {
         return $this->hasMany('App\Models\UrlCarteDepartement');
     }
