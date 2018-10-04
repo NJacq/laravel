@@ -32,10 +32,10 @@
                                     <span slot="no-options">Aucun département trouvé!</span>
                                 </v-select>
                                 <br>                  
-                                <v-select label="nom_commune" :filterable="false" :options="options" @search="onSearch" @input='onSelectCommune' placeholder="une commune">
-                                    <span slot="selected-option" slot-scope="option">
+                                <v-select label="nom_commune" :filterable="false" :options="communes" @search="onSearch" @input='onSelectCommune' placeholder="une commune">
+                                    <span slot="selected-option" slot-scope="commune">
                                         <div class="selected d-center">                                    
-                                            {{ option }}
+                                            {{ commune }}
                                         </div>
                                     </span>
                                     <span slot="no-options">Aucune commune trouvée!</span>
@@ -62,7 +62,7 @@ import axios from 'axios'
             return {
                 regions: [],
                 departements: [],
-                options: []                              
+                communes: []                              
             }
         },
         methods:{
@@ -84,7 +84,7 @@ import axios from 'axios'
                 fetch(`/api/communes/search?q=${escape(search)}`)
                 .then(res => {
                     res.json().then(json => {
-                        vm.options = json
+                        vm.communes = json
                     });
                     loading(false);
                 });
@@ -104,11 +104,6 @@ import axios from 'axios'
             .then(response => {
                 this.departements = response.data
                   this.isLoading = false;
-            }),
-            axios.get('/api/communes/search')
-            .then(response => {
-                this.communesSearch = response.data
-              
             })
         }
     }
